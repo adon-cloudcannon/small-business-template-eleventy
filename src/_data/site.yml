@@ -1,0 +1,17 @@
+social_media_links:
+  - label: YouTube
+    link_url:
+    svg_icon:
+    hover_color:
+  - label: Facebook
+    link_url:
+    svg_icon:
+    hover_color:
+  - label: Linkedin
+    link_url:
+    svg_icon:
+    hover_color:
+  - label: X
+    link_url:
+    svg_icon:
+    hover_color:
