@@ -20,6 +20,13 @@ module.exports = {
 				return true;
 			}
 		},
+		permalink: function(data) {
+			if(showDraft(data)) {
+				return data.permalink;
+			} else {
+				return false;
+			}
+		}
 		
 	}
 };
