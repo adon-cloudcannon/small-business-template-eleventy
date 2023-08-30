@@ -1,0 +1,32 @@
+{
+  "name": "small-business-template-eleventy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:bookshop": "bookshop-browser",
+    "dev:11ty": "eleventy --serve --watch --incremental",
+    "start": "run-p dev:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudCannon/small-business-template-eleventy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CloudCannon/small-business-template-eleventy/issues"
+  },
+  "homepage": "https://github.com/CloudCannon/small-business-template-eleventy#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@bookshop/browser": "3.6.5",
+    "@bookshop/eleventy-bookshop": "3.6.5",
+    "@bookshop/eleventy-engine": "3.6.5",
+    "@bookshop/generate": "3.6.5",
+    "js-yaml": "^4.1.0"
+  }
+}
