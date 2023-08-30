@@ -1,5 +1,5 @@
 // Set to true for development environment, false for production. 
-// When true, developers can see all posts (including drafts and future-dated posts) 
+// When true, developers can see all posts 
 // without having to manually change each post's front matter.
 const isDevEnv = false
 
