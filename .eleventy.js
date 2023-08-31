@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
 
     // Data extensions
     eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents))
-
+    eleventyConfig.addDataExtension('yml', contents => yaml.load(contents))
     // Bookshop
     eleventyConfig.addWatchTarget("component-library/");
 
