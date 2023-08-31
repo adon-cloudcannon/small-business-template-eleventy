@@ -1,0 +1,47 @@
+source: src
+paths:
+  data: _data
+  collections: ''
+  layouts: _includes
+  static: ''
+  uploads: uploads
+  includes: _includes
+  pages: ''
+collections_config:
+  data:
+    path: _data
+    output: false
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  pages:
+    output: true
+    filter: strict
+    icon: notes
+    _editables: {}
+    _inputs: {}
+    _select_data: {}
+    _structures: {}
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas: {}
+_inputs: {}
+_select_data: {}
+_structures:
+  content_blocks:
+    style: select
+    id_key: _bookshop_name
+    values:
+      - value:
+          _bookshop_name: generic/sample
+          text:
+        label: Sample
+        description:
+        icon:
+        tags: []
+        _inputs: {}
+_editables: {}
+data_config: {}
+timezone: Etc/UTC
