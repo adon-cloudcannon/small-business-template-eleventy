@@ -4,3 +4,4 @@ node_modules/
 .jampack
 .cache
 src/assets/styles/bookshop.css
+css/

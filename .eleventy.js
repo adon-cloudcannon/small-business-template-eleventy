@@ -12,10 +12,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/fonts");
     eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addPassthroughCopy("src/assets/styles");
+    eleventyConfig.addPassthroughCopy("css");
 
     // Data extensions
     eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents))
-	eleventyConfig.addDataExtension('yml', contents => yaml.load(contents))
 
     // Bookshop
     eleventyConfig.addWatchTarget("component-library/");
@@ -25,11 +25,12 @@ module.exports = function(eleventyConfig) {
 		pathPrefix: '',
 	}));
 
-
-
     // Filters
     eleventyConfig.addFilter("markdownify", (markdown) => md.render(markdown));
 
+    eleventyConfig.setBrowserSyncConfig({
+      files: './_site/css/**/*.css'
+    });
 
     return {
         dir: {
