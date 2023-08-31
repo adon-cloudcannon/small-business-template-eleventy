@@ -13,14 +13,6 @@
 </head>
 <body>
     {% include 'partials/nav/navigation.html' %}
-    <h2 style="color:#ff0000">fonts</h2>
-    {% for font in googleFonts.fonts %}
-        <h1>{{ font.label }}</h1>
-    {% endfor %}
-    
-    {% for item in nav.navigation_items %}
-        <h1>{{ item.label }}</h1>
-    {% endfor %}
     <main>
         {% bookshop_include "page" content_blocks: content_blocks %}
         {{ content }}

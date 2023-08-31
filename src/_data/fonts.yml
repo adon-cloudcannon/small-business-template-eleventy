@@ -1,0 +1,6 @@
+google_fonts:
+  - font_title: Questrial
+  - font_title: Source Sans Pro
+_inputs:
+  font_title:
+    comment: Enter the font title as displayed in Google Fonts
