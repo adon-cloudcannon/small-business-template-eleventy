@@ -1,5 +1,5 @@
 navigation_heading:
-logo_image:
+logo_image: '/assets/images/Logo.png'
 navigation_items:
   - label: About Us
     link_url: /about
