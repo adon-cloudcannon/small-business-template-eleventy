@@ -28,6 +28,8 @@ _inputs:
     hidden: true
   eleventyExcludeFromCollections:
     hidden: true
+  draft:
+    type: switch
 _select_data: {}
 _structures:
   content_blocks:
