@@ -1,5 +1,6 @@
 const pluginBookshop = require("@bookshop/eleventy-bookshop");
 const yaml = require("js-yaml");
+const svgContents = require("eleventy-plugin-svg-contents")
 
 const MarkdownIt = require("markdown-it"),
   md = new MarkdownIt({
@@ -24,6 +25,9 @@ module.exports = function(eleventyConfig) {
 		bookshopLocations: ["component-library"],
 		pathPrefix: '',
 	}));
+
+    // Plugins
+    eleventyConfig.addPlugin(svgContents);
 
     // Filters
     eleventyConfig.addFilter("markdownify", (markdown) => md.render(markdown));

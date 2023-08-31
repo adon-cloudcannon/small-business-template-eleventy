@@ -12,7 +12,6 @@
     "eleventy:watch": "ELEVENTY_ENV=development eleventy --serve",
     "sass:watch": "sass --no-source-map --watch src/assets/styles:css",
     "sass:build": "sass --no-source-map src/assets/styles:css",
-
     "start": "npm-run-all sass:build bookshop-sass:build --parallel bookshop-sass:watch sass:watch bookshop:browser eleventy:watch"
   },
   "repository": {
@@ -28,7 +27,8 @@
   "homepage": "https://github.com/CloudCannon/small-business-template-eleventy#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@bookshop/sass": "^3.6.5"
+    "@bookshop/sass": "^3.6.5",
+    "eleventy-plugin-svg-contents": "^0.7.0"
   },
   "dependencies": {
     "@bookshop/browser": "3.6.5",
