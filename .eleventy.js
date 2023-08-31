@@ -1,6 +1,10 @@
 const pluginBookshop = require("@bookshop/eleventy-bookshop");
 const yaml = require("js-yaml");
 
+const MarkdownIt = require("markdown-it"),
+  md = new MarkdownIt({
+    html: true,
+  });
 
 
 module.exports = function(eleventyConfig) {
@@ -24,6 +28,7 @@ module.exports = function(eleventyConfig) {
 
 
     // Filters
+    eleventyConfig.addFilter("markdownify", (markdown) => md.render(markdown));
 
 
     return {
