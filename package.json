@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "generate:styles": "node src/assets/js/generate-styles.js",
     "bookshop-sass:build": "bookshop-sass -b component-library -o src/assets/styles/bookshop.css",
     "bookshop-sass:watch": "bookshop-sass -b component-library -o src/assets/styles/bookshop.css -w",
     "bookshop:browser": "bookshop-browser",
     "bookshop:new": "npx @bookshop/init --component",
 
-    "eleventy:build": "eleventy",
+    "eleventy:build": "generate:styles eleventy",
     "eleventy:watch": "ELEVENTY_ENV=development eleventy --serve",
-    "start": "npm-run-all bookshop-sass:build --parallel bookshop-sass:watch bookshop:browser eleventy:watch"
+    "start": "npm-run-all bookshop-sass:build --parallel generate:styles bookshop-sass:watch bookshop:browser eleventy:watch"
 
   },
   "repository": {
