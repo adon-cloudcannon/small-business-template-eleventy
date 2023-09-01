@@ -16,5 +16,5 @@ The reviewer should check on this branch:
 
 # Before merge (PR owner)
 
-- Delete the test site in CloudCannon
-- For "generic" components **only**: remove `- content_blocks` from `structures` in the YAML file (this was added for testing).
+- [ ] Delete the test site in CloudCannon
+- [ ] For "generic" components **only**: remove `- content_blocks` from `structures` in the YAML file (this was added for testing).
