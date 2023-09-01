@@ -1,10 +1,11 @@
 {% assign c = "c-navigation" %}
-<nav class="{{c}}">
+<nav class="{{c}}" aria-label="Main menu">
     {% if nav.navigation_heading != blank %}
         <a class="{{c}}__logo-text {{c}}__logo-link">{{ nav.navigation_heading }}</a>
     {% else %}
         <a href="/" class="{{c}}__logo-link"><img class="{{c}}__logo-image" src="{{nav.logo_image}}" alt="Site logotype"/></a>
     {% endif %}
+    {{page.url}}
     {% include 'partials/nav/navigation-mobile.html' %}
     {% include 'partials/nav/navigation-desktop.html' %}
 </nav>
