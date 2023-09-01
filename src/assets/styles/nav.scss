@@ -1,0 +1,19 @@
+.c-navigation{
+
+
+    &__mobile{
+        @media screen and (min-width: 768px ) {
+            display: none;
+        }
+
+    }
+
+    &__desktop{
+        display: none;
+
+        @media screen and (min-width: 768px ) {
+            display: block;
+        }
+
+    }
+}
