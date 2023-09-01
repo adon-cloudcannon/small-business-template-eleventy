@@ -1,4 +1,4 @@
-{% assign c = "c-navigation" %}
-<ul class="{{c}}--mobile">
-  <li>This is a mobile nav</li>
-</ul>
+<div class="{{ c }}__mobile">
+  {% include 'partials/nav/navigation-list.html' %}
+  <div class="{{ c }}__burger"></div>
+</div>

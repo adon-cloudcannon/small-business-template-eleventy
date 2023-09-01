@@ -1,0 +1,7 @@
+<ul class="{{c }}__list">
+  {% for navitem in nav.navigation_items %}
+    <li class="{{ c }}__item">
+      <a class="{{ c }}__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+    </li>
+  {% endfor %}
+</ul>
