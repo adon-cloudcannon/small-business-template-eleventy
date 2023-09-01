@@ -3,6 +3,6 @@
     "light_background_variant": "#3B3B3D",
     "dark_background_variant": "#1B1B1D"
   },
-  "heading_font": "Source Sans Pro",
-  "content_font": "Questrial"
+  "heading_font": "",
+  "content_font": ""
 }
