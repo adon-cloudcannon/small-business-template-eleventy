@@ -1,6 +1,12 @@
 {% assign c = "c-icon" %}
 
-<div class="{{ c }} {%if big_icon %}{{c}}__big{% else %}{{c}}__small{% endif %} {% if rounded_border %}{{c}}__round{% endif %}">
-    {{ '/src/assets/images/icons/' | append: svg_icon  | append: '.svg'  | svgContents }}
-</div>
-
+{% if env_bookshop_live %}
+    {% comment %}
+        TODO: see how Mike implemented visual editing with icons in bookshop
+    {% endcomment %}
+    <p>This component won't display correctly while live editing </p>
+{% else %}
+    <div class="{{ c }} {%if big_icon %}{{c}}__big{% else %}{{c}}__small{% endif %} {% if rounded_border %}{{c}}__round{% endif %}">
+        {{ '/src/assets/images/icons/' | append: svg_icon  | append: '.svg'  | svgContents }}
+    </div>
+{% endif %}
