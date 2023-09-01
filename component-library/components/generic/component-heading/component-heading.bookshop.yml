@@ -12,13 +12,6 @@ blueprint:
   eyebrow_headline:
   primary_heading:
   text_alignment:
-  _inputs:
-    text_alignment:
-      type: select
-      options:
-        values:
-          left: Left
-          center: Center
 
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
@@ -26,13 +19,12 @@ preview:
   eyebrow_headline: EYEBROW HEADLINE
   primary_heading: A simple text block
   text_alignment: left
-  _inputs:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
     text_alignment:
       type: select
       options:
         values:
           left: Left
           center: Center
-
-# Any extra CloudCannon inputs configuration to apply to the blueprint
-_inputs:
