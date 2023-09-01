@@ -1,7 +1,7 @@
 {% assign google_fonts = '' | split: '' %}
 
 {% for font in fonts %}
-  {% assign google_fonts = google_fonts | push: font.font_title %}
+  {% assign google_fonts = google_fonts | push: font %}
 {% endfor %}
 
 {% assign google_fonts = google_fonts | uniq %}
