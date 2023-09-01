@@ -1,16 +1,14 @@
 <ul class="{{c }}__list">
   {% for navitem in nav.navigation_items %}
-  {% assign nav_link = navitem.link_url | append: "/" %}
-  {% assign current_page_length = page.url | size | minus: 1 %}
-  {% assign trimmed_current_url = page.url | slice: 0, current_page_length %}
-  {% if page.url == navitem.link_url or trimmed_current_url == navitem.link_url %}
-    <li class="{{ c }}__item {{ c }}__item--active" aria-current="page">
-      <a class="{{ c }}__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
-    </li>
-  {% else %}
-    <li class="{{ c }}__item">
-      <a class="{{ c }}__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
-    </li>
+    {% assign nav_item_with_slash = navitem.link_url | append: "/" %}
+    {% if page.url == navitem.link_url or page.url == nav_item_with_slash %}
+      <li class="{{ c }}__item {{ c }}__item--active" aria-current="page">
+        <a class="{{ c }}__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+      </li>
+    {% else %}
+      <li class="{{ c }}__item">
+        <a class="{{ c }}__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+      </li>
     {% endif %}
   {% endfor %}
 </ul>
