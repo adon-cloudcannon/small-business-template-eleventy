@@ -3,6 +3,6 @@
     "light_background_variant": "#3B3B3D",
     "dark_background_variant": "#1B1B1D"
   },
-  "heading_fonts": "",
-  "content_fonts": ""
+  "heading_font": "",
+  "content_font": ""
 }
