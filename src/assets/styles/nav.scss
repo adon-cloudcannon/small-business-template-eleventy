@@ -1,6 +1,39 @@
 .c-navigation{
+    display: grid;
+    grid-template-columns: var(--twelve-column-grid);
 
+    &__social-icons{
+        display: none;
+        @media screen and (min-width: 768px ) {
+            display: block;
+            grid-column: 2 / 14;
+            background-color: purple;
+            height: 30px;
+        }
+        
+    }
+    &__logo-link{
+        grid-column: 2 / 4;
+    }
+    &__list{
+        list-style-type: none;
+        display: flex;
+        padding: 0;
 
+        @media screen and (min-width: 768px ) {
+            justify-content: flex-end;
+            gap: 2rem;
+        }
+
+        &__item{
+
+            &__link{
+                text-decoration: none;
+            }
+
+        }
+
+    }
     &__mobile{
         @media screen and (min-width: 768px ) {
             display: none;
@@ -13,6 +46,8 @@
 
         @media screen and (min-width: 768px ) {
             display: block;
+            grid-column: 5 / 14;
+
         }
 
     }

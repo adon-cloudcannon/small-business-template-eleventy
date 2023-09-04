@@ -1,5 +1,11 @@
 {% assign c = "c-navigation" %}
 <nav class="{{c}}" aria-label="Main menu">
+    <div class="{{ c }}__social-icons">
+        {% comment %}
+            TODO: social-icons go here
+        {% endcomment %}
+    </div>
+
     <a class="{{c}}__logo-link" href="/" aria-label="Home" {% if page.url == "/" %}aria-current="page"{% endif %}>
         {% if nav.navigation_heading %}
             <span class="{{c}}__logo-text">{{ nav.navigation_heading }}</span>
