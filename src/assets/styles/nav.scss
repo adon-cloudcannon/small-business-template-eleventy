@@ -45,7 +45,6 @@
 
     }
     &__mobile{
-        background-color: purple;
         grid-column: 13 / 14;
 
         @media screen and (min-width: 768px ) {
@@ -53,11 +52,67 @@
         }
 
         &__burger-menu{
-            height: 50px;
-            background-color: green;
-            grid-column: 13 / 14;
-            @media screen and (min-width: 768px ) {
-                display: none;
+            background-color: unset;
+
+            display: flex;
+            align-items: center;
+            border:none;
+            position: relative;
+            height: 36px;
+            width: 30px;
+            &:hover{
+                cursor: pointer;
+            }
+        
+            &__burger{
+                transition: background-color .1s;
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 3px;
+                width: 30px;
+                border-radius: 15px;
+                background-color: #FFFF;    
+                &::before{
+                    transition: all .18s;
+                    top: -8px;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    height: 3px;
+                    width: 30px;
+                    border-radius: 15px;
+                    background-color: #FFFF;    
+                
+                }
+                &::after{
+                    transition: all .18s;
+                    top: 8px;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    height: 3px;
+                    width: 30px;
+                    border-radius: 15px;
+                    background-color: #FFFF;    
+                
+                }
+        
+                &--open{
+                    &::before{
+                        transform: rotate(45deg);
+                        background-color: #FFFF;    
+                        top: 0;
+        
+                    }
+                    &::after{
+                        transform: rotate(-45deg);
+                        background-color: #FFFF;    
+                        top: 0;
+                    }
+                    background-color: transparent;
+        
+                }
             }
         }
 

@@ -1,8 +1,23 @@
 <div class="{{ c }}__mobile">
-  <div class="{{ c }}__burger-menu"></div>
+  <button class="{{ c }}__mobile__burger-menu">
+    <div id="burger-menu" class="{{ c }}__mobile__burger-menu__burger"></div>
+  </button>
 
   <div class="{{ c }}__mobile__nav-list">
     {% include 'partials/nav/navigation-list.html' %}
   </div>
 
 </div>
+
+<script>
+  let burgerMenu = document.getElementById('burger-menu');
+  let openClass = "c-navigation__mobile__burger-menu__burger--open";
+  burgerMenu.addEventListener('click', function () {
+    if(burgerMenu.classList.contains(openClass)){
+      burgerMenu.classList.remove(openClass);
+    }
+    else{
+      burgerMenu.classList.add(openClass);
+    }
+  })
+</script>
