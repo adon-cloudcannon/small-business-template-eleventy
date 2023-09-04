@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: var(--twelve-column-grid);
 
+    background: var(--feature-image-opacity);
     &__social-icons{
         display: none;
         @media screen and (min-width: 768px ) {
@@ -13,7 +14,16 @@
         
     }
     &__logo-link{
-        grid-column: 2 / 4;
+        grid-column: 2 / 5;
+
+        @media screen and (min-width: 768px ) {
+            grid-column: 2 / 4;
+        }
+
+        &__image{
+            width: 100%;
+        }
+
     }
     &__list{
         list-style-type: none;
@@ -35,7 +45,23 @@
 
     }
     &__mobile{
+        background-color: purple;
+        grid-column: 13 / 14;
+
         @media screen and (min-width: 768px ) {
+            display: none;
+        }
+
+        &__burger-menu{
+            height: 50px;
+            background-color: green;
+            grid-column: 13 / 14;
+            @media screen and (min-width: 768px ) {
+                display: none;
+            }
+        }
+
+        &__nav-list{
             display: none;
         }
 
