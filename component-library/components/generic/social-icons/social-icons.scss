@@ -1,0 +1,35 @@
+.c-social-icons {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    --dynamic-fill-color: var(--fill-color, var(--brand-grey-000));
+    --dynamic-hover-color: var(--hover-color, var(--brand-grey-000));
+
+    &__icon {
+        padding: 12px;
+        border-radius: 40px;
+        width: 20px;
+        height: 20px;
+        transition: background-color 300ms ease-out, fill 300ms ease-out;
+
+        svg, img {
+            width: 20px;
+            height: 20px;
+
+            * {
+                fill: var(--dynamic-fill-color);
+                transition: fill 300ms ease-out;
+            }
+        }
+
+        &:hover {
+            background-color: var(--dynamic-hover-color);
+
+            * {
+                fill: var(--brand-grey-900);
+            }
+        }
+    }
+}
