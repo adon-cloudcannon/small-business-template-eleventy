@@ -1,0 +1,49 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Social-icons"
+  description:
+  icon:
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  icon_hover_color: 
+  icon_fill_color: 
+  social_media_links:
+
+   
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  icon_hover_color: "#f9f9fb"
+  icon_fill_color: "#f9f9fb"
+  social_media_links:
+    - label: YouTube
+      link_url: https://www.youtube.com/
+      svg_icon: youtube
+    - label: Facebook
+      link_url: https://www.facebook.com/
+      svg_icon: facebook
+    - label: Linkedin
+      link_url: https://www.linkedin.com/
+      svg_icon: linkedin 
+    - label: X
+      link_url: https://www.twitter.com/
+      svg_icon: X
+    - label: Instagram
+      link_url: https://www.instagram.com/
+      svg_icon: instagram
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  svg_icon:
+    type: select 
+    options: 
+      values: 
+        - "youtube"
+        - "facebook"
+        - "linkedin"
+        - "X"
+        - "instagram"
