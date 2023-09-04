@@ -1,0 +1,35 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Labelled-icon"
+  description: Labelled icon
+  icon: grading
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  icon_orientation: Horizontal
+  text: Great customer service
+  icons:
+    - icon_label: hi
+      svg_icon: bookshop:generic/icon
+      icon_fill_color: red
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  icon_orientation: Stacked
+  text: Great customer service
+  icons:
+    - icon_label: hi
+      svg_icon: bookshop:generic/icon
+      icon_fill_color: red
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  icon_orientation:
+    type: select
+    options:
+      values:
+        - Horizontal
+        - Stacked

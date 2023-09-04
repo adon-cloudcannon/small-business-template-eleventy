@@ -1,0 +1,16 @@
+.c-labelled-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6875rem;
+
+    &__horizontal {
+        flex-direction: row;
+        align-self: stretch;
+    }
+
+    &__Stacked {
+        flex-direction: column;
+        width: 5rem;
+    }
+}
