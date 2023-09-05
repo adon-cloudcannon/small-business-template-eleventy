@@ -1,6 +1,13 @@
 .c-navigation{
+    $c: &;
     display: grid;
     grid-template-columns: var(--twelve-column-grid);
+    grid-template-rows: auto 1fr auto;
+    height: 100svh;
+    &__logo-link{
+        grid-column: 2 / 10;
+        max-height: 44px;}
+
 
     background: var(--feature-image-opacity);
     &__social-icons{
@@ -14,7 +21,7 @@
         
     }
     &__logo-link{
-        grid-column: 2 / 5;
+        grid-column: 2 / 10;
 
         @media screen and (min-width: 768px ) {
             grid-column: 2 / 4;
@@ -25,15 +32,15 @@
         }
 
     }
-    &__list{
+    &__navlist{
         list-style-type: none;
-        display: flex;
         padding: 0;
-
-        @media screen and (min-width: 768px ) {
-            justify-content: flex-end;
-            gap: 2rem;
-        }
+        grid-row: 2 / 3;
+        grid-column: 2 / -2;
+        // display: none;
+        justify-self: center;
+        align-self: center;
+        
 
         &__item{
 
@@ -44,14 +51,17 @@
         }
 
     }
-    &__mobile{
-        grid-column: 13 / 14;
-
-        @media screen and (min-width: 768px ) {
-            display: none;
-        }
-
-        &__burger-menu{
+    &__mobile {
+        display: grid;
+        grid-column: 1 / -1;
+    grid-template-columns: var(--twelve-column-grid);
+        
+        // @media screen and (min-width: 768px ) {
+            //     display: none;
+            // }
+            
+            &__burger-menu{
+            grid-column: 13 / 14;
             background-color: unset;
 
             display: flex;
@@ -116,20 +126,23 @@
             }
         }
 
-        &__nav-list{
-            display: none;
-        }
 
     }
+
+     &__mobile--open {
+        #{$c}__mobile__burger-menu {
+            background-color: red;
+        }
+     }
 
     &__desktop{
         display: none;
 
-        @media screen and (min-width: 768px ) {
-            display: block;
-            grid-column: 5 / 14;
+        // @media screen and (min-width: 768px ) {
+        //     display: block;
+        //     grid-column: 5 / 14;
 
-        }
+        // }
 
     }
 }

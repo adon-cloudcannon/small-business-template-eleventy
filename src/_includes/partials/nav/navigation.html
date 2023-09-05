@@ -1,19 +1,20 @@
 {% assign c = "c-navigation" %}
-<nav class="{{c}}" aria-label="Main menu">
-    <div class="{{ c }}__social-icons">
-        {% comment %}
-            TODO: social-icons go here
-        {% endcomment %}
-    </div>
-
-    <a class="{{c}}__logo-link" href="/" aria-label="Home" {% if page.url == "/" %}aria-current="page"{% endif %}>
-        {% if nav.navigation_heading %}
+<head>
+    <nav class="{{c}}" aria-label="Main menu">
+        
+        <a class="{{c}}__logo-link" href="/" aria-label="Home" {% if page.url == "/" %}aria-current="page"{% endif %}>
+            {% if nav.navigation_heading %}
             <span class="{{c}}__logo-link__text">{{ nav.navigation_heading }}</span>
-        {% else %}
+            {% else %}
             <img class="{{c}}__logo-link__image" src="{{nav.logo_image}}" alt="Site logotype" />
-        {% endif %}
-    </a>
-    
-    {% include 'partials/nav/navigation-mobile.html' %}
-    {% include 'partials/nav/navigation-desktop.html' %}
-</nav>
+            {% endif %}
+        </a>
+        
+        {% include 'partials/nav/navigation-mobile.html' %}
+        <div class="{{ c }}__social-icons">
+            {% comment %}
+            TODO: social-icons go here
+            {% endcomment %}
+        </div>
+    </nav>
+</head>

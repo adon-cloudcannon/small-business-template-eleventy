@@ -1,4 +1,4 @@
-<ul class="{{ c }}__list">
+<ul class="{{ c }}__navlist">
   {% for navitem in nav.navigation_items %}
     {% assign nav_item_with_slash = navitem.link_url | append: "/" %}
     {% if page.url == navitem.link_url or page.url == nav_item_with_slash %}
