@@ -22,7 +22,7 @@ const imageShortcode = async (src, alt, className = undefined, widths = [400, 80
     urlPath: imageUrlPath,
   });
 
-  console.log("🐄", inputPath, src, imageMetadata);
+  console.log(imageMetadata);
 
   const sourceHtmlString = Object.values(imageMetadata)
     // Map each format to the source HTML markup
