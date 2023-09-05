@@ -6,7 +6,7 @@
     gap: 0.5rem;
     width: 27.9375rem;
 
-    @media (width > 1279px){
+    @media (min-width: 1279px){
         width: var(--tablet, 48rem);
     }
 
@@ -23,15 +23,23 @@
         letter-spacing: 4px;
         text-transform: uppercase; 
 
-        @media (width > 1279px){
+        @media (min-width: 1279px){
             grid-column: 3 / -3;
+        }
+
+        &-center {
+            text-align: center;
+
+            @media (min-width: 1279px){
+                grid-column: 4 / -4;
+            }
         }
     }
 
     &--primary_heading {
         grid-column: 2 / -2;
 
-        @media (width > 1279px){
+        @media (min-width: 1279px){
             grid-column: 3 / -3;
         }
 
@@ -42,12 +50,16 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+
+        &-center {
+            text-align: center;
+
+            @media (min-width: 1279px){
+                grid-column: 4 / -4;
+            }
+        }
     }
 
-    &-center {
-        text-align: center;
-
-    }    
 
 
         
