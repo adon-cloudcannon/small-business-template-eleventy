@@ -4,9 +4,12 @@
     {%  assign big_icon = false %}
 {% endif %}
 
-<div class='{{ c }} {% if icon_orientation == 'Horizontal' %} {{ c }}__horizontal {%  elsif  %} {{ c }}__Stacked {% endif %}'>
+<div class="{{ c }} {% if icon_orientation == 'Horizontal' %} {{ c }}__horizontal {%  else  %} {{ c }}__Stacked {% endif %}">
     <div>
         {% bookshop "generic/icon" svg_icon: "solid/cpu-chip" big_icon: big_icon rounded_border: true %}
     </div>
-    <p class="{{ c }}__text">{{ text }}</p>
+    {% comment %}
+    I cant use {{c}} for the class below because the bookshop icon seems to crap out
+    {% endcomment %}
+    <p class="c-labelled-icon__text">{{ text }}</p>
 </div>
