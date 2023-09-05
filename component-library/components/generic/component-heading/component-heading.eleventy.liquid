@@ -1,10 +1,10 @@
 {% assign c="c-component-heading" %}
 
-<section class="{{ c }}">
-    <h3 class="{{ c }}--eyebrow_heading {{ c }}--eyebrow_heading-{{ text_alignment }}">
-        {{ eyebrow_headline }}
-    </h3>
+<section class="{{ c }} {{ c }}-{{ text_alignment }}">
     <h2 class="{{ c }}--primary_heading {{ c }}--primary_heading-{{ text_alignment }}">
         {{ primary_heading }}
     </h2>
+    <h3 class="{{ c }}--eyebrow_heading {{ c }}--eyebrow_heading-{{ text_alignment }}">
+        {{ eyebrow_headline }}
+    </h3>
 </section>

@@ -4,24 +4,34 @@
     display: grid;
     grid-template-columns: var(--twelve-column-grid);
     gap: 0.5rem;
-    width: 27.9375rem;
 
-    @media (min-width: 1279px){
+    &-center {
+        height: 7.875rem;
+        align-self: stretch;
+    }
+
+    @media (min-width: 768px){
         width: var(--tablet, 48rem);
+        height: 4.9375rem;
     }
 
     &--eyebrow_heading {
 
         grid-column: 2 / -2;
-
-        /* Heading/Eyebrow heading */
-        font-family: Lato;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 24px; /* 150% */
-        letter-spacing: 4px;
+        grid-row: 1;
+        font-family: var(--font-family);
+        font-size: var(--eyebrow_heading);
+        font-weight: var(--font-weight-headings);
+        line-height: var(--line-height);
+        letter-spacing: var(--letter-spacing-eyebrow);
         text-transform: uppercase; 
+        margin: 0;
+        align-self: stretch;
+
+        @media (min-width: 768px){
+            width: var(--tablet, 48rem);
+        }
+
 
         @media (min-width: 1279px){
             grid-column: 3 / -3;
@@ -38,18 +48,22 @@
 
     &--primary_heading {
         grid-column: 2 / -2;
+        grid-row: 2;
+        font-family: var(--font-family);
+        font-size: var(--large-heading);
+        font-weight: var(--font-weight-headings);
+        line-height: var(--line-height);
+        letter-spacing: var(--letter-spacing);
+        margin: 0;
+
+        @media (min-width: 768px){
+            width: var(--tablet, 48rem);
+        }
+
 
         @media (min-width: 1279px){
             grid-column: 3 / -3;
         }
-
-        font-feature-settings: 'clig' off, 'liga' off;
-        /* Heading/Large */
-        font-family: Lato;
-        font-size: 39.06px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
 
         &-center {
             text-align: center;
