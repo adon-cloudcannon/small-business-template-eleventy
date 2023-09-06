@@ -47,3 +47,7 @@ _inputs:
         - "linkedin"
         - "X"
         - "instagram"
+  icon_fill_color:
+    type: color 
+  icon_hover_color:
+    type: color
