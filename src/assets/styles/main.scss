@@ -1,13 +1,22 @@
+@import "reset.css";
 @import 'variables.scss';
 
-html,
 body {
+  display: grid;
+  grid-template-columns: var(--twelve-column-grid);
+
   h1,
   h2,
   h3,
   h4 {
     font-family: var(--heading-font);
   }
+}
+
+nav,
+footer,
+main {
+  grid-column: 1 / -1;
 }
 
 // Default styles applied to all components
