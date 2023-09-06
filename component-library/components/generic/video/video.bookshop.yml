@@ -11,11 +11,17 @@ spec:
 blueprint:
   video_source:
   video_url:
+  image:
+    src: 
+    alt: 
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   video_source: "YouTube"
   video_url: https://www.youtube.com/watch?v=LeqKIzeZel4
+  image: 
+    src: https://placekitten.com/1000
+    alt: "A placeholder image"
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
@@ -25,3 +31,8 @@ _inputs:
       values:
         - "YouTube"
         - "Vimeo"
+  video_url: 
+    type: url 
+  src: 
+    type: image 
+    alt: text
