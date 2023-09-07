@@ -12,12 +12,14 @@ blueprint:
   svg_icon:
   big_icon: true
   rounded_border: false
+  icon_fill_color: white
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   svg_icon: solid/academic-cap
   big_icon: true
   rounded_border: false
+  icon_fill_color: black
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
