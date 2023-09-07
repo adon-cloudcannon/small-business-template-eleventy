@@ -1,1 +1,12 @@
-@import 'variables.scss';
+@import "reset.css";
+@import "variables.scss";
+
+body {
+  display: grid;
+  grid-template-columns: var(--twelve-column-grid);
+}
+nav,
+footer,
+main {
+  grid-column: 1 / -1;
+}
