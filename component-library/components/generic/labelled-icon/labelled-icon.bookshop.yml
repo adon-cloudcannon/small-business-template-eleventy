@@ -12,18 +12,14 @@ blueprint:
   icon_orientation: Horizontal
   text: Great customer service
   icons:
-    - icon_label: hi
-      svg_icon: bookshop:generic/icon
-      icon_fill_color: red
+    - svg_icon: bookshop:generic/icon
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   icon_orientation: Stacked
   text: Great customer service
   icons:
-    - icon_label: hi
-      svg_icon: bookshop:generic/icon
-      icon_fill_color: red
+    - svg_icon: bookshop:generic/icon
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:

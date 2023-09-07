@@ -6,11 +6,7 @@
 
 <div class="{{ c }} {% if icon_orientation == 'Horizontal' %} {{ c }}__horizontal {%  else  %} {{ c }}__Stacked {% endif %}">
     <div>
-        {% bookshop "generic/icon" svg_icon: "solid/cpu-chip" big_icon: big_icon rounded_border: true %}
+        {% bookshop "generic/icon" svg_icon: "solid/cpu-chip" big_icon: big_icon rounded_border: true icon_fill_color: "black" %}
     </div>
     <p class="c-labelled-icon__text">{{ text }}</p>
-    {% comment %}
-    Need to ask about the color change
-    dev note! use a if to show text about the sitution ; copy from bookshop
-    {% endcomment %}
 </div>
