@@ -8,8 +8,9 @@
     <div>
         {% bookshop "generic/icon" svg_icon: "solid/cpu-chip" big_icon: big_icon rounded_border: true %}
     </div>
-    {% comment %}
-    I cant use {{c}} for the class below because the bookshop icon seems to crap out
-    {% endcomment %}
     <p class="c-labelled-icon__text">{{ text }}</p>
+    {% comment %}
+    Need to ask about the color change
+    dev note! use a if to show text about the sitution ; copy from bookshop
+    {% endcomment %}
 </div>
