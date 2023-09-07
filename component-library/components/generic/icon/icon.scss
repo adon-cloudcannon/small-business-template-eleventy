@@ -3,16 +3,19 @@
 
     &__round {
         border-radius: 50%;
-        border-color: var(--neutral-000, #FFF);
+        border-color: var(--brand-grey-000, #FFF);
     }
-    
+
+    &:not(.c-icon__round) {
+        border-color: transparent;
+    }
+
     &__big {
         width: 2.32044rem;
         height: 2.32044rem;
         padding: 1rem;
         border-style: solid;
         border-width: 1px;
-        border-color: transparent;
     }
 
     &__small {
@@ -21,7 +24,6 @@
         padding: 0.46294rem;
         border-style: solid;
         border-width: 0.463px;
-        border-color: transparent;
     }
 
     &__svg {
