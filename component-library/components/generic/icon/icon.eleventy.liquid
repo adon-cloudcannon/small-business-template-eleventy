@@ -2,6 +2,11 @@
 
 <div class="{{ c }} {%if big_icon %}{{c}}__big{% else %}{{c}}__small{% endif %} {% if rounded_border %}{{c}}__round{% endif %}" style="--icon-color: {{icon_fill_color}}">
     {% if env_bookshop_live %}
+        {%  comment  %}
+            Because we use image for bookshop instead of SVG, the custom color don't apply to the icon.
+            TODO: make a better dev note component corresponding to this situation.
+        {% endcomment %}
+        {% if icon_fill_color != 'black' %}Sorry, you can't change color in bookshop{% endif %}
         <img class="c-icon__svg" src="/assets/images/icons/{{svg_icon}}.svg" alt="{{svg_icon}}">
     {% else %}
         {{ '/src/assets/images/icons/' | append: svg_icon  | append: '.svg'  | svgContents: "c-icon__svg" }}
