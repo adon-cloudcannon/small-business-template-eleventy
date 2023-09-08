@@ -39,6 +39,11 @@
                 text-decoration: none;
                 color: var(--brand-grey-200, #E9E9EC);
                 white-space: nowrap;
+
+                &:hover, &:active {
+                    text-decoration: underline;
+                    color: var(--brand-grey-000, #F9F9FB);
+                }
             }
         }
 
