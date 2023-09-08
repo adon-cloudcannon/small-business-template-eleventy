@@ -9,17 +9,17 @@
     &__logo-link {
         grid-column: 2 / 10;
         max-height: 44px;
+        &__image {
+            height: 44px;
+            width: auto;
+        }
     }
-
 
     &__social-icons {
         grid-column: 2 / 14;
         background-color: purple;
         height: 30px;
-    }
-
-    &__logo-link {
-        grid-column: 2 / 10;
+        display: none;
     }
 
     &__navlist {
@@ -27,17 +27,14 @@
         padding: 0;
         grid-row: 2 / 3;
         grid-column: 2 / -2;
-        // display: none;
         justify-self: center;
         align-self: center;
-
+        display: none;
 
         &__item {
-
             &__link {
                 text-decoration: none;
             }
-
         }
 
     }
@@ -52,6 +49,8 @@
         position: relative;
         height: 36px;
         width: 30px;
+        align-self: center;
+        justify-self: end;
 
         &:hover {
             cursor: pointer;
@@ -96,6 +95,7 @@
         }
     }
 
+    // Mobile menu open state
     &--open {
         #{$c}__burger-menu {
             &__burger {
@@ -115,6 +115,44 @@
                 background-color: transparent;
             }
         }
+
+        #{$c}__social-icons {
+            display: block;
+        }
+
+        #{$c}__navlist {
+            display: block;
+        }
+    }
+
+    // Desktop styles
+    @media screen and (min-width: 768px ) {
+        height: auto;
+
+        &__social-icons {
+            display: block;
+            grid-row: 1 / 2;
+        }
+
+        &__logo-link {
+            grid-row: 2 / 3;
+            grid-column: 2 / 5;
+        }
+        
+        &__navlist {
+            display: block;
+            grid-row: 2 / 3;
+            grid-column: 5 / -2;
+            height: auto;
+            display: flex;
+            gap: 0.625rem;
+            justify-self: end;
+        }
+
+        &__burger-menu {
+            display: none;
+        }
+
     }
 
 }
