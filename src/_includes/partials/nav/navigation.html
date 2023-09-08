@@ -1,16 +1,35 @@
 {% assign c = "c-navigation" %}
+
 <head>
-    <nav class="{{c}}" aria-label="Main menu">
-        
-        <a class="{{c}}__logo-link" href="/" aria-label="Home" {% if page.url == "/" %}aria-current="page"{% endif %}>
+    <nav class="{{c}}" aria-label="Main menu" id="main-menu">
+
+        <a class="{{c}}__logo-link" href="/" aria-label="Home" {% if page.url=="/" %}aria-current="page" {% endif %}>
             {% if nav.navigation_heading %}
-            <span class="{{c}}__logo-link__text">{{ nav.navigation_heading }}</span>
+                <span class="{{c}}__logo-link__text">{{ nav.navigation_heading }}</span>
             {% else %}
-            <img class="{{c}}__logo-link__image" src="{{nav.logo_image}}" alt="Site logotype" />
+                <img class="{{c}}__logo-link__image" src="{{nav.logo_image}}" alt="Site logotype" />
             {% endif %}
         </a>
-        
-        {% include 'partials/nav/navigation-mobile.html' %}
+
+        <button class="{{ c }}__burger-menu" onclick="swapOpenState()">
+            <div class="{{ c }}__burger-menu__burger"></div>
+        </button>
+
+        <ul class="{{ c }}__navlist">
+            {% for navitem in nav.navigation_items %}
+                {% assign nav_item_with_slash = navitem.link_url | append: "/" %}
+                {% if page.url == navitem.link_url or page.url == nav_item_with_slash %}
+                    <li class="{{ c }}__list__item {{ c }}__item--active" aria-current="page">
+                        <a class="{{ c }}__list__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+                    </li>
+                {% else %}
+                    <li class="{{ c }}__list__item">
+                        <a class="{{ c }}__list__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
         <div class="{{ c }}__social-icons">
             {% comment %}
             TODO: social-icons go here
@@ -18,3 +37,17 @@
         </div>
     </nav>
 </head>
+
+<script>
+    function swapOpenState() {
+        const nav = document.getElementById('main-menu');
+        const openClass = "c-navigation--open";
+        console.log(nav);
+        if (nav.classList.contains(openClass)) {
+            nav.classList.remove(openClass);
+        }
+        else {
+            nav.classList.add(openClass);
+        }
+    } 
+</script>
