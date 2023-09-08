@@ -19,12 +19,12 @@
             {% for navitem in nav.navigation_items %}
                 {% assign nav_item_with_slash = navitem.link_url | append: "/" %}
                 {% if page.url == navitem.link_url or page.url == nav_item_with_slash %}
-                    <li class="{{ c }}__list__item {{ c }}__item--active" aria-current="page">
-                        <a class="{{ c }}__list__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+                    <li class="{{ c }}__navlist__item {{ c }}__item--active" aria-current="page">
+                        <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
                     </li>
                 {% else %}
-                    <li class="{{ c }}__list__item">
-                        <a class="{{ c }}__list__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+                    <li class="{{ c }}__navlist__item">
+                        <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
                     </li>
                 {% endif %}
             {% endfor %}
@@ -42,7 +42,6 @@
     function swapOpenState() {
         const nav = document.getElementById('main-menu');
         const openClass = "c-navigation--open";
-        console.log(nav);
         if (nav.classList.contains(openClass)) {
             nav.classList.remove(openClass);
         }
