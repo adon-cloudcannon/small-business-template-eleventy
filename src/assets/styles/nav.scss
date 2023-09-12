@@ -2,16 +2,18 @@
     $c: &;
     display: grid;
     grid-template-columns: var(--twelve-column-grid);
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 60px 1fr auto;
     height: 100svh;
     background: var(--feature-image-opacity);
+    --nav-padding: 8px;
 
     &__logo-link {
-        grid-column: 2 / 10;
-        max-height: 44px;
+        grid-column: 2 / -3;
         &__image {
-            height: 44px;
+            height: 100%;
             width: auto;
+            padding-top: var(--nav-padding);
+            padding-bottom: var(--nav-padding); 
         }
     }
 
@@ -138,6 +140,7 @@
     // Desktop styles
     @media screen and (min-width: 768px ) {
         height: auto;
+        grid-template-rows: 1fr 60px auto;
 
         &__social-icons {
             display: block;
