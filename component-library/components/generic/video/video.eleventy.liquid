@@ -22,7 +22,7 @@
 {% else %}
   <div class="{{ c }}__video-aspect-wrapper">
     <div class="{{ c }}__video">
-      <img class="{{ c }}__default-image" src="{{ image.src }}" alt="{{ image.alt }}">
+      <img class="{{ c }}__default-image" src="{{ fallback_image.image_src }}" alt="{{ fallback_image.alt_description }}">
     </div>
   </div>
 {% endif %}
