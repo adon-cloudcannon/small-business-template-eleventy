@@ -9,16 +9,16 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  icon_hover_color: 
-  icon_fill_color: 
   social_media_links:
+  style:
+    icon_hover_color: "#f9f9fb"
+    icon_fill_color: "#f9f9fb"
+    icon_fill_color_hover: "#000"
 
    
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  icon_hover_color: "#f9f9fb"
-  icon_fill_color: "#f9f9fb"
   social_media_links:
     - label: YouTube
       link_url: https://www.youtube.com/
@@ -35,6 +35,10 @@ preview:
     - label: Instagram
       link_url: https://www.instagram.com/
       svg_icon: instagram
+  style:
+    icon_hover_color: "pink"
+    icon_fill_color: "#f9f9fb"
+    icon_fill_color_hover: "#000"
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:

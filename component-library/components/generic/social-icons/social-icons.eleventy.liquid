@@ -1,6 +1,10 @@
 {% assign c = "c-social-icons" %}
 
-<div class="{{ c }}" style="--hover-color: {{ icon_hover_color }}; --fill-color: {{ icon_fill_color }};">
+{% if env_bookshop_live %}
+  <p>Does not render correctly in the bookshop browser</p>
+{% endif %}
+
+<div class="{{ c }}" style="--hover-color: {{ style.icon_hover_color }}; --fill-color: {{ style.icon_fill_color }}; --fill-color-hover: {{ style.icon_fill_color_hover }};">
 
     {% for item in social_media_links %}
       {% if env_bookshop_live %}
