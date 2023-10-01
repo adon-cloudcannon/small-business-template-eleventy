@@ -1,6 +1,6 @@
 {% assign c = "c-icon" %}
 
-<div class="{{ c }} {%if big_icon %}{{c}}__big{% else %}{{c}}__small{% endif %} {% if rounded_border %}{{c}}__round{% endif %}" style="--icon-color: {{icon_fill_color}}">
+<div class="{{ c }} {{ c }}--{{ icon_size }} {% if rounded_border %}{{c}}__round{% endif %}" style="--icon-color: {{icon_color}}">
     {% if env_bookshop_live %}
         {%  comment  %}
             Because we use image for bookshop instead of SVG, the custom color don't apply to the icon.

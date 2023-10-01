@@ -9,19 +9,24 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   svg_icon:
-  big_icon: true
+  icon_size: small
   rounded_border: false
-  icon_fill_color: white
+  icon_color: white
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   svg_icon: solid/academic-cap
-  big_icon: true
   rounded_border: false
-  icon_fill_color: black
+  icon_color: black
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  icon_size:
+    type: choice
+    options:
+      values:
+        - small
+        - large
   svg_icon:
     comment: Visit https://heroicons.com/ to see the full library
     type: select
