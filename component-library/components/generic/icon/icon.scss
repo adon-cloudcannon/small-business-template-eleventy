@@ -1,12 +1,12 @@
 .c-icon {
     --icon-color: white;
 
-    &__round {
+    &--round {
         border-radius: 50%;
         border-color: var(--brand-grey-000, #FFF);
     }
 
-    &:not(.c-icon__round) {
+    &:not(.c-icon--round) {
         border-color: transparent;
     }
 
