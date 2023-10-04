@@ -11,16 +11,18 @@ blueprint:
   svg_icon:
   icon_size: small
   rounded_border: false
-  icon_color: white
+  color: white
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   svg_icon: solid/academic-cap
   rounded_border: false
-  icon_color: black
+  color: black
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  color:
+    comment: This controls the icon color and the rounded border color (if one is included)
   icon_size:
     type: choice
     options:
