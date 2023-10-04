@@ -2,7 +2,7 @@
 
 {% assign icon_style = svg_icon | split: '/' | first %}
 
-<div class="{{ c }} {{ c }}--{{ icon_size }} {% if rounded_border %}{{c}}--round{% endif %}" style="--c-icon-color: {{ color }}">
+<div class="{{ c }} {{ c }}--{{ icon_size }} {{ c }}--{{ icon_style }} {% if rounded_border %}{{c}}--round{% endif %}" style="--c-icon-color: {{ color }}">
     {% if env_bookshop_live %}
         <div class="{{ c }}__image" style="--url: url('/assets/images/icons/{{svg_icon}}.svg')"></div>
     {% else %}
