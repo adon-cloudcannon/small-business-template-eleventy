@@ -9,16 +9,13 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  svg_icon:
+  svg_icon: solid/academic-cap
   icon_size: small
   rounded_border: false
-  color: white
+  color: '#f9f9fb'
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  svg_icon: solid/academic-cap
-  rounded_border: false
-  color: black
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
