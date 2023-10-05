@@ -1,3 +1,4 @@
 npm i
 
+npm run sass:build
 npm run bookshop-sass:build
