@@ -3,7 +3,7 @@
     "light_background_variant": "#3b3b3d",
     "dark_background_variant": "#1b1b1d",
     "heading_font": "Lato",
-    "content_font": "Lato"
+    "content_font": "Birthstone Bounce"
   },
   "_inputs": {
     "light_background_variant": {
@@ -11,6 +11,46 @@
     },
     "dark_background_variant": {
       "type": "color"
+    },
+    "heading_font": {
+      "type": "select",
+      "comment": "Write the name of any font from https://fonts.google.com/ here to use that font for headings on your site, or select from one of the predefined options",
+      "allow_create": true,
+      "options": {
+        "values": [
+          "Lato",
+          "Birthstone Bounce",
+          "Roboto",
+          "Open Sans",
+          "Playfair Display",
+          "Alegreya",
+          "Montserrat",
+          "Poppins",
+          "Oswald",
+          "Raleway",
+          "Futura"
+        ]
+      }
+    },
+    "content_font": {
+      "type": "select",
+      "comment": "Write the name of any font from https://fonts.google.com/ here to use that font for content on your site, or select from one of the predefined options",
+      "allow_create": true,
+      "options": {
+        "values": [
+          "Lato",
+          "Birthstone Bounce",
+          "Roboto",
+          "Open Sans",
+          "Playfair Display",
+          "Alegreya",
+          "Montserrat",
+          "Poppins",
+          "Oswald",
+          "Raleway",
+          "Futura"
+        ]
+      }
     }
   }
 }

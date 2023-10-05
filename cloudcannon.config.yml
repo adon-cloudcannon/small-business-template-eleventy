@@ -45,6 +45,4 @@ _structures:
         tags: []
         _inputs: {}
 _editables: {}
-data_config:
-  fonts: true
 timezone: Etc/UTC
