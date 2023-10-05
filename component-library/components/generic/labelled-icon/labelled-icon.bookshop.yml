@@ -11,7 +11,7 @@ spec:
 blueprint:
   layout: inline
   text: 
-  icon: bookshop:generic/icon
+  icon: bookshop:generic/icon!
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
