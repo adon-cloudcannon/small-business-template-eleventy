@@ -1,7 +1,7 @@
 {% assign google_fonts = '' | split: '' %}
 {% assign google_fonts = google_fonts | push: "Lato" %}
 
-{% for font in fonts %}
+{% for font in fonts.fonts %}
   {% assign google_fonts = google_fonts | push: font %}
 {% endfor %}
 
