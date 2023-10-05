@@ -4,12 +4,12 @@
     align-items: center;
     gap: 0.6875rem;
 
-    &__horizontal {
+    &--inline {
         flex-direction: row;
         align-self: stretch;
     }
 
-    &__Stacked {
+    &--stacked {
         flex-direction: column;
         width: 5rem;
     }

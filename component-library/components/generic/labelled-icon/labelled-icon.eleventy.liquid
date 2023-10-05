@@ -1,6 +1,6 @@
 {%  assign c = 'c-labelled-icon' %}
 
-<div class="{{ c }} {% if icon_orientation == 'Horizontal' %} {{ c }}__horizontal {%  else  %} {{ c }}__Stacked {% endif %}">
+<div class="{{ c }} {{ c }}--{{ layout }}">
     {% bookshop "generic/icon" bind:icon %}
-    <p class="c-labelled-icon__text">{{ text }}</p>
+    <p class="{{ c }}__text">{{ text }}</p>
 </div>
