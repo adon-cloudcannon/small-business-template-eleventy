@@ -30,6 +30,8 @@ _inputs:
     hidden: true
   draft:
     type: switch
+  value:
+    comment: Write the name of any font from https://fonts.google.com/ to allow it to be selected in data/site for the site fonts
 _select_data: {}
 _structures:
   content_blocks:
