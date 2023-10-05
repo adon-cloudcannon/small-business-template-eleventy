@@ -1,2 +1,6 @@
 - Lato
 - Birthstone Bounce
+
+_inputs:
+  value:
+    comment: Write the name of any font from https://fonts.google.com/ to allow it to be selected in data/site for the site fonts
