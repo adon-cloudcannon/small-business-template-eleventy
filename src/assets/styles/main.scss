@@ -4,7 +4,7 @@
 body {
   display: grid;
   grid-template-columns: var(--twelve-column-grid);
-  font-family: var(--content-font);
+  font-family: var(--content-font), Lato, sans-serif;
 
   h1,
   h2,
@@ -12,7 +12,7 @@ body {
   h4,
   h5,
   h6 {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font), Lato, serif;
   }
 }
 
