@@ -1,12 +1,6 @@
 {%  assign c = 'c-labelled-icon' %}
-{%  assign big_icon = true %}
-{% if icon_orientation == 'Horizontal' %}
-    {%  assign big_icon = false %}
-{% endif %}
 
 <div class="{{ c }} {% if icon_orientation == 'Horizontal' %} {{ c }}__horizontal {%  else  %} {{ c }}__Stacked {% endif %}">
-    <div>
-        {% bookshop "generic/icon" svg_icon: "solid/cpu-chip" big_icon: big_icon rounded_border: true icon_fill_color: "black" %}
-    </div>
+    {% bookshop "generic/icon" bind:icon %}
     <p class="c-labelled-icon__text">{{ text }}</p>
 </div>

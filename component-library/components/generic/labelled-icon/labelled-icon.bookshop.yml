@@ -10,16 +10,12 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   icon_orientation: Horizontal
-  text: Great customer service
-  icons:
-    - svg_icon: bookshop:generic/icon
+  text: 
+  icon: bookshop:generic/icon
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  icon_orientation: Stacked
   text: Great customer service
-  icons:
-    - svg_icon: bookshop:generic/icon
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
