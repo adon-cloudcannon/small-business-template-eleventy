@@ -1,17 +1,2 @@
 // Files in shared/styles will be used as global stylesheets on your site,
 // as well as in the component browser and screenshots.
-
-html, body {
-    
-}
-
-// Default styles applied to all components
-// Component-specific styles are defined within their component directory
-.component {
-	padding: 96px 124px;
-	background-color: var(--light-background-variant);
-
-	&--dark {
-		background-color: var(--dark-background-variant);
-	}
-}
