@@ -41,12 +41,16 @@
 <script> //TODO: move to bundle
     function swapOpenState() {
         const nav = document.getElementById('main-menu');
+        const body = document.getElementsByTagName('body')[0];
         const openClass = "c-navigation--open";
+        const noScrollClass = 'body--no-scroll'
         if (nav.classList.contains(openClass)) {
             nav.classList.remove(openClass);
+            body.classList.remove(noScrollClass);
         }
         else {
             nav.classList.add(openClass);
+            body.classList.add(noScrollClass);
         }
     } 
 </script>

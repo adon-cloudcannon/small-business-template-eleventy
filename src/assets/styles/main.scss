@@ -6,6 +6,10 @@
 body{
     display: grid;
     grid-template-columns: var(--twelve-column-grid);
+
+    &--no-scroll {
+
+    }
     
     nav, main, footer{
         grid-column: 1/ -1;
