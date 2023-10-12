@@ -1,5 +1,6 @@
 .c-icon {
     border: none;
+    flex-shrink: 0;
     
     &--round {
         border-radius: 50%;
