@@ -1,23 +1,21 @@
 {% assign c = "c-video" %}
-{% if video_url %}
-  {% if video_source == "Vimeo" %}
-    {% assign url = video_url | remove: 'https://vimeo.com/' %}
-    <div class="{{ c }}__video-aspect-wrapper">
-      <div class="{{ c }}__video">
-        <iframe class="{{ c }}__vimeo" src="https://player.vimeo.com/video/{{ url }}" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </div>
-    </div>
-  {% elsif video_source == "YouTube" %}
-    {% if video_url contains 'youtu.be' %}
-      {% assign url = video_url | replace: 'https://youtu.be/', 'https://www.youtube.com/embed/' %}
-    {% else %}
-      {% assign url = video_url | replace: 'watch?v=', 'embed/' | replace: 'watch?time_continue=1&v=', 'embed/' | remove: '&feature=emb_logo' | remove: '&feature=youtu.be' %}
+<div class="{{ c }}__video-aspect-wrapper">
+  <div class="{{ c }}__video">
+    <img class="{{ c }}__default-image" src="{{ fallback_image.image_src }}" alt="{{ fallback_image.alt_description }}">
+
+    {% if video_url %}
+      {% if video_source == "Vimeo" %}
+        {% assign url = video_url | remove: 'https://vimeo.com/' %}
+            <iframe class="{{ c }}__vimeo" src="https://player.vimeo.com/video/{{ url }}" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      {% elsif video_source == "YouTube" %}
+        {% if video_url contains 'youtu.be' %}
+          {% assign url = video_url | replace: 'https://youtu.be/', 'https://www.youtube.com/embed/' %}
+        {% else %}
+          {% assign url = video_url | replace: 'watch?v=', 'embed/' | replace: 'watch?time_continue=1&v=', 'embed/' | remove: '&feature=emb_logo' | remove: '&feature=youtu.be' %}
+        {% endif %}
+            <iframe class="{{ c }}__youtube" src="{{ url }}" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      {% endif %}
     {% endif %}
-    <div class="{{ c }}__video-aspect-wrapper">
-      <div class="{{ c }}__video">
-        <img class="{{ c }}__default-image" src="{{ fallback_image.image_src }}" alt="{{ fallback_image.alt_description }}">
-        <iframe class="{{ c }}__youtube" src="{{ url }}" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
+
     </div>
-  {% endif %}
-{% endif %}
+</div>
