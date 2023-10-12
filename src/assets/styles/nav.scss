@@ -43,13 +43,13 @@
                 white-space: nowrap;
 
                 &:hover, &:active {
-                    text-decoration: underline;
+                    border-bottom: 1px solid var(--brand-grey-000, #F9F9FB);
                     color: var(--brand-grey-000, #F9F9FB);
                 }
             }
             &--active {
                 #{$c}__navlist__item__link {
-                    text-decoration: underline;
+                    border-bottom: 1px solid var(--brand-grey-000, #F9F9FB);
                     color: var(--brand-grey-000, #F9F9FB);
                 }
             }
