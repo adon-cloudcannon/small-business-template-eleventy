@@ -44,30 +44,6 @@ _structures:
         icon:
         tags: []
         _inputs: {}
-_editables:
-  content:
-    bold: true
-    format: p h1 h2 h3 h4 
-    italic: true
-    strike: true
-    subscript: true
-    superscript: true
-    underline: true
-    link: true
-    bulletedlist: true
-    indent: true
-    numberedlist: true
-    outdent: true
-    code: false
-    embed: true 
-    horizontalrule: true
-    image: true
-    table: false
-    undo: true
-    redo: true
-    removeformat: true
-    copyformatting: true
-    snippet: false
 
 data_config: {}
 timezone: Etc/UTC
