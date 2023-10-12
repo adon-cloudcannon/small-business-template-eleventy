@@ -1,9 +1,7 @@
 {% assign google_fonts = '' | split: '' %}
 {% assign google_fonts = google_fonts | push: "Lato" %}
-
-{% for font in fonts.fonts %}
-  {% assign google_fonts = google_fonts | push: font %}
-{% endfor %}
+{% assign google_fonts = google_fonts | push: site.styles.heading_font %}
+{% assign google_fonts = google_fonts | push: site.styles.content_font %}
 
 {% assign google_fonts = google_fonts | uniq %}
 {% assign count = 0 %}
