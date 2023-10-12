@@ -1,8 +1,5 @@
 .c-component-heading {
-  color: var(--brand-grey-000, #f9f9fb);
-  background: var(--brand-grey-900, #1b1b1d);
   display: grid;
-  grid-template-columns: var(--twelve-column-grid);
   gap: 0.5rem;
 
   &--center {
