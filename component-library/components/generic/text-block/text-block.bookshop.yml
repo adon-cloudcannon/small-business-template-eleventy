@@ -3,7 +3,7 @@ spec:
   structures:
     - content_blocks
   label: "Text block"
-  description: A block of rich text (text, headings, links etc)
+  description: A block of content (text, headings, links etc)
   icon: edit_note
   tags: []
 
@@ -14,47 +14,98 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   text: >-
-    Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task that required a keen eye for typography and a lot of complex custom CSS.
+    ## Una at murmure altera retinebat tu quem
 
-    By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you&nbsp;*really are*&nbsp;just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive.
+    Lorem **markdownum factum arborei** victus patruus. Apolline sanguis ~~qua sternit~~
+    artes. Enim nec marmora atrox causa tum, labor colentibus metum ad linguae.
+    Tanto spatiantia iactatis, exiguas Lapithaeae aditu
+    [Phoebique](http://ponto.com/heros.html) modo ibat pectoribus Phegiaco
+    mortisque, semel minus?
 
-    We get lots of complaints about it actually, with people regularly asking us things like:
+    Sua ducit Ino, sensurus, hoc ortus sanguine: erat. Ore aratri ut membra illis,
+    **Cerealia dextra velle** piscem ossa ab fieri sed; siquid, non. Quae summoque.
 
-    > Why is Tailwind removing the default styles on my h1 elements? How do I disable this? What do you mean I lose all the other base styles too?
+    ### Inposito omnia vulgasse Talia in nemora
 
-    We hear you, but we're not convinced that simply disabling our base styles is what you really want. You don't want to have to remove annoying margins every time you use a p&nbsp;element in a piece of your dashboard UI. And I doubt you really want your blog posts to use the user-agent styles either — you want them to look&nbsp;*awesome*, not awful.
+    Amphiona sidera fecit quid **haurite**: desierant facies per nato nam ibat primo
+    Cephalus silvis. Non obliquo pugnax exspectare At viros celeberrima hosti, qui
+    hoc, ignibus cinctum acumine? Gaudia in *conversa* cum equosque modo superbus
+    lepori ille tellus nubibus!
 
-    The @tailwindcss/typography plugin is our attempt to give you what you&nbsp;*actually*&nbsp;want, without any of the downsides of doing something stupid like disabling our base styles.
+    [Et fretumque crimen](http://turbantcapillo.com/) et meo ignesque remotam
+    nulli, et ubi procul astris tumulos alimentaque post dryadas! Animal possit
+    deficit vestro: *neci carina* veniet agnovique popularis, Amphissos, quem
+    oculis Hebre auro.<sub>1</sub>
 
-    It adds a new prose class that you can slap on any block of vanilla HTML content and turn it into a beautiful, well-formatted document:
+    * Coniugis genibus o meosque silvas
 
-    &lt;article class="prose"&gt; &lt;h1&gt;Garlic bread with cheese: What the science tells us&lt;/h1&gt; &lt;p&gt; For years parents have espoused the health benefits of eating garlic bread with cheese to their children, with the food earning such an iconic status in our culture that kids will often dress up as warm, cheesy loaf for Halloween. &lt;/p&gt; &lt;p&gt; But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases springing up around the country. &lt;/p&gt; &lt;!-- ... --&gt; &lt;/article&gt;
+    * Sacros imagine dimittit
 
-    For more information about how to use the plugin and the features it includes,&nbsp;[read the documentation](https://github.com/tailwindcss/typography/blob/master/README.md).
+    * Aeolidae ego positis virgineas potuit levem possit
 
-    ## What to expect from here on out
+    * Saxa adsiduoque petiere iubar Actorides augent
 
-    What follows from here is just a bunch of absolute nonsense I've written to dogfood the plugin itself. It includes every sensible typographic element I could think of, like&nbsp;**bold text**, unordered lists, ordered lists, code blocks, block quotes,&nbsp;*and even italics*.
+    * Phoebi adsiduae decipit posuere
 
-    It's important to cover all of these use cases for a few reasons:
 
-    1. We want everything to look good out of the box.
-    2. Really just the first reason, that's the whole point of the plugin.
-    3. Here's a third pretend reason though a list with three items looks more realistic than a list with two items.
+    #### Non matrem rabies unus
 
-    Now we're going to try out another header style.
+    1. Eras Phasias et venias nubila umeros deos
 
-    ### Typography should be easy
+    2. Questus mediam inopem
 
-    So that's a header for you — with any luck if we've done our job correctly that will look pretty reasonable.
+    3. Dum canor Phrygum candor per cum vocant
 
-    Something a wise person once told me about typography is:
+    Loqui et minus flammas iubet humana cum longi fecundus sonant carmen in has?
+    Horrida circumque roganti ignavi Attis gemitum poma spumisque nam lacus orbe, at
+    quaque Mavortis et corpus sine fallax. Atque nec victore festo nidis
+    Telamoniades montis. O sed, quod nymphae iunctas, hunc pavet, si officium
+    stimulosque in contra confessasque rubescere mercede Cephisos. Lactens saltu,
+    pellor *Eumenides repetita* genialiter motu putatur.<sup>2</sup>
 
-    > Typography is pretty important if you don't want your stuff to look like trash. Make it good then it won't be bad.
+    Draconem in parva auras ait genitoris quid, per sed commisi vultu **qui** e
+    egressa ulvis. Sit secretos latus, ore nostri verbaque ore amicis fuerit. Aevum
+    longumque visa *texit lupi aliquid* numeri quoque, ense signum foret paucaque
+    exhalari, precantibus iacebat onerique sed.
 
-    It's probably important that images look okay here by default as well:
+    ##### Dum Thisbaeas tardius alite virentes Thybridis radiosque
+
+    Frigoris dixit habet Capitolia animam; frater *merito*, et vate conspecta.
+    Comitata deserit clauduntur quid natamque Saturnus robore bimatrem amore quam
+    sinu vigili mutati quaerit frui, [curva](http://fibras.net/torsit-cavas.html).
+
+    Meruit membra suoque Iam nam statuunt venenis gramine? Pater iacuit celebrare
+    velit Ismenis mandasset ventis sustinuit decepto! In [recepto tumentemaris](http://meamedio.com/)
+    sumere foedus Circaea?
+
+    *Et matres nil* capiti rebus, nec remisit, tempora sed. Aliquid alis nulla
+    patulos ille eadem lignum silices videt. *Quod genus accipe* atque sit *Lacinia
+    quaerenti* propiusque oculos cursu, aliter sterilique causa usus, quibus! <u>Secus
+    aut, quis, puppimque is corpus moenia Cythereius erit, fluminea?</u>
           
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   text:
     type: markdown
+    options:
+      blockquote: false
+      bold: true
+      format: p h3 h4 h5 h6
+      italic: true
+      strike: true
+      subscript: true
+      superscript: true
+      underline: true
+      bulletedlist: true
+      indent: true
+      numberedlist: true
+      outdent: true
+      code: false
+      embed: false
+      horizontalrule: false
+      image: false
+      table: false
+      undo: true
+      redo: true
+      removeformat: true
+      copyformatting: true
