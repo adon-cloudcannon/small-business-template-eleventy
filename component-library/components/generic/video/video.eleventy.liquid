@@ -15,14 +15,9 @@
     {% endif %}
     <div class="{{ c }}__video-aspect-wrapper">
       <div class="{{ c }}__video">
+        <img class="{{ c }}__default-image" src="{{ fallback_image.image_src }}" alt="{{ fallback_image.alt_description }}">
         <iframe class="{{ c }}__youtube" src="{{ url }}" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
   {% endif %}
-{% else %}
-  <div class="{{ c }}__video-aspect-wrapper">
-    <div class="{{ c }}__video">
-      <img class="{{ c }}__default-image" src="{{ fallback_image.image_src }}" alt="{{ fallback_image.alt_description }}">
-    </div>
-  </div>
 {% endif %}
