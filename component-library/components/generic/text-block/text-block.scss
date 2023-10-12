@@ -1,3 +1,8 @@
 .c-text-block {
+    display: grid;
+    gap: 1rem;
 
+    a {
+        color: inherit;
+    }
 }
