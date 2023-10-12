@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: "Rich Text Editor"
-  description:
+  label: "Text block"
+  description: A block of rich text (text, headings, links etc)
   icon: edit_note
   tags: []
 
