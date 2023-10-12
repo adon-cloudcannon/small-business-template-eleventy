@@ -12,16 +12,16 @@ blueprint:
   video_source:
   video_url:
   fallback_image:
-    image_src: 
-    alt_description: 
+    image_path: 
+    image_alt: 
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   video_source: "YouTube"
   video_url: https://www.youtube.com/watch?v=LeqKIzeZel4
   fallback_image: 
-    image_src: https://placekitten.com/1000
-    alt_description: "A placeholder image"
+    image_path: https://placekitten.com/1000
+    image_alt: "A placeholder image"
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
@@ -33,6 +33,7 @@ _inputs:
         - "Vimeo"
   video_url: 
     type: url 
-  image_src: 
-    type: image 
-    alt_description: text
+  image_path: 
+    type: image
+  fallback_image:
+    comment: This is used while the video is loading/if the video fails to load
