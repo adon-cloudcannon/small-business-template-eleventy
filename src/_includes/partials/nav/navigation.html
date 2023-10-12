@@ -19,7 +19,7 @@
             {% for navitem in nav.navigation_items %}
                 {% assign nav_item_with_slash = navitem.link_url | append: "/" %}
                 {% if page.url == navitem.link_url or page.url == nav_item_with_slash %}
-                    <li class="{{ c }}__navlist__item {{ c }}__item--active" aria-current="page">
+                    <li class="{{ c }}__navlist__item {{ c }}__navlist__item--active" aria-current="page">
                         <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
                     </li>
                 {% else %}
@@ -38,7 +38,7 @@
     </nav>
 </head>
 
-<script>
+<script> //TODO: move to bundle
     function swapOpenState() {
         const nav = document.getElementById('main-menu');
         const openClass = "c-navigation--open";
