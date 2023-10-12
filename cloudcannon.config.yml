@@ -44,6 +44,7 @@ _structures:
         icon:
         tags: []
         _inputs: {}
+_editables: {}
 
 data_config: {}
 timezone: Etc/UTC
