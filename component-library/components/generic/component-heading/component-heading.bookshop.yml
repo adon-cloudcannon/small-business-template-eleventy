@@ -11,7 +11,7 @@ spec:
 blueprint:
   eyebrow_headline: Eyebrow Heading
   primary_heading: Primary Heading
-  text_alignment: left
+  text_alignment: center
 
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
