@@ -11,7 +11,7 @@
             {% endif %}
         </a>
 
-        <button class="{{ c }}__burger-menu" onclick="swapOpenState()">
+        <button class="{{ c }}__burger-menu" id="main-menu-toggle">
             <div class="{{ c }}__burger-menu__burger"></div>
         </button>
 
@@ -37,20 +37,3 @@
         </div>
     </nav>
 </head>
-
-<script> //TODO: move to bundle
-    function swapOpenState() {
-        const nav = document.getElementById('main-menu');
-        const body = document.getElementsByTagName('body')[0];
-        const openClass = "c-navigation--open";
-        const noScrollClass = 'body--no-scroll'
-        if (nav.classList.contains(openClass)) {
-            nav.classList.remove(openClass);
-            body.classList.remove(noScrollClass);
-        }
-        else {
-            nav.classList.add(openClass);
-            body.classList.add(noScrollClass);
-        }
-    } 
-</script>
