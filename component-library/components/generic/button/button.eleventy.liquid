@@ -1,0 +1,11 @@
+{% assign c = "c-button" %}
+
+{% if url and url!=''%}
+<a href="{{ url }}" class="{{c}} {{c}}--{{ variant }} {% if disabled==true %}{{c}}--disabled{% endif %}">
+    {{ text }}
+</a>
+    {% else %}
+    <button class="{{c}} {{c}}--{{ variant }}">
+        {{ text  }}
+    </button>
+{% endif %}

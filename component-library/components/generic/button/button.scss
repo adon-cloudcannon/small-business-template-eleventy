@@ -1,0 +1,35 @@
+.c-button {
+  --button-color: var(--brand-grey-000, #f9f9fb);
+  --button-color-secondary: var(--brand-grey-900, #1b1b1d);
+  all: unset;
+  padding: 1rem 0.75rem;
+  color: var(--button-color);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: inline-block;
+  &:focus {
+    outline: 2px solid var(--interaction-blue-300, #2566f2);
+    outline-offset: -2px;
+  }
+  &--disabled {
+    --button-color: var(--brand-grey-600, #6e6e70);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &--primary {
+    border: 2px solid var(--button-color);
+    &:hover {
+      border: 2px solid var(--button-color-secondary);
+      background: var(--button-color);
+      color: var(--button-color-secondary);
+    }
+  }
+  &--secondary {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
