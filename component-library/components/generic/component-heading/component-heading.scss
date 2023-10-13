@@ -14,19 +14,11 @@
     font-size: var(--eyebrow_heading);
     letter-spacing: var(--letter-spacing-wide);
     text-transform: uppercase;
-
-    &--center {
-      text-align: center;
-    }
   }
 
   &__primary_heading {
     grid-row: 2;
     font-size: var(--large-heading);
     letter-spacing: var(--letter-spacing);
-
-    &--center {
-      text-align: center;
-    }
   }
 }
