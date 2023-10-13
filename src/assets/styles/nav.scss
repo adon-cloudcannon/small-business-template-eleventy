@@ -9,11 +9,16 @@
 
     &__logo-link {
         grid-column: 2 / -3;
+        text-decoration: none;
+        color: var(--brand-grey-200, #E9E9EC);
+        font-size: 2rem;
+        line-height: 3.75rem;
+        white-space: nowrap;
         &__image {
             height: 100%;
             width: auto;
             padding-top: var(--nav-padding);
-            padding-bottom: var(--nav-padding); 
+            padding-bottom: var(--nav-padding);
         }
     }
 
