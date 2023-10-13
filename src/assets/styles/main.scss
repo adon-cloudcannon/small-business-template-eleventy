@@ -1,11 +1,34 @@
-@import "variables.scss";
+@import "reset.css";
+@import 'variables.scss';
 
 body {
   display: grid;
   grid-template-columns: var(--twelve-column-grid);
+  font-family: var(--content-font), Lato, sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--heading-font), Lato, serif;
+  }
 }
+
 nav,
 footer,
 main {
   grid-column: 1 / -1;
+}
+
+// Default styles applied to all components
+// Component-specific styles are defined within their component directory
+.component {
+  padding: 96px 124px;
+  background-color: var(--light-background-variant);
+
+  &--dark {
+    background-color: var(--dark-background-variant);
+  }
 }
