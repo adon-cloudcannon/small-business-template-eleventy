@@ -1,0 +1,7 @@
+.c-google-map-embed {
+  height: 400px; // The parent element/component should define the embed height
+
+  &__element {
+    height: 100%;
+  }
+}
