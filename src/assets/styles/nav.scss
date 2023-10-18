@@ -4,7 +4,7 @@
     grid-template-columns: var(--twelve-column-grid);
     grid-template-rows: 60px 1fr auto;
     height: auto;
-    background: var(--feature-image-opacity);
+    background: var(--header-color);
     --nav-padding: 8px;
 
     &__logo-link {
