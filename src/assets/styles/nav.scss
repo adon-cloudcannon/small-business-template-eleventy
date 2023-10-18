@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: var(--twelve-column-grid);
     grid-template-rows: 60px 1fr auto;
-    height: 100svh;
+    height: auto;
     background: var(--feature-image-opacity);
     --nav-padding: 8px;
 
@@ -120,6 +120,7 @@
 
     // Mobile menu open state
     &--open {
+        height: 100svh;
         #{$c}__burger-menu {
             &__burger {
                 &::before {
