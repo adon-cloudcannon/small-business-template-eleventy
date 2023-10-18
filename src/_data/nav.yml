@@ -1,5 +1,7 @@
-navigation_heading:
-logo_image:
+logo_image: ''
+logo_text:
+  text: Primera Mesa
+  font: Birthstone Bounce
 navigation_items:
   - label: About Us
     link_url: /about
