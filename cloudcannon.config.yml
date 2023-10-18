@@ -31,8 +31,9 @@ _inputs:
   draft:
     type: switch
   logo_image:
-    empty_type: null
     comment: If an image is uploaded it will be used over a name set in the logo text field
+    options:
+      empty_type: null
   logo_text:
     comment: If an image is set in the logo image field, this value will not be used
   font:
