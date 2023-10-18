@@ -30,8 +30,11 @@ _inputs:
     hidden: true
   draft:
     type: switch
-  value:
-    comment: Write the name of any font from https://fonts.google.com/ to allow it to be selected in data/site for the site fonts
+  logo_image:
+    empty_type: null
+    comment: If an image is uploaded it will be used over a name set in the logo text field
+  logo_text:
+    comment: If an image is set in the logo image field, this value will not be used
 _select_data: {}
 _structures:
   content_blocks:
