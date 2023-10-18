@@ -35,6 +35,8 @@ _inputs:
     comment: If an image is uploaded it will be used over a name set in the logo text field
   logo_text:
     comment: If an image is set in the logo image field, this value will not be used
+  font:
+    comment: Write the name of any font from https://fonts.google.com/ in data/fonts to access it here
 _select_data: {}
 _structures:
   content_blocks:
