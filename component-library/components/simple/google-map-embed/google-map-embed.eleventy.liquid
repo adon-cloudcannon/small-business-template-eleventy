@@ -1,13 +1,7 @@
 {% assign c = "c-google-map-embed" %}
-
-<div class="{{c}} 
-            component 
-            {% if styles.background_variant == "Dark" %} 
-                component--dark
-            {% endif %}">
-            <div class="{{c}}__element" 
-                 id="map"
-                 maplat={{ latitude }}
-                 maplong={{ longitude }}
-                 mapzoom={{ zoom_level }}></div>
+<div class="{{c}}" 
+    id="map"
+    maplat={{ latitude }}
+    maplong={{ longitude }}
+    mapzoom={{ zoom_level }}>
 </div>
