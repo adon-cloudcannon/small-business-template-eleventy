@@ -18,11 +18,12 @@
             {{ content }}
         </main>
         {% include 'partials/footer/footer.html' %}
-
     </body>
     {% if content_blocks %}
         {% if content_blocks | contains_block: "simple/google-map-embed" %}
             {% include 'partials/map/map-initialisation.html' %}
         {% endif %}
+    {% elsif page.url == "/components/" %}
+        {% include 'partials/map/map-initialisation.html' %}
     {% endif %}
 </html>
