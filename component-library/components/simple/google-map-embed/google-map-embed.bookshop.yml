@@ -17,12 +17,12 @@ preview:
   latitude: -45.8744660518195
   longitude: 170.5039494590889
   zoom_level: 8
-# Any extra CloudCannon inputs configuration to apply to the blueprint
 
+# Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   zoom_level:
     type: range
     options:
-      step: 2
+      step: 1
       max: 13
       min: 0
