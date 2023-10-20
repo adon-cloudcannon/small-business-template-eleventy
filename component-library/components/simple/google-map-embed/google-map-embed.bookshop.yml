@@ -14,9 +14,9 @@ blueprint:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  latitude: -45.8744660518195
-  longitude: 170.5039494590889
-  zoom_level: 8
+  latitude: 37.782046
+  longitude: -122.4514212
+  zoom_level: 9
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
