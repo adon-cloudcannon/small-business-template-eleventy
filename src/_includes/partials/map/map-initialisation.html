@@ -84,19 +84,22 @@
 
   // Initialise each map on the page
   async function initMap() {
-    const mapEl = document.getElementById("map");
-    const mapLat = parseFloat(mapEl.getAttribute("maplat"));
-    const mapLong = parseFloat(mapEl.getAttribute("maplong"));
-    const mapZoom = parseFloat(mapEl.getAttribute("mapzoom"));
-    const map = new google.maps.Map(mapEl, {
-      center: { lat: mapLat, lng: mapLong },
-      zoom: (mapZoom ? mapZoom + 5 : 13), // The user-editable mapZoom value is 5 less than Google's to make it a more logical zoom scale (0-13 opposed to 5-18)
-      styles: mapStyles,
-    });
-    var marker = new google.maps.Marker({
-      position: { lat: mapLat, lng: mapLong },
-      map: map,
-    });
+    const mapEls = document.getElementsByClassName("c-google-map-embed");
+    for(index in mapEls) {
+      const mapEl = mapEls[index];
+      const mapLat = parseFloat(mapEl.getAttribute("maplat"));
+      const mapLong = parseFloat(mapEl.getAttribute("maplong"));
+      const mapZoom = parseFloat(mapEl.getAttribute("mapzoom"));
+      const map = new google.maps.Map(mapEl, {
+        center: { lat: mapLat, lng: mapLong },
+        zoom: (mapZoom ? mapZoom + 5 : 13), // The user-editable mapZoom value is 5 less than Google's to make it a more logical zoom scale (0-13 opposed to 5-18)
+        styles: mapStyles,
+      });
+      var marker = new google.maps.Marker({
+        position: { lat: mapLat, lng: mapLong },
+        map: map,
+      });
+    }
   }
 
 
