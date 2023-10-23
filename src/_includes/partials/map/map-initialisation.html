@@ -85,7 +85,7 @@
   // Initialise each map on the page
   async function initMap() {
     const mapEls = document.getElementsByClassName("c-google-map-embed");
-    for(index in mapEls) {
+    for (var index = 0; index < mapEls.length; index++) {
       const mapEl = mapEls[index];
       const mapLat = parseFloat(mapEl.getAttribute("maplat"));
       const mapLong = parseFloat(mapEl.getAttribute("maplong"));
