@@ -5,7 +5,7 @@
     "heading_font": "Lato",
     "content_font": "Lato"
   },
-  "google_maps_api_key": "AIzaSyCxZPYXD1Wt37bG3rJKrRVUn36dMYwFVSY",
+  "google_maps_api_key": null,
   "_inputs": {
     "light_background_variant": {
       "type": "color"
