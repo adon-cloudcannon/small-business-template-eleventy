@@ -20,10 +20,9 @@
         {% include 'partials/footer/footer.html' %}
     </body>
     {% if content_blocks %}
-        {% if content_blocks | contains_block: "simple/google-map-embed" %}
+        {% assign include-map = content_blocks | contains_block: "simple/google-map-embed" %}
+        {% if site.google_maps_api_key and include-map %}
             {% include 'partials/map/map-initialisation.html' %}
         {% endif %}
-    {% elsif page.url == "/components/" %}
-        {% include 'partials/map/map-initialisation.html' %}
     {% endif %}
 </html>
