@@ -10,6 +10,8 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   social_media_links:
+    - svg_icon:
+      link_url:
   style:
     icon_hover_color: "#f9f9fb"
     icon_fill_color: "#f9f9fb"
@@ -20,21 +22,16 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   social_media_links:
-    - label: YouTube
-      link_url: https://www.youtube.com/
-      svg_icon: youtube
-    - label: Facebook
-      link_url: https://www.facebook.com/
-      svg_icon: facebook
-    - label: Linkedin
-      link_url: https://www.linkedin.com/
-      svg_icon: linkedin 
-    - label: X
-      link_url: https://www.twitter.com/
-      svg_icon: X
-    - label: Instagram
-      link_url: https://www.instagram.com/
-      svg_icon: instagram
+    - link_url: https://www.youtube.com/
+      svg_icon: social/youtube
+    - link_url: https://www.facebook.com/
+      svg_icon: social/facebook
+    - link_url: https://www.linkedin.com/
+      svg_icon: social/linkedin
+    - link_url: https://www.twitter.com/
+      svg_icon: social/x
+    - link_url: https://www.instagram.com/
+      svg_icon: social/instagram
   style:
     icon_hover_color: "pink"
     icon_fill_color: "#f9f9fb"
@@ -46,11 +43,11 @@ _inputs:
     type: select 
     options: 
       values: 
-        - "youtube"
-        - "facebook"
-        - "linkedin"
-        - "X"
-        - "instagram"
+        - "social/youtube"
+        - "social/facebook"
+        - "social/linkedin"
+        - "social/X"
+        - "social/instagram"
   icon_fill_color:
     type: color 
   icon_hover_color:

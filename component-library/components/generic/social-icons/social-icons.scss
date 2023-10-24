@@ -8,30 +8,32 @@
     --dynamic-fill-color-hover: var(--fill-color-hover, var(--brand-grey-900));
   
     &__icon {
-      display: flex; 
-      justify-content: center; 
-      align-items: center;
-      padding: 12px;
-      border-radius: 2.5rem;
-      width: 2.75rem;
-      height: 2.75rem;
       transition: background-color 300ms ease-out, fill 300ms ease-out;
-      box-sizing: border-box;
+      border-radius: 50%;
+
   
-      svg, img {
+      svg {
         * {
           fill: var(--dynamic-fill-color);
           transition: fill 300ms ease-out;
-          width: 1.25rem;
-          height: 1.25rem;
         }
       }
-  
       &:hover {
         background-color: var(--dynamic-hover-color);
   
         * {
           fill: var(--dynamic-fill-color-hover);
+        }
+      }
+
+      // Live editing fallback for mask colors
+      .c-icon__image {
+        background-color: var(--dynamic-fill-color);
+      }
+
+      &:hover {
+        .c-icon__image {
+          background-color: var(--dynamic-fill-color-hover);
         }
       }
     }
