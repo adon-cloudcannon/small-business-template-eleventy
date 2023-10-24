@@ -2,20 +2,28 @@
 spec:
   structures:
     - content_blocks
-  label: "Social-icons"
-  description:
-  icon:
+  label: "Social Icons"
+  description: Icon links to social media platforms
+  icon: diversity_3
   tags: []
 
 # Defines the structure of this component, as well as the default values
 blueprint:
   social_media_links:
-    - svg_icon:
-      link_url:
+    - link_url: https://www.youtube.com/
+      svg_icon: /assets/images/icons/social/youtube.svg
+    - link_url: https://www.facebook.com/
+      svg_icon: /assets/images/icons/social/facebook.svg
+    - link_url: https://www.linkedin.com/
+      svg_icon: /assets/images/icons/social/linkedin.svg
+    - link_url: https://www.twitter.com/
+      svg_icon: /assets/images/icons/social/x.svg
+    - link_url: https://www.instagram.com/
+      svg_icon: /assets/images/icons/social/instagram.svg
   style:
     icon_hover_color: "#f9f9fb"
     icon_fill_color: "#f9f9fb"
-    icon_fill_color_hover: "#000"
+    icon_fill_color_hover: "#000000"
 
    
 
@@ -23,15 +31,15 @@ blueprint:
 preview:
   social_media_links:
     - link_url: https://www.youtube.com/
-      svg_icon: social/youtube
+      svg_icon: /assets/images/icons/social/youtube.svg
     - link_url: https://www.facebook.com/
-      svg_icon: social/facebook
+      svg_icon: /assets/images/icons/social/facebook.svg
     - link_url: https://www.linkedin.com/
-      svg_icon: social/linkedin
+      svg_icon: /assets/images/icons/social/linkedin.svg
     - link_url: https://www.twitter.com/
-      svg_icon: social/x
+      svg_icon: /assets/images/icons/social/x.svg
     - link_url: https://www.instagram.com/
-      svg_icon: social/instagram
+      svg_icon: /assets/images/icons/social/instagram.svg
   style:
     icon_hover_color: "pink"
     icon_fill_color: "#f9f9fb"
@@ -40,14 +48,10 @@ preview:
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   svg_icon:
-    type: select 
-    options: 
-      values: 
-        - "social/youtube"
-        - "social/facebook"
-        - "social/linkedin"
-        - "social/X"
-        - "social/instagram"
+    type: image
+    options:
+      accepts_mime_types:
+        - image/svg+xml
   icon_fill_color:
     type: color 
   icon_hover_color:
