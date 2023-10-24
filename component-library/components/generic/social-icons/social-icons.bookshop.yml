@@ -41,9 +41,9 @@ preview:
     - link_url: https://www.instagram.com/
       svg_icon: /assets/images/icons/social/instagram.svg
   style:
-    icon_hover_color: "pink"
+    icon_hover_color: "#f9f9fb"
     icon_fill_color: "#f9f9fb"
-    icon_fill_color_hover: "#000"
+    icon_fill_color_hover: "#000000"
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
@@ -55,4 +55,6 @@ _inputs:
   icon_fill_color:
     type: color 
   icon_hover_color:
+    type: color
+  icon_fill_color_hover:
     type: color
