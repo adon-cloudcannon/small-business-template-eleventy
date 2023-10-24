@@ -31,6 +31,7 @@ module.exports = function(eleventyConfig) {
 
     // Filters
     eleventyConfig.addFilter("markdownify", (markdown) => md.render(markdown));
+    eleventyConfig.addFilter("ymlify", (yml) => yaml.load(yml));
 
     eleventyConfig.setBrowserSyncConfig({
       files: './_site/css/**/*.css'

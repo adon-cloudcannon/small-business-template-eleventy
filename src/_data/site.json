@@ -27,11 +27,6 @@
         "svg_icon": "/assets/images/icons/social/instagram.svg"
       }
   ],
-  "style": {
-    "icon_hover_color": "#f9f9fb",
-    "icon_fill_color": "#f9f9fb",
-    "icon_fill_color_hover": "#000000"
-  },
   "_inputs": {
     "light_background_variant": {
       "type": "color"
