@@ -52,11 +52,9 @@ _inputs:
     options:
       structures:
         values:
-          icon: link
           - value:
               link_url:
               svg_icon:
-
   svg_icon:
     type: image
     options:
