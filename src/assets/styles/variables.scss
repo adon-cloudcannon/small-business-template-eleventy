@@ -20,6 +20,12 @@
   --paragraph-small: 0.8rem;
   --label: 0.64rem;
   --button: 1rem;
+  --line-height: normal;
+  --letter-spacing: 0;
+  --letter-spacing-wide: 0.25rem;
+  --font-weight-headings: 700;
+  --font-weight-body: 400;
+  --font-weight-bold: 700;
 
   /* Colors */
   // Gray
@@ -54,4 +60,11 @@
   --success-green-300: #0d8843;
   --success-green-400: #017737;
   --success-green-500: #005824;
+
+  --header-color: #1b1b1d99;
+
 }
+
+
+// User controlled variables such as fonts, colors etc. are defined
+// within src/_includes/partials/head/stylesheets.

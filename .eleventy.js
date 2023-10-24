@@ -1,6 +1,7 @@
 const pluginBookshop = require("@bookshop/eleventy-bookshop");
 const yaml = require("js-yaml");
 const svgContents = require("eleventy-plugin-svg-contents")
+const esbuild = require('esbuild');
 
 const MarkdownIt = require("markdown-it"),
   md = new MarkdownIt({
@@ -11,7 +12,6 @@ const MarkdownIt = require("markdown-it"),
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/images");
     eleventyConfig.addPassthroughCopy("src/assets/fonts");
-    eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addPassthroughCopy("src/assets/styles");
     eleventyConfig.addPassthroughCopy("css");
 
@@ -22,9 +22,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget("component-library/");
 
     eleventyConfig.addPlugin(pluginBookshop({
-		bookshopLocations: ["component-library"],
-		pathPrefix: '',
-	}));
+      bookshopLocations: ["component-library"],
+      pathPrefix: '',
+    }));
 
     // Plugins
     eleventyConfig.addPlugin(svgContents);
@@ -34,6 +34,18 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.setBrowserSyncConfig({
       files: './_site/css/**/*.css'
+    });
+
+    // esbuild
+    eleventyConfig.addWatchTarget('./src/assets/js/**');
+    eleventyConfig.on('eleventy.before', async () => {
+      await esbuild.build({
+        entryPoints: ['src/assets/js/**'],
+        outdir: '_site/assets/js',
+        bundle: true,
+        minify: true,
+        sourcemap: true,
+      });
     });
 
     return {
