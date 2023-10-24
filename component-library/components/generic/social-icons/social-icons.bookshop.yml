@@ -59,9 +59,6 @@ _inputs:
               svg_icon:
   svg_icon:
     type: image
-    options:
-      accepts_mime_types:
-        - image/svg+xml
   icon_fill_color:
     type: color 
   icon_hover_color:
