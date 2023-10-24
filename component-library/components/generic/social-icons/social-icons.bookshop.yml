@@ -52,7 +52,9 @@ _inputs:
     options:
       structures:
         values:
-          - value:
+          - label: Social Media Link
+            icon: link
+            value:
               link_url:
               svg_icon:
   svg_icon:
