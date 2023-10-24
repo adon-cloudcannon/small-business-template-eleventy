@@ -60,11 +60,10 @@ _inputs:
             _inputs:
               svg_icon:
                 type: image
+                comment: This input is restricted to only allow images with type SVG
                 options:
                   accepts_mime_types:
                     - image/svg+xml
-  svg_icon:
-    type: image
   icon_fill_color:
     type: color 
   icon_hover_color:
