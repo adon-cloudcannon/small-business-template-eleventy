@@ -60,6 +60,9 @@ _inputs:
             _inputs:
               svg_icon:
                 type: image
+                options:
+                  accepts_mime_types:
+                    - image/svg+xml
   svg_icon:
     type: image
   icon_fill_color:
