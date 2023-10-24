@@ -57,9 +57,9 @@ _inputs:
             value:
               link_url:
               svg_icon:
-          _inputs:
-            svg_icon:
-              type: image
+            _inputs:
+              svg_icon:
+                type: image
   svg_icon:
     type: image
   icon_fill_color:
