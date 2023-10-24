@@ -52,8 +52,6 @@ const imageShortcode = async (src, alt, className = undefined, widths = [400, 80
   const largestUnoptimizedImg = getLargestImage(formats[0]);
   const imgAttributes = stringifyAttributes({
     src: largestUnoptimizedImg.url,
-    width: largestUnoptimizedImg.width,
-    height: largestUnoptimizedImg.height,
     alt,
     loading: "lazy",
     decoding: "async",
