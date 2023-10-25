@@ -64,3 +64,9 @@ _inputs:
       values:
         - left
         - center
+  background_variant:
+    type: choice
+    options:
+      values:
+        - dark
+        - light
