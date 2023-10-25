@@ -41,7 +41,7 @@ preview:
     - link_url: https://www.instagram.com/
       svg_icon: /assets/images/icons/social/instagram.svg
   style:
-    icon_hover_color: "#f9f9fb"
+    icon_background_hover_color: "#f9f9fb"
     icon_color: "#f9f9fb"
     icon_hover_color: "#000000"
 
