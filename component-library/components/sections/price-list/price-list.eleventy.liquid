@@ -5,7 +5,7 @@
             {% endif %}">
     
     <div class="{{ pl }}__heading">
-        {% bookshop "generic/component-heading" bind:content.heading %}
+        {% if content.heading %}{% bookshop "generic/component-heading" bind:content.heading %}{% endif %}
         {% if content.description %}{% bookshop "generic/text-block" text:content.description %}{% endif %}
     </div>
 
