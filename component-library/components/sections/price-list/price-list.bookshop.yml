@@ -11,11 +11,11 @@ spec:
 blueprint:
   content:
     heading: bookshop:generic/component-heading!
-    description: Description text to complement the block
+    description: Description text to compliment the block
     lists:
-      - list_heading: Subheading
+      - list_heading: List heading
         list_items:
-          - label: List item 1
+          - label: List item
             detail: $$
     # TODO: add button(s) subcomponent
   styles:
