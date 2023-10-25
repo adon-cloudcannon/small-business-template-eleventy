@@ -39,6 +39,34 @@
     },
     "content_font": {
       "comment": "Write the name of any font from https://fonts.google.com/ in data/fonts to access it here"
+    },
+    "social_media_links": {
+      "type": "array",
+      "options": {
+        "structures": {
+          "values": [
+            {
+              "label": "Social Media Link",
+              "icon": "link",
+              "value": {
+                "link_url": null,
+                "svg_icon": null
+              },
+              "_inputs": {
+                "svg_icon": {
+                  "type": "image",
+                  "comment": "This input is restricted to only allow images with type SVG",
+                  "options": {
+                    "accepts_mime_types": [
+                      "image/svg+xml"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
     }
   }
 }
