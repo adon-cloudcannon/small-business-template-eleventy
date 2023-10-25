@@ -32,6 +32,13 @@ module.exports = function(eleventyConfig) {
     // Filters
     eleventyConfig.addFilter("markdownify", (markdown) => md.render(markdown));
 
+    eleventyConfig.addFilter('contains_block', function(content_blocks, blockName) {
+      if (!Array.isArray(content_blocks)) {
+        return false;
+      }
+      return content_blocks.some(block => block._bookshop_name === blockName);
+    });
+
     eleventyConfig.setBrowserSyncConfig({
       files: './_site/css/**/*.css'
     });
