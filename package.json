@@ -8,6 +8,7 @@
     "bookshop-sass:watch": "bookshop-sass -b component-library -o css/bookshop.css -w",
     "bookshop:browser": "bookshop-browser",
     "bookshop:new": "npx @bookshop/init --component",
+    "bookshop:update": "npx @bookshop/up@latest",
     "eleventy:build": "eleventy",
     "eleventy:watch": "ELEVENTY_ENV=development eleventy --serve",
     "sass:watch": "sass --no-source-map --watch src/assets/styles:css",
