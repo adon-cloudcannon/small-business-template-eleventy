@@ -1,24 +1,28 @@
 {% assign c = "c-left-right-block" %}
 
-<section class="{{ c }}">
+<section class="{{ c }} {% if styles.orientation == "Right" %}{{ c }}--right{% endif %}">
   <div class="{{ c }}__content">
     {% bookshop "generic/component-heading" bind: data.heading %}
     {% if data.content %}
       {{ data.content | markdownify }}
     {% endif %}
     {% if data.icons %}
-      {% for icon in data.icons %}
-        {% bookshop "generic/labelled-icon" bind: icon %}
-      {% endfor %}
+      <div class="{{ c }}__icons">
+        {% for icon in data.icons %}
+          {% bookshop "generic/labelled-icon" bind: icon %}
+        {% endfor %}
+      </div>
     {% endif %}
     {% if data.buttons %}
-      {% for button in data.buttons %}
-        {% comment %} TBD: {% bookshop "generic/button" bind: button %} {% endcomment %}
-        <button>button.label</button>
-      {% endfor %}
+      <div class="{{ c }}__icons">
+        {% for button in data.buttons %}
+          {% comment %} TBD: {% bookshop "generic/button" bind: button %} {% endcomment %}
+          <button>button.label</button>
+        {% endfor %}
+      </div>
     {% endif %}    
   </div>
   {% if styles.image %}
-    <img src="{{ styles.image }}" />
+    <img class="{{ c }}__image" src="{{ styles.image }}" alt="" />
   {% endif %}
 </section>

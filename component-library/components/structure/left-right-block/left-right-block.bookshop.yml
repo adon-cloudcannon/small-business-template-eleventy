@@ -38,8 +38,7 @@ preview:
           bookshop: generic/icon
           svg_icon: solid/academic-cap
           icon_size: small
-          rounded_border: false
-          color: '#f9f9fb'
+          rounded_border: true
   styles:
     orientation: Left
     image: http://placekitten.com/500/500
