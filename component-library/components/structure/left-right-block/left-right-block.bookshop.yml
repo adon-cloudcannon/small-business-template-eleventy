@@ -1,0 +1,35 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+  label: "Left/Right block"
+  description: Left/Right content block
+  icon: side_navigation
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  content:
+    eyebrow_headline:
+    primary_heading:
+    content:
+    buttons:
+      - label:
+        link_url:
+        open_in_new_tab: false
+        svg_icon:
+    icons:
+      - svg_icon:
+        label:
+  styles:
+    orientation:
+    image:
+    background_variant: Dark
+
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  eyebrow_headline: EYEBROW HEADLINE
+  primary_heading: A simple text block
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
