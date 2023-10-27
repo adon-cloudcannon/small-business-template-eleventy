@@ -22,6 +22,27 @@ blueprint:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
+  data:
+    heading:
+      bookshop: generic/component-heading
+      eyebrow_headline: Let your features shine
+      primary_heading: A featured icons left right block
+    content: Content
+    buttons:
+      - label: Test button
+    icons:
+      - bookshop: generic/labelled-icon
+        arrangement: stacked
+        text: Icon text
+        icon:
+          bookshop: generic/icon
+          svg_icon: solid/academic-cap
+          icon_size: small
+          rounded_border: false
+          color: '#f9f9fb'
+  styles:
+    orientation: Left
+    image: http://placekitten.com/500/500
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
