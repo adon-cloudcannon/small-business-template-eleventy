@@ -10,8 +10,7 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   content:
-    eyebrow_headline:
-    primary_heading:
+    heading: bookshop:generic/component-heading
     content:
     buttons:
       - label:
@@ -24,7 +23,6 @@ blueprint:
   styles:
     orientation:
     image:
-    background_variant: Dark
 
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
