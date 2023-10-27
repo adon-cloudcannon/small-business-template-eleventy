@@ -9,9 +9,9 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  content:
+  data:
     heading: bookshop:generic/component-heading
-    content:
+    content: 
     buttons:
       - label:
     icons: [bookshop:generic/labelled-icon]
@@ -22,8 +22,13 @@ blueprint:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  eyebrow_headline: EYEBROW HEADLINE
-  primary_heading: A simple text block
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  orientation:
+    type: select
+    options:
+      - Right
+      - Left
+  content:
+    type: markdown
