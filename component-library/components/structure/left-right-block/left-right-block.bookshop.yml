@@ -28,7 +28,8 @@ _inputs:
   orientation:
     type: select
     options:
-      - Right
-      - Left
+      values:
+        - Left
+        - Right  
   content:
     type: markdown
