@@ -14,12 +14,7 @@ blueprint:
     content:
     buttons:
       - label:
-        link_url:
-        open_in_new_tab: false
-        svg_icon:
-    icons:
-      - svg_icon:
-        label:
+    icons: [bookshop:generic/labelled-icon]
   styles:
     orientation:
     image:
