@@ -32,7 +32,7 @@ preview:
       - label: Test button
     icons:
       - bookshop: generic/labelled-icon
-        arrangement: stacked
+        arrangement: inline
         text: Icon text
         icon:
           bookshop: generic/icon
