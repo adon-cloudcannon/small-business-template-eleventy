@@ -2,25 +2,29 @@
 
 <section class="{{ c }} {% if styles.orientation == "Right" %}{{ c }}--right{% endif %}">
   <div class="{{ c }}__content">
-    {% bookshop "generic/component-heading" bind: data.heading %}
-    {% if data.content %}
-      {{ data.content | markdownify }}
-    {% endif %}
-    {% if data.icons %}
-      <div class="{{ c }}__icons">
-        {% for icon in data.icons %}
-          {% bookshop "generic/labelled-icon" bind: icon %}
-        {% endfor %}
-      </div>
-    {% endif %}
-    {% if data.buttons %}
-      <div class="{{ c }}__icons">
-        {% for button in data.buttons %}
-          {% comment %} TBD: {% bookshop "generic/button" bind: button %} {% endcomment %}
-          <button>button.label</button>
-        {% endfor %}
-      </div>
-    {% endif %}    
+    <div class="{{ c }}__content-wrapper">
+      {% bookshop "generic/component-heading" bind: data.heading %}
+      {% if data.content %}
+        <div class="{{ c }}__content-text">
+          {{ data.content | markdownify }}
+        </div>
+      {% endif %}
+      {% if data.icons %}
+        <div class="{{ c }}__icons">
+          {% for icon in data.icons %}
+            {% bookshop "generic/labelled-icon" bind: icon %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if data.buttons %}
+        <div class="{{ c }}__buttons">
+          {% for button in data.buttons %}
+            {% comment %} TBD: {% bookshop "generic/button" bind: button %} {% endcomment %}
+            <button>{{button.label}}</button>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
   </div>
   {% if styles.image %}
     <img class="{{ c }}__image" src="{{ styles.image }}" alt="" />

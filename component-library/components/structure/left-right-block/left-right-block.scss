@@ -1,2 +1,60 @@
 .c-left-right-block {
+  //Colors added for demo only. Remove before merge.
+  background-color: var(--brand-grey-900, );
+  color: var(--brand-grey-000, #F9F9FB);
+  display: grid;
+  grid-template-columns: var(--twelve-column-grid);
+
+  .c-component-heading {
+    margin-bottom: 0.5rem;
+  }
+
+  &__content {
+    padding: 6rem 0 3rem 0;
+    grid-column: 2 / -2;
+  }
+
+  &__content-text {
+    margin-bottom: 1.5rem;
+  }
+
+  &__content-wrapper {
+    border-left: 0.0625rem solid var(--brand-grey-000);
+    padding-left: 1.5rem;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  &__image {
+    object-fit: cover;
+    grid-column: 1 / -1;
+  }
+
+  // Tablet styles
+  @media screen and (min-width: 768px) {
+
+  }
+
+  // Desktop styles
+  @media screen and (min-width: 1279px) {
+    &__content {
+      grid-column: 2 / 7;
+      padding: 0;
+      align-self: center;
+    }
+
+    &__image {
+      grid-column: 7 / -2;
+    }
+  }
 }
