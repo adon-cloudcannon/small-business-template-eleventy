@@ -5,6 +5,7 @@
     "heading_font": "Lato",
     "content_font": "Lato"
   },
+  "google_maps_api_key": null,
   "_inputs": {
     "light_background_variant": {
       "type": "color"
@@ -17,6 +18,9 @@
     },
     "content_font": {
       "comment": "Write the name of any font from https://fonts.google.com/ in data/fonts to access it here"
+    },
+    "google_maps_api_key": {
+      "comment": "The API key used for the Google Map component. To see more about getting an API key see the [documentation](https://developers.google.com/maps/documentation/javascript/get-api-key)."
     }
   }
 }
