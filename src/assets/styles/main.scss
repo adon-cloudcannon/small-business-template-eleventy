@@ -6,6 +6,7 @@ body {
   display: grid;
   grid-template-columns: var(--twelve-column-grid);
   font-family: var(--content-font), Lato, sans-serif;
+  color: var(--brand-grey-000, #f9f9fb);
 
   h1,
   h2,
