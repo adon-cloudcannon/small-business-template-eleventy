@@ -67,7 +67,16 @@ _inputs:
   background_variant:
     type: choice
     options:
-      value_key: name
+      value_key: id
+      preview:
+        text: 
+          - key: name
+        icon:
+          - key: icon
       values:
-        - name: dark
-        - name: light
+        - name: Dark
+          id: dark
+          icon: dark_mode
+        - name: Light
+          id: light
+          icon: light_mode
