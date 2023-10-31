@@ -61,9 +61,19 @@ _inputs:
   content_alignment:
     type: choice
     options:
+      value_key: id
+      preview:
+        text: 
+          - key: name
+        icon:
+          - key: icon
       values:
-        - left
-        - center
+        - name: Left
+          id: left
+          icon: format_align_left
+        - name: Center
+          id: center
+          icon: format_align_center
   background_variant:
     type: choice
     options:
