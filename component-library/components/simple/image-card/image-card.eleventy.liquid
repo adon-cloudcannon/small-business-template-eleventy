@@ -1,11 +1,13 @@
 {%  assign c = 'c-image-card' %}
 <div class={{c}}>
     {% if is_image %}
-        {% comment %} TODO: waiting on image component {% endcomment %}
+        {% comment %} TODO: put image component here {% endcomment %}
     {% elsif icon %}
         {% bookshop "generic/icon" bind:icon %}
     {% endif %}
+
     {% if heading %}{% bookshop "generic/component-heading" bind:heading %}{% endif %}
+
     <div class="{{c}}--content">{{ content }}</div>
     <div>
         {% comment %} TODO: waiting on Generic Button component {% endcomment %}
