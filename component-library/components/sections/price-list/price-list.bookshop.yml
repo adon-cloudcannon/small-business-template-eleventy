@@ -67,6 +67,7 @@ _inputs:
   background_variant:
     type: choice
     options:
+      value_key: name
       values:
-        - dark
-        - light
+        - name: dark
+        - name: light
