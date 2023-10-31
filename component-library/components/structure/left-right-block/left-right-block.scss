@@ -1,8 +1,6 @@
 .c-left-right-block {
   $c: &;
   //Colors added for demo only. Remove before merge.
-  background-color: var(--brand-grey-900, );
-  color: var(--brand-grey-000, #F9F9FB);
   display: grid;
   grid-template-columns: var(--twelve-column-grid);
 
