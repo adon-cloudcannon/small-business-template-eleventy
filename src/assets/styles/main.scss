@@ -1,5 +1,6 @@
 @import "reset.css";
 @import 'variables.scss';
+@import 'nav.scss';
 
 body {
   display: grid;
@@ -16,7 +17,7 @@ body {
   }
 }
 
-nav,
+header,
 footer,
 main {
   grid-column: 1 / -1;

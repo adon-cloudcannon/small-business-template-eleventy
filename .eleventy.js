@@ -2,6 +2,7 @@ const pluginBookshop = require("@bookshop/eleventy-bookshop");
 const yaml = require("js-yaml");
 const svgContents = require("eleventy-plugin-svg-contents");
 const imageShortcode = require("./11ty/shortcodes/image");
+const esbuild = require('esbuild');
 
 const MarkdownIt = require("markdown-it"),
   md = new MarkdownIt({
@@ -31,8 +32,13 @@ module.exports = function (eleventyConfig) {
 
   // Custom shortcodes
   eleventyConfig.addShortcode("image", imageShortcode);
-
+  
   // Plugins
+  eleventyConfig.addPlugin(pluginBookshop({
+    bookshopLocations: ["component-library"],
+    pathPrefix: '',
+  }));
+
   eleventyConfig.addPlugin(svgContents);
 
   // Filters
@@ -42,10 +48,33 @@ module.exports = function (eleventyConfig) {
     files: "./_site/css/**/*.css",
   });
 
+  eleventyConfig.addFilter('contains_block', function(content_blocks, blockName) {
+    if (!Array.isArray(content_blocks)) {
+      return false;
+    }
+    return content_blocks.some(block => block._bookshop_name === blockName);
+  });
+
+  eleventyConfig.setBrowserSyncConfig({
+    files: './_site/css/**/*.css'
+  });
+
+  // esbuild
+  eleventyConfig.addWatchTarget('./src/assets/js/**');
+  eleventyConfig.on('eleventy.before', async () => {
+    await esbuild.build({
+      entryPoints: ['src/assets/js/**'],
+      outdir: '_site/assets/js',
+      bundle: true,
+      minify: true,
+      sourcemap: true,
+    });
+  });
+
   return {
-    dir: {
-      input: "src",
-      output: "_site",
-    },
-  };
-};
+      dir: {
+          input: "src",
+          output: "_site"
+      }
+  }
+}
