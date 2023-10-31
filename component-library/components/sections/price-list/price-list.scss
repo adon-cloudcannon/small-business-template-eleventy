@@ -52,6 +52,10 @@
                 font-size: var(--paragraph-large);
                 letter-spacing: var(--letter-spacing);
 
+                &__label {
+                    overflow-wrap: anywhere;
+                }
+
                 &__seperator {
                     border-bottom: 1px var(--brand-grey-000, #F9F9FB) dotted
                 }
