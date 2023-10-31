@@ -33,15 +33,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("image", imageShortcode);
   
   // Plugins
+  eleventyConfig.addPlugin(svgContents);
   eleventyConfig.addPlugin(pluginBookshop({
     bookshopLocations: ["component-library"],
     pathPrefix: '',
   }));
 
-  eleventyConfig.addPlugin(svgContents);
-
   // Filters
   eleventyConfig.addFilter("markdownify", (markdown) => md.render(markdown));
+  eleventyConfig.addFilter("ymlify", (yml) => yaml.load(yml));
 
   eleventyConfig.setBrowserSyncConfig({
     files: "./_site/css/**/*.css",
