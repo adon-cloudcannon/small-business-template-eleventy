@@ -1,0 +1,27 @@
+.c-content-block {
+    grid-column: 2 / -2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    align-self: stretch;
+
+    &--container {
+        display: grid;
+        grid-template-columns: var(--twelve-column-grid);
+        width: var(--desktop-large, 87.5rem);
+        padding: 6rem 7.6875rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1279px) {
+        grid-column: 0 / -0;
+
+        &--container {
+            width: var(--mobile, 29.9375rem);
+            padding: 6rem 1rem;
+        }
+    }
+}
