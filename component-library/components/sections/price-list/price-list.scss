@@ -53,7 +53,7 @@
                 font-size: var(--paragraph-large);
                 letter-spacing: var(--letter-spacing);
 
-                &__label {
+                &__label, &__detail {
                     overflow-wrap: anywhere;
                 }
 
