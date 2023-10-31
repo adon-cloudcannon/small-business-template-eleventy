@@ -1,9 +1,9 @@
 .c-button {
-  --button-color: var(--brand-grey-000, #f9f9fb);
-  --button-color-secondary: var(--brand-grey-900, #1b1b1d);
+  --_button-color: var(--brand-grey-000, #f9f9fb);
+  --_button-color-secondary: var(--brand-grey-900, #1b1b1d);
   all: unset;
   padding: 1rem 0.75rem;
-  color: var(--button-color);
+  color: var(--_button-color);
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
@@ -13,18 +13,22 @@
     outline: 2px solid var(--interaction-blue-300, #2566f2);
     outline-offset: -2px;
   }
-  &--disabled {
-    --button-color: var(--brand-grey-600, #6e6e70);
-  }
   &:hover {
     cursor: pointer;
   }
-  &--primary {
-    border: 2px solid var(--button-color);
+  &[disabled] {
+    --_button-color: var(--brand-grey-600, #6e6e70);
     &:hover {
-      border: 2px solid var(--button-color-secondary);
-      background: var(--button-color);
-      color: var(--button-color-secondary);
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+  &--primary {
+    border: 2px solid var(--_button-color);
+    &:hover {
+      border: 2px solid var(--_button-color-secondary);
+      background: var(--_button-color);
+      color: var(--_button-color-secondary);
     }
   }
   &--secondary {
