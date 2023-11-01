@@ -12,6 +12,7 @@ blueprint:
   text: "Hello World!"
   variant: "secondary"
   disabled: true
+  arrow: "up"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:

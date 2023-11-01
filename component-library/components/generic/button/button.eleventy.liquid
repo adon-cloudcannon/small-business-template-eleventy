@@ -3,9 +3,37 @@
 {% if url and url!=''%}
     <a href="{{ url }}" class="{{c}} {{c}}--{{ variant }}" {% if disabled %}disabled{% endif %}>
         {{ text }}
+        {% if arrow %}
+            {% if arrow=="up" %}
+                up
+            {% endif %}
+            {% if arrow=="down" %}
+                down
+            {% endif %}
+            {% if arrow=="left" %}
+                left
+            {% endif %}
+            {% if arrow=="right" %}
+                right
+            {% endif %}
+        {% endif %} 
     </a>
     {% else %}
     <button class="{{c}} {{c}}--{{ variant }}" {% if disabled %}disabled{% endif %}>
-        {{ text }}
+        {{ text }} 
+        {% if arrow %}
+            {% if arrow=="up" %}
+                up
+            {% endif %}
+            {% if arrow=="down" %}
+                down
+            {% endif %}
+            {% if arrow=="left" %}
+                left
+            {% endif %}
+            {% if arrow=="right" %}
+                right
+            {% endif %}
+        {% endif %} 
     </button>
 {% endif %}
