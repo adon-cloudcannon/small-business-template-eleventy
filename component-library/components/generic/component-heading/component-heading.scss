@@ -1,0 +1,27 @@
+.c-component-heading {
+  display: grid;
+  gap: 0.5rem;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-headings);
+  line-height: var(--line-height);
+  width: 100%;
+  @supports (text-wrap: balance) {
+    text-wrap: balance;
+  }
+
+  &__eyebrow_heading {
+    grid-row: 1;
+    font-size: var(--eyebrow-heading);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+  }
+
+  &__primary_heading {
+    font-size: var(--large-heading);
+    letter-spacing: var(--letter-spacing);
+  }
+
+  &__eyebrow_heading + &__primary_heading {
+    grid-row: 2;
+  }
+}

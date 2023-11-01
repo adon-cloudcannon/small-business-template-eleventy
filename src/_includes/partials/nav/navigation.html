@@ -1,3 +1,43 @@
-<nav style="height: 100px; box-shadow: 0 1px 5px #888888; background-color: rgba(27, 27, 29, 0.60); display: flex; justify-content: center; align-items: center">
-    <h2>NAV GOES HERE</h2>
-</nav>
+{% assign c = "c-navigation" %}
+
+<header>
+    <nav class="{{c}}" aria-label="Main menu" id="main-menu">
+
+        <a class="{{c}}__logo-link" href="/" aria-label="Home" {% if page.url=="/" %}aria-current="page" {% endif %}>
+            {% if nav.logo_image != '' %}
+                <img class="{{c}}__logo-link__image" src="{{nav.logo_image}}" alt="Site logo" />
+            {% else %}
+                <span class="{{c}}__logo-link__text">{{ nav.logo_text.text }}</span>
+            {% endif %}
+        </a>
+
+        <button class="{{ c }}__burger-menu" id="main-menu-toggle">
+            <div class="{{ c }}__burger-menu__burger"></div>
+        </button>
+
+        <ul class="{{ c }}__navlist">
+            {% for navitem in nav.navigation_items %}
+                {% assign nav_item_with_slash = navitem.link_url | append: "/" %}
+                {% if page.url == navitem.link_url or page.url == nav_item_with_slash %}
+                    <li class="{{ c }}__navlist__item {{ c }}__navlist__item--active" aria-current="page">
+                        <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+                    </li>
+                {% else %}
+                    <li class="{{ c }}__navlist__item">
+                        <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <div class="{{ c }}__social-icons">
+            {% capture social_icon_styles %}
+                icon_background_hover_color: "var(--brand-grey-200, #E9E9EC)"
+                icon_color: "var(--brand-grey-200, #E9E9EC)"
+                icon_hover_color: "var(--brand-grey-900, #f9f9fb)"
+            {% endcapture %}
+            {% assign social_icons_style = social_icon_styles | ymlify %}
+            {% bookshop "generic/social-icons" social_media_links:site.social_media_links style:social_icons_style %}
+        </div>
+    </nav>
+</header>

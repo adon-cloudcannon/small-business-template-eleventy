@@ -1,5 +1,6 @@
 @import "reset.css";
 @import 'variables.scss';
+@import 'nav.scss';
 
 body {
   display: grid;
@@ -16,7 +17,7 @@ body {
   }
 }
 
-nav,
+header,
 footer,
 main {
   grid-column: 1 / -1;
@@ -25,7 +26,7 @@ main {
 // Default styles applied to all components
 // Component-specific styles are defined within their component directory
 .component {
-  padding: 96px 124px;
+  padding: 96px 0px;
   background-color: var(--light-background-variant);
 
   &--dark {
