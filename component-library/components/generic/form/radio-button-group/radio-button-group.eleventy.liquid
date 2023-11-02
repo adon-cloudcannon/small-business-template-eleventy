@@ -1,0 +1,21 @@
+{% assign_local c = "c-radio-button-group" %}
+<div class="{{ c }}">
+    <fieldset class="{{ c }}__group">
+        <legend class="{{ c }}__group__label">{{ label }}</legend>
+        <div class="{{ c }}__group__inputs {{ c }}__group__inputs--arrangement-{{ arrangement }}">
+            {% assign groupname = heading %}
+            {% for item in radio_buttons %}
+                {% bookshop "generic/form/radio-input" bind:item %}
+            {% endfor %}
+        </div>
+
+    </fieldset>
+
+    {% if helper_text %}
+        <div class="{{ c }}__helper">
+            {% bookshop "generic/icon" svg_icon:"outline/information-circle" icon_size:'extra-small' rounded_border:false color:'var(--brand-grey-000, #F9F9FB)' %}
+            <p class="{{ c }}__helper__text">{{ helper_text }}<p>
+        </div>
+    {% endif %}
+
+</div>

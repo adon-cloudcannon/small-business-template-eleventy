@@ -1,0 +1,21 @@
+{% assign_local c = "c-date-input" %}
+<div class="{{ c }}">
+    <label class="{{ c }}__label" for="{{ name_and_id }}">{{ label }}{% if required %} *{% endif %}</label>
+    <input class="{{ c }}__input"
+        type="date"
+        id="{{ name_and_id }}" 
+        name="{{ name_and_id }}" 
+        value="{{ 'now' | date: '%Y-%m-%d' }}"
+        min="{{ min }}"
+        max="{{ max }}"
+        {% if required %}required{% endif %}>
+    <div class="{{ c }}__icon">{% bookshop "generic/icon" svg_icon:"outline/calendar-days" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
+    <div class="{{ c }}__dropdown-arrow">{% bookshop "generic/icon" svg_icon:"solid/chevron-down" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
+
+    {% if helper_text %}
+        <div class="{{ c }}__helper">
+            {% bookshop "generic/icon" svg_icon:"outline/information-circle" icon_size:'extra-small' rounded_border:false color:'var(--brand-grey-000, #F9F9FB)' %}
+            <p class="{{ c }}__helper__text">{{ helper_text }}<p>
+        </div>
+    {% endif %}
+</div>

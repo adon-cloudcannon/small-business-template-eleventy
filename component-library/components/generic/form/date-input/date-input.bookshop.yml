@@ -1,0 +1,29 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Date Input"
+  description: Calendar date picker input
+  icon: date_range
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  name_and_id: ""
+  label: ""
+  required: false
+  min:
+  max:
+  helper_text:
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  label: Choose a date
+  name_and_id: date
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  name_and_id:
+    comment: Provides a unique identifier for the input
+  helper_text:
+    comment: Helpful text for the user such as 'The date should be after today'

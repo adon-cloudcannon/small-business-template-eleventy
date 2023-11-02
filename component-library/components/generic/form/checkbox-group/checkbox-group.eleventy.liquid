@@ -1,0 +1,19 @@
+{% assign_local c = "c-checkbox-group" %}
+<div class="{{ c }}">
+    <fieldset class="{{ c }}__group">
+        <legend class="{{ c }}__group__label">{{ label }}</legend>
+        <div class="{{ c }}__group__inputs {{ c }}__group__inputs--arrangement-{{ arrangement }}">
+            {% for item in checkboxes %}
+                {% bookshop "generic/form/checkbox-input" bind:item %}
+            {% endfor %}
+        </div>
+    </fieldset>
+
+    {% if helper_text %}
+        <div class="{{ c }}__helper">
+            {% bookshop "generic/icon" svg_icon:"outline/information-circle" icon_size:'extra-small' rounded_border:false color:'var(--brand-grey-000, #F9F9FB)' %}
+            <p class="{{ c }}__helper__text">{{ helper_text }}<p>
+        </div>
+    {% endif %}
+
+</div>

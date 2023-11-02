@@ -1,0 +1,20 @@
+{% assign_local c = "c-select-input" %}
+<div class="{{ c }}">
+  <label class="{{ c }}__label" for="{{ name_and_id }}">{{ label }}</label>
+  <select class="{{ c }}__input"
+    name="{{ name_and_id }}"
+    id="{{ name_and_id }}">
+    {% for option in options %}
+        <option value="{{ option.key }}">{{ option.key }}</option>
+    {% endfor %}
+  </select>
+  <div class="{{ c }}__dropdown-arrow">{% bookshop "generic/icon" svg_icon:"solid/chevron-down" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
+
+  {% if helper_text %}
+      <div class="{{ c }}__helper">
+          {% bookshop "generic/icon" svg_icon:"outline/information-circle" icon_size:'extra-small' rounded_border:false color:'var(--brand-grey-000, #F9F9FB)' %}
+          <p class="{{ c }}__helper__text">{{ helper_text }}<p>
+      </div>
+  {% endif %}
+
+</div>
