@@ -1,0 +1,14 @@
+{% assign_local c = "c-form-builder" %}
+<form class="{{ c }}"
+    id="{{ id }}"
+    action="{{ success_page }}"
+    method="post"
+    novalidate
+    onsubmit="return validateFormSubmit(event, this)">
+
+    {% for input in inputs %}
+        {% bookshop "{{input._bookshop_name}}" bind: input %}
+    {% endfor %}
+
+    <button type="submit">Submit</button>
+</form>

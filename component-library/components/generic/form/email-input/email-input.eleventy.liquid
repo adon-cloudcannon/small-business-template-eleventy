@@ -6,7 +6,9 @@
         id="{{ name_and_id }}" 
         name="{{ name_and_id }}" 
         placeholder="{{ placeholder }}"
-        {% if required %}required{% endif %}>
+        {% if required %}required{% endif %}
+        onblur="validateInput(this)"
+        oninput="validateInputTyping(this)">
 
     {% if helper_text %}
         <div class="{{ c }}__helper">
@@ -14,4 +16,9 @@
             <p class="{{ c }}__helper__text">{{ helper_text }}<p>
         </div>
     {% endif %}
+
+    <div class="{{ c }}__error error">
+        {% bookshop "generic/icon" svg_icon:"outline/x-circle" icon_size:'extra-small' rounded_border:false color:'var(--error-red-300, #BF2323)' %}
+        <p class="{{ c }}__error__text error__text">Error Message<p>
+    </div>
 </div>

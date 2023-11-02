@@ -6,7 +6,9 @@
         name="{{ name_and_id }}" 
         value="{{ placeholder }}"
         min="{{ min }}"
-        max="{{ max }}">
+        max="{{ max }}"
+        onblur="validateInput(this)"
+        oninput="validateInputTyping(this)">
     <div class="{{ c }}__icon">{% bookshop "generic/icon" svg_icon:"outline/clock" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
     <div class="{{ c }}__dropdown-arrow">{% bookshop "generic/icon" svg_icon:"solid/chevron-down" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
 
@@ -17,4 +19,8 @@
         </div>
     {% endif %}
 
+    <div class="{{ c }}__error error">
+        {% bookshop "generic/icon" svg_icon:"outline/x-circle" icon_size:'extra-small' rounded_border:false color:'var(--error-red-300, #BF2323)' %}
+        <p class="{{ c }}__error__text error__text">Error Message<p>
+    </div>
 </div>

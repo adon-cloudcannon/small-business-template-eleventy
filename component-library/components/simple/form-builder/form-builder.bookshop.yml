@@ -1,0 +1,138 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+  label: "Form Builder"
+  description: Build a form with the developed inputs
+  icon: dynamic_form
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  id: 
+  form_submission_type: email/cloudcannon
+  success_page: ""
+  inputs: [bookshop:structure:form_blocks]
+  tandc_checkbox: bookshop:generic/form/checkbox-input
+  submit_button: bookshop:generic/form/button
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  id: 727a56cc-0bfc-4ab4-901e-144f407cd1ae
+  inputs:
+    - _bookshop_name: generic/form/text-input
+      label: Full name
+      placeholder: John Smith
+      name_and_id: full_name
+      required: true
+      helper_text: You do not need to include any middle names
+    - _bookshop_name: generic/form/email-input
+      name_and_id: email
+      label: Email
+      required: false
+      placeholder: mybusiness@smallbusiness.com
+      helper_text: Your personal email
+    - _bookshop_name: generic/form/phone-input
+      label: Phone number
+      placeholder: +64 21 859292
+      name_and_id: phone_number
+      required: false
+      helper_text: Your personal phone number
+    - _bookshop_name: generic/form/radio-button-group
+      label: Radio Button group
+      radio_buttons:
+        - _bookshop_name: generic/form/radio-input
+          label: Radio button 1
+          id: radio-button
+          checked: false
+          required: false
+        - _bookshop_name: generic/form/radio-input
+          label: Radio button 2
+          id: radio-button
+          checked: true
+          required: false
+        - _bookshop_name: generic/form/radio-input
+          label: Radio button 3
+          id: radio-button
+          checked: false
+          required: false
+        - _bookshop_name: generic/form/radio-input
+          label: Radio button 4
+          id: radio-button
+          checked: false
+          required: false
+      arrangement: inline
+      helper_text: Radio button 1 is only available on weekends
+    - _bookshop_name: generic/form/checkbox-group
+      label: Checkbox group
+      checkboxes:
+        - _bookshop_name: generic/form/checkbox-input
+          _name: UUID
+          label: Checkbox
+          checked: false
+          required: false
+        - _bookshop_name: generic/form/checkbox-input
+          _name: UUID
+          label: Checkbox
+          checked: true
+          required: false
+        - _bookshop_name: generic/form/checkbox-input
+          _name: UUID
+          label: Checkbox
+          checked: false
+          required: false
+      arrangement: inline
+      helper_text: Do not select more than 2
+    - _bookshop_name: generic/form/country-select-input
+      name_and_id: country-selector
+      label: Country
+      required: false
+      placeholder: Select your country
+      helper_text: The country you primarily reside in
+    - _bookshop_name: generic/form/date-input
+      name_and_id: date
+      label: Choose a date
+      required: false
+      min: "2023-11-03"
+      max: null
+      helper_text: The date cannot be in the past
+    - _bookshop_name: generic/form/time-input
+      label: Choose a time slot
+      placeholder: '15:00'
+      name_and_id: time
+      required: false
+      min: '09:00'
+      max: '17:00'
+      helper_text: Select a time between 9:00 and 15:00
+    - _bookshop_name: generic/form/select-input
+      name_and_id: option-selector
+      label: Select
+      options:
+        - key: Option 1
+        - key: Option 2
+        - key: Option 3
+        - key: Option 4
+      required: false
+      helper_text: Option 1 is only available on weekdays
+    - _bookshop_name: generic/form/text-area-input
+      label: Comment
+      placeholder: Any helpful information we should know about
+      name_and_id: comment
+      rows: 2
+      required: false
+      helper_text: Let us know things such as if you have any allergies
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  form_submission_type:
+    comment: This option will provide the type of submission that will be targeted. 
+    type: select
+    options:
+      values:
+      - email/cloudcannon
+      - mailchimp
+  id:
+    hidden: true
+    instance_value: UUID
+  success_page:
+    type: url
+    comment:  The page to redirect to after submission (mailchimp something like https://company.us12.list-manage.com/subscribe?u=c2asfj8ec0sdfjsadlfe3f&id=88786d434e)
