@@ -14,7 +14,6 @@ blueprint:
   success_page: ""
   inputs: [bookshop:structure:form_blocks]
   tandc_checkbox: bookshop:generic/form/checkbox-input
-  submit_button: bookshop:generic/form/button
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
