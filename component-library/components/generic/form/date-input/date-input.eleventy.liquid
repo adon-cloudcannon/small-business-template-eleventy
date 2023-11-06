@@ -6,8 +6,8 @@
         id="{{ id }}" 
         name="{{ label }}" 
         value="{{ 'now' | date: '%Y-%m-%d' }}"
-        min="{{ min }}"
-        max="{{ max }}"
+        min="{{ min | date: '%Y-%m-%d' }}"
+        max="{{ max | date: '%Y-%m-%d' }}"
         {% if required %}required{% endif %}>
     <div class="{{ c }}__icon">{% bookshop "generic/icon" svg_icon:"outline/calendar-days" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
     <div class="{{ c }}__dropdown-arrow">{% bookshop "generic/icon" svg_icon:"solid/chevron-down" icon_size:'extra-small' rounded_border:false color:'white' %}</div>

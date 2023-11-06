@@ -5,8 +5,8 @@
         type="time" id="{{ id }}" 
         name="{{ label }}" 
         value="{{ placeholder }}"
-        min="{{ min }}"
-        max="{{ max }}"
+        min="{{ min | militaryTime }}"
+        max="{{ max | militaryTime }}"
         onblur="validateInput(this)"
         oninput="validateInputTyping(this)">
     <div class="{{ c }}__icon">{% bookshop "generic/icon" svg_icon:"outline/clock" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
