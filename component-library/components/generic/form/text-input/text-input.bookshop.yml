@@ -11,19 +11,19 @@ spec:
 blueprint:
   label: ""
   placeholder: ""
-  name_and_id: ""
+  id:
   required: false
   helper_text:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   label: Full name
-  name_and_id: full_name
   placeholder: John Smith
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  name_and_id:
-    comment: Provides a unique identifier for the input
+  id:
+    hidden: true
+    instance_value: UUID
   helper_text:
     comment: Helpful text for the user such as 'You do not need to enter your middle name(s)'

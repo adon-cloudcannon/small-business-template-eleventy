@@ -1,10 +1,10 @@
 {% assign_local c = "c-email-input" %}
 <div class="{{ c }}">
-    <label class="{{ c }}__label" for="{{ name_and_id }}">{{ label }}{% if required %} *{% endif %}</label>
+    <label class="{{ c }}__label" for="{{ id }}">{{ label }}{% if required %} *{% endif %}</label>
     <input class="{{ c }}__input"
         type="email" 
-        id="{{ name_and_id }}" 
-        name="{{ name_and_id }}" 
+        id="{{ id }}" 
+        name="{{ label }}" 
         placeholder="{{ placeholder }}"
         {% if required %}required{% endif %}
         onblur="validateInput(this)"

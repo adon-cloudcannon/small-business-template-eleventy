@@ -1,9 +1,9 @@
 {% assign_local c = "c-time-input" %}
 <div class="{{ c }}">
-    <label class="{{ c }}__label" for="{{ name_and_id }}">{{ label }}</label>
+    <label class="{{ c }}__label" for="{{ id }}">{{ label }}</label>
     <input class="{{ c }}__input"
-        type="time" id="{{ name_and_id }}" 
-        name="{{ name_and_id }}" 
+        type="time" id="{{ id }}" 
+        name="{{ label }}" 
         value="{{ placeholder }}"
         min="{{ min }}"
         max="{{ max }}"

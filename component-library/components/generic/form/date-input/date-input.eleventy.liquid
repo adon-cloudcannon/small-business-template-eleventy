@@ -1,10 +1,10 @@
 {% assign_local c = "c-date-input" %}
 <div class="{{ c }}">
-    <label class="{{ c }}__label" for="{{ name_and_id }}">{{ label }}{% if required %} *{% endif %}</label>
+    <label class="{{ c }}__label" for="{{ id }}">{{ label }}{% if required %} *{% endif %}</label>
     <input class="{{ c }}__input"
         type="date"
-        id="{{ name_and_id }}" 
-        name="{{ name_and_id }}" 
+        id="{{ id }}" 
+        name="{{ label }}" 
         value="{{ 'now' | date: '%Y-%m-%d' }}"
         min="{{ min }}"
         max="{{ max }}"

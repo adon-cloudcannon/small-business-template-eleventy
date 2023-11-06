@@ -11,7 +11,7 @@ spec:
 blueprint:
   label: ""
   placeholder: ""
-  name_and_id: ""
+  id:
   rows: 2
   required: false
   helper_text:
@@ -19,14 +19,14 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   label: Comment
-  name_and_id: comment
   placeholder: Any helpful information we should know about
   rows: 2
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  name_and_id:
-    comment: Provides a unique identifier for the input
+  id:
+    hidden: true
+    instance_value: UUID
   rows:
     type: range
     options:

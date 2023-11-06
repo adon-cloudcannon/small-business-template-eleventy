@@ -11,19 +11,19 @@ spec:
 blueprint:
   label: ""
   placeholder: ""
-  name_and_id: ""
+  id:
   required: false
   helper_text:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   label: Phone number
-  name_and_id: phone_number
   placeholder: +64 21 859292
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  name_and_id:
-    comment: Provides a unique identifier for the input
+  id:
+    hidden: true
+    instance_value: UUID
   helper_text:
     comment: Helpful text for the user such as 'Please use your personal phone number'

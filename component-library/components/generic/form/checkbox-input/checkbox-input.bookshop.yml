@@ -1,7 +1,6 @@
 # Metadata about this component, to be used in the CMS
 spec:
   structures:
-    - form_blocks
   label: "Checkbox Input"
   description: A single checkbox input
   icon: check_box
@@ -9,8 +8,9 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  id:
+  group_name:
   label: ""
+  id:
   checked: false
   required: false
 
@@ -20,6 +20,9 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  id:
+  group_name:
     hidden: true
     comment: This input should be hidden from editors and passed through from the radio-group component so that these inputs function correctly
+  id:
+    hidden: true
+    instance_value: UUID

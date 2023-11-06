@@ -9,8 +9,8 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  name_and_id: ""
   label: ""
+  id:
   options:
     - key:
   helper_text:
@@ -18,7 +18,6 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   label: Select input
-  name_and_id: option-selector
   options:
     - key: Option 1
     - key: Option 2
@@ -27,7 +26,8 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  name_and_id:
-    comment: Provides a unique identifier for the input
+  id:
+    hidden: true
+    instance_value: UUID
   helper_text:
     comment: Helpful text for the user such as 'Option 1 is only available on weekends'

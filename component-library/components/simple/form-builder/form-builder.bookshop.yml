@@ -1,6 +1,7 @@
 # Metadata about this component, to be used in the CMS
 spec:
   structures:
+    - content_blocks
   label: "Form Builder"
   description: Build a form with the developed inputs
   icon: dynamic_form
@@ -22,11 +23,11 @@ preview:
     - _bookshop_name: generic/form/text-input
       label: Full name
       placeholder: John Smith
-      name_and_id: full_name
+      id: full_name
       required: true
       helper_text: You do not need to include any middle names
     - _bookshop_name: generic/form/email-input
-      name_and_id: email
+      id: email
       label: Email
       required: false
       placeholder: mybusiness@smallbusiness.com
@@ -34,62 +35,54 @@ preview:
     - _bookshop_name: generic/form/phone-input
       label: Phone number
       placeholder: +64 21 859292
-      name_and_id: phone_number
+      id: phone_number
       required: false
       helper_text: Your personal phone number
     - _bookshop_name: generic/form/radio-button-group
       label: Radio Button group
+      required: true
       radio_buttons:
-        - _bookshop_name: generic/form/radio-input
-          label: Radio button 1
-          id: radio-button
+        - label: Radio button 1
           checked: false
-          required: false
-        - _bookshop_name: generic/form/radio-input
-          label: Radio button 2
-          id: radio-button
+        - label: Radio button 2
           checked: true
-          required: false
-        - _bookshop_name: generic/form/radio-input
-          label: Radio button 3
-          id: radio-button
+        - label: Radio button 3
           checked: false
-          required: false
-        - _bookshop_name: generic/form/radio-input
-          label: Radio button 4
-          id: radio-button
+        - label: Radio button 4
           checked: false
-          required: false
       arrangement: inline
       helper_text: Radio button 1 is only available on weekends
     - _bookshop_name: generic/form/checkbox-group
       label: Checkbox group
       checkboxes:
         - _bookshop_name: generic/form/checkbox-input
-          _name: UUID
+          group_name:
           label: Checkbox
           checked: false
           required: false
+          id: 0cd76c37-3678-4b71-b676-061de9061eca
         - _bookshop_name: generic/form/checkbox-input
-          _name: UUID
+          group_name:
           label: Checkbox
           checked: true
           required: false
+          id: b73cc3d9-a34d-43dc-b9ce-40c8b9670583
         - _bookshop_name: generic/form/checkbox-input
-          _name: UUID
+          group_name:
           label: Checkbox
           checked: false
           required: false
+          id: 7c97077e-b0eb-42ba-8e6e-3da627e1684e
       arrangement: inline
       helper_text: Do not select more than 2
     - _bookshop_name: generic/form/country-select-input
-      name_and_id: country-selector
+      id: country-selector
       label: Country
       required: false
       placeholder: Select your country
       helper_text: The country you primarily reside in
     - _bookshop_name: generic/form/date-input
-      name_and_id: date
+      id: date
       label: Choose a date
       required: false
       min: "2023-11-03"
@@ -98,13 +91,13 @@ preview:
     - _bookshop_name: generic/form/time-input
       label: Choose a time slot
       placeholder: '15:00'
-      name_and_id: time
+      id: time
       required: false
       min: '09:00'
       max: '17:00'
       helper_text: Select a time between 9:00 and 15:00
     - _bookshop_name: generic/form/select-input
-      name_and_id: option-selector
+      id: option-selector
       label: Select
       options:
         - key: Option 1
@@ -116,10 +109,21 @@ preview:
     - _bookshop_name: generic/form/text-area-input
       label: Comment
       placeholder: Any helpful information we should know about
-      name_and_id: comment
+      id: comment
       rows: 2
       required: false
       helper_text: Let us know things such as if you have any allergies
+    - _bookshop_name: generic/form/checkbox-group
+      label: Terms and conditions
+      checkboxes:
+        - _bookshop_name: generic/form/checkbox-input
+          group_name:
+          label: Do you accept the terms and conditions?
+          checked: false
+          required: true
+          id: beff4820-604b-4d23-a74b-47625baa2c3f
+      arrangement: inline
+      helper_text: You can view the terms and conditions at /terms-and-conditions
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:

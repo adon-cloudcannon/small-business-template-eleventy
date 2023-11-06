@@ -10,6 +10,9 @@
     border: 2px solid var(--brand-grey-000, #F9F9FB);
     cursor: pointer;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:focus {
         border: 2px solid var(--interaction-blue-300, #2566F2);
@@ -31,5 +34,9 @@
       line-height: var(--paragraph-small);
       color: var(--brand-grey-000, #F9F9FB);
     }
+  }
+
+  &__label {
+    cursor: pointer;
   }
 }

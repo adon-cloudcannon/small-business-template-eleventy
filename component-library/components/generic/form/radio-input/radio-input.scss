@@ -35,4 +35,8 @@
           background: var(--brand-grey-000, #F9F9FB);
         }
     }
+
+    &__label {
+      cursor: pointer;
+    }
 }

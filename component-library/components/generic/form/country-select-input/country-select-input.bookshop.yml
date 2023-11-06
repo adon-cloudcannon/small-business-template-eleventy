@@ -9,19 +9,19 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  name_and_id: ""
   label: ""
+  id:
   required: false
   helper_text:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   label: Country
-  name_and_id: country-selector
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  name_and_id:
-    comment: Provides a unique identifier for the input
   helper_text:
     comment: Helpful text for the user such as 'Your primary country of residence'
+  id:
+    hidden: true
+    instance_value: UUID

@@ -10,7 +10,11 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   label: ""
-  radio_buttons: [bookshop:generic/form/radio-input]
+  id:
+  required: false
+  radio_buttons: 
+    - label:
+      checked:
   arrangement: inline
   helper_text:
 
@@ -18,21 +22,20 @@ blueprint:
 preview:
   label: "Radio Button group"
   radio_buttons:
-    - _bookshop_name: generic/form/radio-input
-      label: Radio button 1
-      id: radio-button-1
-    - _bookshop_name: generic/form/radio-input
-      label: Radio button 2
-      id: radio-button-2
-    - _bookshop_name: generic/form/radio-input
-      label: Radio button 3
-      id: radio-button-3
-    - _bookshop_name: generic/form/radio-input
-      label: Radio button 4
-      id: radio-button-4
+    - label: Radio button 1
+      checked: false
+    - label: Radio button 2
+      checked: false
+    - label: Radio button 3
+      checked: false
+    - label: Radio button 4
+      checked: false
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  id:
+    hidden: true
+    instance_value: UUID
   arrangement:
     type: select
     comment: The layout of the icon and text together

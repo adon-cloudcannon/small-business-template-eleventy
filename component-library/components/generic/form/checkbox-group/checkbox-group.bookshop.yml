@@ -3,13 +3,14 @@ spec:
   structures:
     - form_blocks
   label: "Checkbox Group"
-  description: Group of radio button inputs
+  description: Group of checkbox inputs
   icon: check_box
   tags: []
 
 # Defines the structure of this component, as well as the default values
 blueprint:
   label: ""
+  id:
   checkboxes: [bookshop:generic/form/checkbox-input]
   arrangement: inline
   helper_text:
@@ -26,3 +27,6 @@ preview:
 _inputs:
   helper_text:
     comment: Helpful text for the user such as 'Do not select more than 2'
+  id:
+    hidden: true
+    instance_value: UUID

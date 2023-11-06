@@ -13,6 +13,18 @@ function validateInput(input) {
     }
 }
 
+function validateInputGroup(input) {
+    const errorContainer = input.parentElement.querySelector('.error');
+
+    let invalidElements = input.querySelectorAll(":invalid");
+    invalidElements = [
+        ...invalidElements
+    ];
+
+    if (invalidElements.length == 0) {
+        errorContainer.style.display = "none";
+    }
+}
 
 function validateInputTyping(input){
     // Wait for a user to stop typing and display an error message if their input is invalid
@@ -33,15 +45,23 @@ function validateFormSubmit(event, element) {
     invalidElements = [
         ...invalidElements
     ];
+    invalidElements = invalidElements.filter(input => input.type != "radio" && input.type != "checkbox");
     
     for (index in invalidElements) {
-        console.log(invalidElements[index])
-        let errorContainer = invalidElements[index].parentElement.querySelector('.error');
+        let item = invalidElements[index];
+        console.log(item)
+        let errorContainer = item.parentElement.querySelector('.error');
         console.log(errorContainer)
         let errorText = errorContainer.querySelector(".error__text")
         console.log(errorText)
         errorContainer.style.display = "flex";
-        errorText.textContent = invalidElements[index].validationMessage;
+        if (item.validationMessage) {
+            console.log(item.validationMessage)
+            errorText.textContent = item.validationMessage;
+        } else if (item.querySelector(':invalid')) {
+            console.log(item.querySelector(':invalid').validationMessage)
+            errorText.textContent = item.querySelector(':invalid').validationMessage;
+        }
     }
 
     if (invalidElements.length > 0) {
@@ -58,4 +78,5 @@ function validateFormSubmit(event, element) {
 
 window.validateInput = validateInput;
 window.validateInputTyping = validateInputTyping;
+window.validateInputGroup = validateInputGroup;
 window.validateFormSubmit = validateFormSubmit;
