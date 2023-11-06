@@ -27,3 +27,7 @@ _inputs:
     instance_value: UUID
   helper_text:
     comment: Helpful text for the user such as 'The date should be after today'
+  min:
+    type: date
+  max:
+    type: date

@@ -30,3 +30,7 @@ _inputs:
     instance_value: UUID
   helper_text:
     comment: Helpful text for the user such as 'Pick a time between 9:00 and 17:00'
+  min:
+    type: time
+  max:
+    type: time
