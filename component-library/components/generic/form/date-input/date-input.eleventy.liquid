@@ -1,13 +1,15 @@
 {% assign_local c = "c-date-input" %}
 <div class="{{ c }}">
     <label class="{{ c }}__label" for="{{ id }}">{{ label }}{% if required %} *{% endif %}</label>
-    <input class="{{ c }}__input"
+    <input class="{{ c }}__input {% if min_today %}{{ c }}__input--min-today{% endif %} {% if max_today %}{{ c }}__input--max-today{% endif %}"
         type="date"
         id="{{ id }}" 
         name="{{ label }}" 
-        value="{{ 'now' | date: '%Y-%m-%d' }}"
-        min="{{ min | date: '%Y-%m-%d' }}"
-        max="{{ max | date: '%Y-%m-%d' }}"
+        value="yyyy-mm-dd"
+        {% if min_today %}min="{{ 'now' | date: '%Y-%m-%d' }}"{% elsif min_today %}min="{{ min | date: '%Y-%m-%d' }}"{% endif %}
+        {% if max_today %}max="{{ 'now' | date: '%Y-%m-%d' }}"{% elsif max_today %}max="{{ max | date: '%Y-%m-%d' }}"{% endif %}
+        onfocus="setMinMaxDateToday(this)"
+        onblur="validateInput(this)"
         {% if required %}required{% endif %}>
     <div class="{{ c }}__icon">{% bookshop "generic/icon" svg_icon:"outline/calendar-days" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
     <div class="{{ c }}__dropdown-arrow">{% bookshop "generic/icon" svg_icon:"solid/chevron-down" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
@@ -18,4 +20,9 @@
             <p class="{{ c }}__helper__text">{{ helper_text }}<p>
         </div>
     {% endif %}
+
+    <div class="{{ c }}__error error">
+        {% bookshop "generic/icon" svg_icon:"outline/x-circle" icon_size:'extra-small' rounded_border:false color:'var(--error-red-300, #BF2323)' %}
+        <p class="{{ c }}__error__text error__text">Error Message<p>
+    </div>
 </div>

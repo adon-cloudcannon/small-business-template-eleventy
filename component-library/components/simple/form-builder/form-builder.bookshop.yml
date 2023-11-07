@@ -84,16 +84,16 @@ preview:
       id: date
       label: Choose a date
       required: false
-      min: "2023-11-03"
-      max: null
+      min: 2023-11-06T00:00:00Z
+      max: 2023-11-16T00:00:00Z
       helper_text: The date cannot be in the past
     - _bookshop_name: generic/form/time-input
       label: Choose a time slot
       placeholder: '15:00'
       id: time
       required: false
-      min: '09:00'
-      max: '17:00'
+      min: 9:00 am
+      max: 3:00 pm
       helper_text: Select a time between 9:00 and 15:00
     - _bookshop_name: generic/form/select-input
       id: option-selector

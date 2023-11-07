@@ -12,7 +12,9 @@ blueprint:
   label: ""
   id:
   required: false
+  min_today: true
   min:
+  max_today:
   max:
   helper_text:
 
@@ -28,6 +30,14 @@ _inputs:
   helper_text:
     comment: Helpful text for the user such as 'The date should be after today'
   min:
+    hidden: min_today
     type: date
   max:
+    hidden: max_today
     type: date
+  min_today:
+    type: switch
+    comment: On if the minimum date to be selected should always be the current date
+  max_today:
+    type: switch
+    comment: On if the maximum date to be selected should always be the current date

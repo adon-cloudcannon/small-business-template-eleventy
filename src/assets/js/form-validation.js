@@ -80,3 +80,28 @@ window.validateInput = validateInput;
 window.validateInputTyping = validateInputTyping;
 window.validateInputGroup = validateInputGroup;
 window.validateFormSubmit = validateFormSubmit;
+
+function setMinMaxDateToday(input) {
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1;
+    let yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd;
+        }
+
+        if (mm < 10) {
+        mm = '0' + mm;
+        } 
+                    
+    today = yyyy + '-' + mm + '-' + dd;
+    
+    if (input.classList.contains("c-date-input__input--min-today")) {
+        input.setAttribute("min", today);
+    } else if (input.classList.contains("c-date-input__input--max-today")) {
+        input.setAttribute("max", today);
+    }
+}
+
+window.setMinMaxDateToday = setMinMaxDateToday;
