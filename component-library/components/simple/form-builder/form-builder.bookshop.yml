@@ -11,6 +11,9 @@ spec:
 blueprint:
   id: 
   form_submission_type: email/cloudcannon
+  inbox_key: 
+  send_to:
+  subject:
   success_page: ""
   inputs: [bookshop:structure:form_blocks]
   tandc_checkbox: bookshop:generic/form/checkbox-input
@@ -133,15 +136,18 @@ preview:
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   form_submission_type:
-    comment: This option will provide the type of submission that will be targeted. 
-    type: select
-    options:
-      values:
-      - email/cloudcannon
-      - mailchimp
+    type: disabled
   id:
     hidden: true
     instance_value: UUID
   success_page:
     type: url
-    comment:  The page to redirect to after submission (mailchimp something like https://company.us12.list-manage.com/subscribe?u=c2asfj8ec0sdfjsadlfe3f&id=88786d434e)
+    comment:  The page to redirect to after submission (mailchimp will be something like https://company.us12.list-manage.com/subscribe?u=c2asfj8ec0sdfjsadlfe3f&id=88786d434e)
+  # TODO: add instructions here with link to docs
+  inbox_key:
+    comment: The key that you configured for your cloudcannon inbox
+  send_to:
+    comment: Email addresses that submissions should be sent to
+    type: array
+  subject:
+    comment: The subject of the submission emails
