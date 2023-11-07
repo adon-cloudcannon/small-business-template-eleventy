@@ -7,9 +7,13 @@ function validateInput(input) {
 
     if (input.checkValidity()) {
         errorContainer.style.display = "none";
+        item.removeAttribute('aria-invalid')
+        item.removeAttribute('aria-errormessage')
     } else {
         errorContainer.style.display = "flex";
         errorText.textContent = input.validationMessage;
+        item.setAttribute('aria-invalid', true)
+        item.setAttribute('aria-errormessage', errorText.id)
     }
 }
 
@@ -22,6 +26,8 @@ function validateInputGroup(input) {
     ];
 
     if (invalidElements.length == 0) {
+        input.removeAttribute('aria-invalid')
+        input.removeAttribute('aria-errormessage')
         errorContainer.style.display = "none";
     }
 }
@@ -49,12 +55,11 @@ function validateFormSubmit(event, element) {
     
     for (index in invalidElements) {
         let item = invalidElements[index];
-        console.log(item)
         let errorContainer = item.parentElement.querySelector('.error');
-        console.log(errorContainer)
         let errorText = errorContainer.querySelector(".error__text")
-        console.log(errorText)
         errorContainer.style.display = "flex";
+        item.setAttribute('aria-invalid', true)
+        item.setAttribute('aria-errormessage', errorText.id)
         if (item.validationMessage) {
             console.log(item.validationMessage)
             errorText.textContent = item.validationMessage;
@@ -66,8 +71,7 @@ function validateFormSubmit(event, element) {
 
     if (invalidElements.length > 0) {
         console.log('contains invalid')
-        scrollTo(invalidElements[0])
-        invalidElements[0].scrollIntoView({ behavior: 'smooth' });
+        invalidElements[0].focus();
         return false
     } else {
         console.log('contains no invalid')
@@ -81,6 +85,7 @@ window.validateInputTyping = validateInputTyping;
 window.validateInputGroup = validateInputGroup;
 window.validateFormSubmit = validateFormSubmit;
 
+// If the min or max value of the provided input should be the current date, set the attribute
 function setMinMaxDateToday(input) {
     let today = new Date();
     let dd = today.getDate();
@@ -89,11 +94,11 @@ function setMinMaxDateToday(input) {
 
     if (dd < 10) {
         dd = '0' + dd;
-        }
+    }
 
-        if (mm < 10) {
+    if (mm < 10) {
         mm = '0' + mm;
-        } 
+    } 
                     
     today = yyyy + '-' + mm + '-' + dd;
     
