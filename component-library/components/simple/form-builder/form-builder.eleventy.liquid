@@ -12,7 +12,6 @@
 
     <input type="text" name="_gotcha" style="display: none;">
     {% if inbox_key %}<input type="hidden" name="inbox_key" value="{{ inbox_key }}">{% endif %}
-    {% if send_to %}<input type="hidden" name="_to" value="{{ send_to }}">{% endif %}
     {% if subject %}<input type="hidden" name="_subject" value="{{ subject }}">{% endif %}
 
     <button type="submit">Submit</button>

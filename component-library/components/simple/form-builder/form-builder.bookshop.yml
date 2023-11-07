@@ -1,9 +1,8 @@
 # Metadata about this component, to be used in the CMS
 spec:
   structures:
-    - content_blocks
   label: "Form Builder"
-  description: Build a form with the developed inputs
+  description: Build a CloudCannon form with the developed inputs
   icon: dynamic_form
   tags: []
 
@@ -12,11 +11,9 @@ blueprint:
   id: 
   form_submission_type: email/cloudcannon
   inbox_key: 
-  send_to:
   subject:
   success_page: ""
   inputs: [bookshop:structure:form_blocks]
-  tandc_checkbox: bookshop:generic/form/checkbox-input
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -142,12 +139,9 @@ _inputs:
     instance_value: UUID
   success_page:
     type: url
-    comment:  The page to redirect to after submission (mailchimp will be something like https://company.us12.list-manage.com/subscribe?u=c2asfj8ec0sdfjsadlfe3f&id=88786d434e)
+    comment:  The page to redirect to after submission
   # TODO: add instructions here with link to docs
   inbox_key:
-    comment: The key that you configured for your cloudcannon inbox
-  send_to:
-    comment: Email addresses that submissions should be sent to
-    type: array
+    comment: The key that you configured for your cloudcannon inbox. If not set it will go to the default inbox you set up.
   subject:
-    comment: The subject of the submission emails
+    comment: The subject line for the form submission emails
