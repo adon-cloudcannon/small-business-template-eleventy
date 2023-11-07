@@ -8,12 +8,13 @@
         {% if required %}required{% endif %}
         rows="{{ rows }}"
         onblur="validateInput(this)"
-        oninput="validateInputTyping(this)"></textarea>
+        oninput="validateInputTyping(this)"
+        {% if helper_text %}aria-describedby="{{ id }}--helper"{% endif %}></textarea>
 
     {% if helper_text %}
         <div class="{{ c }}__helper">
             {% bookshop "generic/icon" svg_icon:"outline/information-circle" icon_size:'extra-small' rounded_border:false color:'var(--brand-grey-000, #F9F9FB)' %}
-            <p class="{{ c }}__helper__text">{{ helper_text }}<p>
+            <p class="{{ c }}__helper__text" id="{{ id }}--helper" role="tooltip">{{ helper_text }}<p>
         </div>
     {% endif %}
 

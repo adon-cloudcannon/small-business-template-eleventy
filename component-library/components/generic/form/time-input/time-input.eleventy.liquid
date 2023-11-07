@@ -8,14 +8,15 @@
         min="{{ min | militaryTime }}"
         max="{{ max | militaryTime }}"
         onblur="validateInput(this)"
-        oninput="validateInputTyping(this)">
+        oninput="validateInputTyping(this)"
+        {% if helper_text %}aria-describedby="{{ id }}--helper"{% endif %}>
     <div class="{{ c }}__icon">{% bookshop "generic/icon" svg_icon:"outline/clock" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
     <div class="{{ c }}__dropdown-arrow">{% bookshop "generic/icon" svg_icon:"solid/chevron-down" icon_size:'extra-small' rounded_border:false color:'white' %}</div>
 
     {% if helper_text %}
         <div class="{{ c }}__helper">
             {% bookshop "generic/icon" svg_icon:"outline/information-circle" icon_size:'extra-small' rounded_border:false color:'var(--brand-grey-000, #F9F9FB)' %}
-            <p class="{{ c }}__helper__text">{{ helper_text }}<p>
+            <p class="{{ c }}__helper__text" id="{{ id }}--helper" role="tooltip">{{ helper_text }}<p>
         </div>
     {% endif %}
 

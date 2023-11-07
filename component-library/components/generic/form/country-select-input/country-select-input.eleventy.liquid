@@ -3,7 +3,8 @@
   <label class="{{ c }}__label" for="{{ id }}">{{ label }}</label>
   <select class="{{ c }}__input"
     name="{{ label }}"
-    id="{{ id }}">
+    id="{{ id }}"
+    {% if helper_text %}aria-describedby="{{ id }}--helper"{% endif %}>
     <option value="164" selected>USA</option>
     <option value="286">Aaland Islands</option>
     <option value="274">Afghanistan</option>
@@ -244,7 +245,7 @@
     {% if helper_text %}
         <div class="{{ c }}__helper">
             {% bookshop "generic/icon" svg_icon:"outline/information-circle" icon_size:'extra-small' rounded_border:false color:'var(--brand-grey-000, #F9F9FB)' %}
-            <p class="{{ c }}__helper__text">{{ helper_text }}<p>
+            <p class="{{ c }}__helper__text" id="{{ id }}--helper" role="tooltip">{{ helper_text }}<p>
         </div>
     {% endif %}
 </div>
