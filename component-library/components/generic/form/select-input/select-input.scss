@@ -29,6 +29,7 @@
     }
 
     &__dropdown-arrow {
+        pointer-events: none;
         grid-row: 2;
         grid-column: 1;
         align-self: center;

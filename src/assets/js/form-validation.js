@@ -7,13 +7,13 @@ function validateInput(input) {
 
     if (input.checkValidity()) {
         errorContainer.style.display = "none";
-        item.removeAttribute('aria-invalid')
-        item.removeAttribute('aria-errormessage')
+        input.removeAttribute('aria-invalid')
+        input.removeAttribute('aria-errormessage')
     } else {
         errorContainer.style.display = "flex";
         errorText.textContent = input.validationMessage;
-        item.setAttribute('aria-invalid', true)
-        item.setAttribute('aria-errormessage', errorText.id)
+        input.setAttribute('aria-invalid', true)
+        input.setAttribute('aria-errormessage', errorText.id)
     }
 }
 
@@ -57,13 +57,16 @@ function validateFormSubmit(event, element) {
         let item = invalidElements[index];
         let errorContainer = item.parentElement.querySelector('.error');
         let errorText = errorContainer.querySelector(".error__text")
-        errorContainer.style.display = "flex";
-        item.setAttribute('aria-invalid', true)
-        item.setAttribute('aria-errormessage', errorText.id)
         if (item.validationMessage) {
+            errorContainer.style.display = "flex";
+            item.setAttribute('aria-invalid', true)
+            item.setAttribute('aria-errormessage', errorText.id)
             console.log(item.validationMessage)
             errorText.textContent = item.validationMessage;
         } else if (item.querySelector(':invalid')) {
+            errorContainer.style.display = "flex";
+            item.setAttribute('aria-invalid', true)
+            item.setAttribute('aria-errormessage', errorText.id)
             console.log(item.querySelector(':invalid').validationMessage)
             errorText.textContent = item.querySelector(':invalid').validationMessage;
         }

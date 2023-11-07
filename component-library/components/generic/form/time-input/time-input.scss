@@ -17,6 +17,7 @@
         background-color: transparent;
 
         &::placeholder {
+            opacity: 1;
             color: var(--brand-grey-400, #B6B6B8);
         }
 
@@ -46,11 +47,13 @@
     }
 
     &__icon {
+        pointer-events: none;
         justify-self: start;
         margin-left: 16px;
     }
 
     &__dropdown-arrow {
+        pointer-events: none;
         justify-self: end;
         margin-right: 16px;
     }

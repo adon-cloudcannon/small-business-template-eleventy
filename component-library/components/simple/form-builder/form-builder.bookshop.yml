@@ -40,15 +40,20 @@ preview:
     - _bookshop_name: generic/form/radio-button-group
       label: Radio Button group
       required: true
+      id: bd65738b-49b7-4225-be21-47b7b41a16a9
       radio_buttons:
         - label: Radio button 1
           checked: false
+          id: cb850e02-a4d0-4f7d-86a8-d1f619549e23
         - label: Radio button 2
           checked: true
+          id: a0bdcf1e-8d56-43d7-96ce-c27431ea3102
         - label: Radio button 3
           checked: false
+          id: c72e1877-b3e1-4b49-922b-255e6ea87b19
         - label: Radio button 4
           checked: false
+          id: 3ec28810-f058-4e91-bf82-59cc0b88a6f7
       arrangement: inline
       helper_text: Radio button 1 is only available on weekends
     - _bookshop_name: generic/form/checkbox-group
@@ -84,7 +89,7 @@ preview:
       id: date
       label: Choose a date
       required: false
-      min: 2023-11-06T00:00:00Z
+      min_today: true
       max: 2023-11-16T00:00:00Z
       helper_text: The date cannot be in the past
     - _bookshop_name: generic/form/time-input

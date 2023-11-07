@@ -10,13 +10,19 @@
 
     &__input {
         padding: 12px 48px;
+
+        @supports not selector(::-webkit-calendar-picker-indicator) {
+            padding: 12px 48px 12px 16px;
+        }
+
         border-radius: 4px;
         border: 2px solid;
         position: relative;
         background-color: transparent;
         color: var(--brand-grey-000, #F9F9FB);
-
+        
         &::placeholder {
+            opacity: 1;
             color: var(--brand-grey-400, #B6B6B8);
         }
 
@@ -54,11 +60,19 @@
     }
 
     &__icon {
+        pointer-events: none;
         justify-self: start;
         margin-left: 16px;
     }
 
+    @supports not selector(::-webkit-calendar-picker-indicator) {
+        &__icon {
+            display: none;
+        }
+    }
+
     &__dropdown-arrow {
+        pointer-events: none;
         justify-self: end;
         margin-right: 16px;
     }

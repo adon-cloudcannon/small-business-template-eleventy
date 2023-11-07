@@ -17,6 +17,7 @@
         color: var(--brand-grey-000, #F9F9FB);
 
         &::placeholder {
+            opacity: 1;
             color: var(--brand-grey-400, #B6B6B8);
         }
 

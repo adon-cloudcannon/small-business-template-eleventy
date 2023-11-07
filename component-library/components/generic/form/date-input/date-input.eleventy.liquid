@@ -5,7 +5,6 @@
         type="date"
         id="{{ id }}" 
         name="{{ label }}" 
-        value="yyyy-mm-dd"
         {% if min_today %}min="{{ 'now' | date: '%Y-%m-%d' }}"{% elsif min_today %}min="{{ min | date: '%Y-%m-%d' }}"{% endif %}
         {% if max_today %}max="{{ 'now' | date: '%Y-%m-%d' }}"{% elsif max_today %}max="{{ max | date: '%Y-%m-%d' }}"{% endif %}
         onfocus="setMinMaxDateToday(this)"
