@@ -12,9 +12,9 @@ blueprint:
   label: ""
   id:
   required: false
-  min_today: true
+  min_today: false
   min:
-  max_today:
+  max_today: false
   max:
   helper_text:
 
@@ -31,11 +31,11 @@ _inputs:
     comment: Helpful text for the user such as 'The date should be after today'
   min:
     hidden: min_today
-    comment: Select the earliest date a user is allowed to input (if not today)
+    comment: Select the earliest date a user is allowed to input (if not the current day)
     type: date
   max:
     hidden: max_today
-    comment: Select the latest date a user is allowed to input (if not today)
+    comment: Select the latest date a user is allowed to input (if not the current day)
     type: date
   min_today:
     type: switch
