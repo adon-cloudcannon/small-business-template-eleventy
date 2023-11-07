@@ -18,6 +18,7 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   id: 727a56cc-0bfc-4ab4-901e-144f407cd1ae
+  success_page: /
   inputs:
     - _bookshop_name: generic/form/text-input
       label: Full name

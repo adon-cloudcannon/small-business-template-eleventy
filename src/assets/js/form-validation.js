@@ -42,11 +42,7 @@ function validateInputTyping(input){
 }
 
 function validateFormSubmit(event, element) {
-    event.preventDefault();
-    console.log('validate form submit')
     let invalidElements = element.querySelectorAll(":invalid");
-
-    console.log(invalidElements)
 
     invalidElements = [
         ...invalidElements
@@ -61,23 +57,20 @@ function validateFormSubmit(event, element) {
             errorContainer.style.display = "flex";
             item.setAttribute('aria-invalid', true)
             item.setAttribute('aria-errormessage', errorText.id)
-            console.log(item.validationMessage)
             errorText.textContent = item.validationMessage;
         } else if (item.querySelector(':invalid')) {
             errorContainer.style.display = "flex";
             item.setAttribute('aria-invalid', true)
             item.setAttribute('aria-errormessage', errorText.id)
-            console.log(item.querySelector(':invalid').validationMessage)
             errorText.textContent = item.querySelector(':invalid').validationMessage;
         }
     }
 
     if (invalidElements.length > 0) {
-        console.log('contains invalid')
+        event.preventDefault();
         invalidElements[0].focus();
         return false
     } else {
-        console.log('contains no invalid')
         return true;
     }
 
