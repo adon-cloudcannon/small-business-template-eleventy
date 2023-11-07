@@ -31,13 +31,15 @@ _inputs:
     comment: Helpful text for the user such as 'The date should be after today'
   min:
     hidden: min_today
+    comment: Select the earliest date a user is allowed to input (if not today)
     type: date
   max:
     hidden: max_today
+    comment: Select the latest date a user is allowed to input (if not today)
     type: date
   min_today:
     type: switch
-    comment: On if the minimum date to be selected should always be the current date
+    comment: On if the earliest date to be selected should always be the current date
   max_today:
     type: switch
-    comment: On if the maximum date to be selected should always be the current date
+    comment: On if the latest date to be selected should always be the current date
