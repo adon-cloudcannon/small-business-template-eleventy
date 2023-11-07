@@ -4,5 +4,97 @@ layout: layouts/page.html
 permalink: /
 draft: false
 eleventyExcludeFromCollections: false
-content_blocks: []
+content_blocks:
+  - _bookshop_name: sections/form
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      form:
+        _bookshop_name: simple/form-builder
+        id: 5dd8dd92-7e85-4681-a3e4-a7c32d567bec
+        form_submission_type: email/cloudcannon
+        inbox_key:
+        subject: Contact form submission
+        success_page: /
+        inputs:
+          - _bookshop_name: generic/form/checkbox-group
+            label: Checkbox group
+            id: 51925dec-314e-4ebf-aeb6-b0de4f03da84
+            checkboxes:
+              - _bookshop_name: generic/form/checkbox-input
+                group_name:
+                label: Checkbox 1
+                id: 0bb9d85c-017e-483c-bcb6-3cf842ba0468
+                checked: true
+                required: false
+              - _bookshop_name: generic/form/checkbox-input
+                group_name:
+                label: Checkbox 2
+                id: bd126f91-44da-4de0-a371-fd08a711efb4
+                checked: false
+                required: false
+              - _bookshop_name: generic/form/checkbox-input
+                group_name:
+                label: Checkbox 3
+                id: fa24b997-f0c0-46eb-b7d0-02b4b5aa2e1e
+                checked: false
+                required: false
+            arrangement: inline
+            helper_text:
+          - _bookshop_name: generic/form/country-select-input
+            label: Country
+            id: 1a315a5b-e876-48c8-97e8-bc7073b5fc03
+            required: false
+            helper_text: Primary country of residence
+          - _bookshop_name: generic/form/email-input
+            label: Email Address
+            id: ae645c5a-986d-4d7a-bab5-554871ce23a8
+            required: true
+            placeholder: example@email.com
+            helper_text:
+          - _bookshop_name: generic/form/phone-input
+            label: Phone Number
+            placeholder: 012 345 6789
+            id: 8da71448-6d29-436a-baae-06140b51b418
+            required: false
+            helper_text:
+          - _bookshop_name: generic/form/text-area-input
+            label: Text area
+            placeholder: Enter any extra information here
+            id: 2c1e33d7-4094-4b6b-9b4f-41c239d3a59a
+            rows: 10
+            required: false
+            helper_text:
+          - _bookshop_name: generic/form/text-input
+            label: Text
+            placeholder: Text placeholder
+            id: c669150f-b8b9-422e-8fda-7cc2376dd75d
+            required: false
+            helper_text:
+          - _bookshop_name: generic/form/radio-button-group
+            label: Radio Group
+            id: 56328622-58b3-4b12-a69c-7bdee10e6bfd
+            required: true
+            radio_buttons:
+              - label: Button 1
+                checked: false
+              - label: Button 2
+                checked: false
+              - label: Button 3
+                checked: false
+            arrangement: stacked
+            helper_text:
+          - _bookshop_name: generic/form/select-input
+            label: Select input
+            id: 170d222b-79d9-4a30-b62a-25c9046e69f8
+            options:
+              - name: Option 1
+              - name: Option 2
+            helper_text:
+    styles:
+      background_variant: light
+      content_alignment: center
 ---
