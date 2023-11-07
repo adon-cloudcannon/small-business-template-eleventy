@@ -6,7 +6,7 @@
     id="{{ id }}"
     {% if helper_text %}aria-describedby="{{ id }}--helper"{% endif %}>
     {% for option in options %}
-        <option value="{{ option.key }}">{{ option.key }}</option>
+        <option value="{{ option.name }}">{{ option.name }}</option>
     {% endfor %}
   </select>
   <div class="{{ c }}__dropdown-arrow">{% bookshop "generic/icon" svg_icon:"solid/chevron-down" icon_size:'extra-small' rounded_border:false color:'white' %}</div>

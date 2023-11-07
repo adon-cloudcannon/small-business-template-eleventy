@@ -12,17 +12,17 @@ blueprint:
   label: ""
   id:
   options:
-    - key:
+    - name:
   helper_text:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   label: Select input
   options:
-    - key: Option 1
-    - key: Option 2
-    - key: Option 3
-    - key: Option 4
+    - name: Option 1
+    - name: Option 2
+    - name: Option 3
+    - name: Option 4
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:

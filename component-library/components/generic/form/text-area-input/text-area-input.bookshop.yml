@@ -35,3 +35,5 @@ _inputs:
       max: 10
   helper_text:
     comment: Helpful text for the user such as 'You do not need to enter your middle name(s)'
+  placeholder:
+    type: textarea

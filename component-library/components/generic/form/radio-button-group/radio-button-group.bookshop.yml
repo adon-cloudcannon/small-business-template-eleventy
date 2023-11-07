@@ -14,7 +14,7 @@ blueprint:
   required: false
   radio_buttons: 
     - label:
-      checked:
+      checked: false
   arrangement: inline
   helper_text:
 
