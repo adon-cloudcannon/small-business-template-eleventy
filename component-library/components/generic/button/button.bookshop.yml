@@ -14,8 +14,7 @@ blueprint:
   variant: "primary"
   disabled: false
   arrow: "right"
-  onclick: ""
-  id: ""
+  onclick: 
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -24,8 +23,7 @@ preview:
   variant: "primary"
   disabled: false
   arrow: "right"
-  onclick: console.log("test")
-  id: ""
+  onclick: console.log(this)
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
@@ -43,3 +41,5 @@ _inputs:
       values:
         - primary
         - secondary
+  onclick:
+    type: hidden
