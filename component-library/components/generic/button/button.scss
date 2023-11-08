@@ -47,12 +47,9 @@
   }
 
   .c-icon {
-      &__svg {
+      &__svg, &__image {
         --c-icon-color: var(--_button-color);
       }
 
-      &__image {
-        background-color: var(--_button-color) ;
-      }
   }
 }
