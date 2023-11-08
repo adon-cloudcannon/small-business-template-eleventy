@@ -51,5 +51,8 @@
         --c-icon-color: var(--_button-color);
       }
 
+      &__image {
+        background: var(--_button-color) ;
+      }
   }
 }
