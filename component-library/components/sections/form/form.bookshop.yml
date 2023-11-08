@@ -12,7 +12,7 @@ blueprint:
   content:
     heading: bookshop:generic/component-heading!
     description: Description text to compliment the block
-    form: bookshop:simple/form-builder!
+    form: bookshop:simple/form-builder
   styles:
     background_variant: light
     content_alignment: center

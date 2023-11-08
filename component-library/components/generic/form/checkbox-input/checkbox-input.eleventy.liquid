@@ -4,6 +4,7 @@
       type="checkbox" 
       id="{{ id }}" 
       name="{{ group_name }}" 
+      value="{{ label }}"
       {% if checked %}checked{% endif %} 
       {% if required %}required{% endif %} />
   <label class="{{ c }}__label" for="{{ id }}">{{ label }}{% if required %} *{% endif %}</label>
