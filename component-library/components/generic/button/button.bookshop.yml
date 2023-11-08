@@ -3,7 +3,7 @@ spec:
   structures:
     - content_blocks
   label: "Button"
-  description:
+  description: Link to another location with the style of a button
   icon: smart_button
   tags: []
 
@@ -44,3 +44,5 @@ _inputs:
         - secondary
   onclick:
     hidden: true
+  open_in_new_tab:
+    hidden: url
