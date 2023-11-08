@@ -1,9 +1,18 @@
 const pluginBookshop = require("@bookshop/eleventy-bookshop");
 const yaml = require("js-yaml");
 const svgContents = require("eleventy-plugin-svg-contents");
-const imageShortcode = require("./11ty/shortcodes/image");
 const esbuild = require('esbuild');
 const { Tokenizer, assert } = require('liquidjs');
+const path = require("node:path");
+const Image = require("@11ty/eleventy-img");
+
+const IMAGE_OPTIONS = {
+	widths: [400, 800, 1280, 1600],
+	formats: ["avif", "webp", "svg", "jpeg"],
+	outputDir: "./_site/optimized/",
+	urlPath: "/optimized/",
+	// svgCompressionSize: "br",
+};
 
 const MarkdownIt = require("markdown-it"),
   md = new MarkdownIt({
@@ -31,7 +40,22 @@ module.exports = function (eleventyConfig) {
   );
 
   // Custom shortcodes
-  eleventyConfig.addShortcode("image", imageShortcode);
+  eleventyConfig.addShortcode("image", async (srcFilePath, alt, className, preferSvg) => {
+		let before = Date.now();
+		let inputFilePath = path.join(eleventyConfig.dir.input, srcFilePath);
+		let metadata = await Image(inputFilePath, Object.assign({
+			svgShortCircuit: preferSvg ? "size" : false,
+		}, IMAGE_OPTIONS));
+		console.log( `[11ty/eleventy-img] ${Date.now() - before}ms: ${inputFilePath}` );
+
+		return Image.generateHTML(metadata, {
+			alt,
+      class: className,
+			sizes: "100vw",
+			loading: "eager",
+			decoding: "async",
+		});
+	});
   
   // Plugins
   eleventyConfig.addPlugin(svgContents);
