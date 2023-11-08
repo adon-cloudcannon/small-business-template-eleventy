@@ -46,7 +46,13 @@
     }
   }
 
-  .c-icon__image, .c-icon__svg {
-      --c-icon-color: var(--_button-color);
+  .c-icon {
+      &__svg {
+        --c-icon-color: var(--_button-color);
+      }
+
+      &__image {
+        background-color: var(--_button-color) ;
+      }
   }
 }
