@@ -11,18 +11,18 @@ spec:
 blueprint:
   label: ""
   id:
-  checkboxes: [bookshop:generic/form/checkbox-input]
+  checkboxes: 
+    - label: 
+      id:
+      checked: false
+      required: false
   arrangement: inline
   helper_text:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   label: Checkbox group
-  checkboxes: 
-    - bookshop:generic/form/checkbox-input
-    - bookshop:generic/form/checkbox-input
-    - bookshop:generic/form/checkbox-input
-
+  
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   helper_text:
