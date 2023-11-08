@@ -1,9 +1,5 @@
 {% assign c = "c-icon" %}
 
-{% assign icon_style="custom" %}
-{% assign icon_path=hero_icon_name %}
-
-{% comment %} Append path and define style if the icon is selected from the heroicon library options {% endcomment %}
 {% assign icon_style = icon_type %}
 {% assign icon_path = "/assets/images/icons/" | append: icon_type | append: "/" | append: hero_icon_name  | append: '.svg' %}
 
