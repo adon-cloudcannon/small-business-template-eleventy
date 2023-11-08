@@ -7,7 +7,7 @@ const path = require("node:path");
 const Image = require("@11ty/eleventy-img");
 
 const IMAGE_OPTIONS = {
-	widths: [400, 800, 1600],
+	widths: [400, 800, 1280, 1600],
 	formats: ["avif", "webp", "svg", "jpeg"],
 	outputDir: "./_site/optimized/",
 	urlPath: "/optimized/",
@@ -40,7 +40,7 @@ module.exports = function (eleventyConfig) {
   );
 
   // Custom shortcodes
-  eleventyConfig.addShortcode("image", async (srcFilePath, alt, preferSvg) => {
+  eleventyConfig.addShortcode("image", async (srcFilePath, alt, className, preferSvg) => {
 		let before = Date.now();
 		let inputFilePath = path.join(eleventyConfig.dir.input, srcFilePath);
 		let metadata = await Image(inputFilePath, Object.assign({
@@ -50,6 +50,7 @@ module.exports = function (eleventyConfig) {
 
 		return Image.generateHTML(metadata, {
 			alt,
+      class: className,
 			sizes: "100vw",
 			loading: "eager",
 			decoding: "async",
