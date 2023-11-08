@@ -43,6 +43,4 @@ _inputs:
         - primary
         - secondary
   onclick:
-    type: hidden
-  open_in_new_tab:
-    hidden: url
+    hidden: true
