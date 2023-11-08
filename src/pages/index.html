@@ -101,4 +101,86 @@ content_blocks:
     styles:
       background_variant: light
       content_alignment: center
+  - _bookshop_name: sections/form
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      form:
+        _bookshop_name: simple/form-builder
+        id: 4c941801-1d3a-4125-8c47-740e33319fde
+        form_submission_type: email/cloudcannon
+        inbox_key:
+        subject:
+        success_page: ''
+        inputs:
+          - _bookshop_name: generic/form/checkbox-group
+            label: checkbox
+            id: dee694f5-78e7-4037-8446-786e80a3b809
+            checkboxes:
+              - label: test
+                id: 313c6783-88ad-4819-91bd-efe5bc6afae4
+                checked: false
+                required: true
+              - label: test 2
+                id: 339b9ef6-a71a-46c1-b50c-2d699eab14e2
+                checked: false
+                required: false
+            arrangement: inline
+            helper_text: must select test 1
+          - _bookshop_name: generic/form/country-select-input
+            label: country test
+            id: 7b7d9166-308e-40b0-a5fc-22442a213657
+            required: true
+            helper_text: test
+          - _bookshop_name: generic/form/email-input
+            label: test email
+            id: e103cf68-c97d-4cdc-83d9-c188c8966aa1
+            required: false
+            placeholder: test
+            helper_text: test
+          - _bookshop_name: generic/form/phone-input
+            label: phone
+            placeholder: phone
+            id: 53101945-2c93-4af9-a670-ecc065a0afb6
+            required: false
+            helper_text: asd
+          - _bookshop_name: generic/form/radio-button-group
+            label: button test
+            id: 902a9813-5909-4b47-abd7-6d9f0435f652
+            required: false
+            radio_buttons:
+              - label: '1'
+                checked: false
+              - label: '2'
+                checked: false
+              - label: '3'
+                checked: false
+            arrangement: stacked
+            helper_text: test
+          - _bookshop_name: generic/form/select-input
+            label: tester
+            id: c89563ab-6242-4130-8e91-fd65e6490933
+            options:
+              - name: test
+              - name: test 2
+            helper_text: '123'
+          - _bookshop_name: generic/form/text-area-input
+            label: test text
+            placeholder: teasdasdas
+            id: 30648089-7899-45f4-870c-0ce3d4cf3b84
+            rows: 5
+            required: true
+            helper_text: test test
+          - _bookshop_name: generic/form/text-input
+            label: test
+            placeholder: '123123123'
+            id: fe31924f-e992-408b-9dc7-0fc5b562edb2
+            required: true
+            helper_text: adasd
+    styles:
+      background_variant: light
+      content_alignment: center
 ---
