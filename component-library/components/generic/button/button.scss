@@ -4,10 +4,9 @@
   all: unset;
   padding: 1rem 0.75rem;
   color: var(--_button-color);
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  font-size: var(--buttonh);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height);
   display: inline-flex;
   gap: 0.5rem;
   align-items: center;

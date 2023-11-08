@@ -2,17 +2,17 @@
 {% assign arrow_type = "arrow-" | append: arrow %}
 
 {% if url and url!=''%}
-    <a href="{{ url }}" class="{{c}} {{c}}--{{ variant }}" {% if disabled %}disabled{% endif %} {% if open_in_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %} onclick="{{ onclick }}">
+    <a href="{{ url }}" class="{{c}} {{c}}--{{ variant }}" {% if disabled %}disabled{% endif %} {% if open_in_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %} {% if onclick %}onclick="{{ onclick }}"{% endif %}>
         {{ text }}
         {% if arrow %}
-            {% bookshop "generic/icon" svg_icon:arrow_type icon_type:"solid" icon_size:'tiny'  color:'transparent' %}
+            {% bookshop "generic/icon" svg_icon:arrow_type icon_type:"solid" icon_size:'extra-small'  color:'transparent' %}
         {% endif %}
     </a>
 {% else %}
-    <button class="{{c}} {{c}}--{{ variant }}" {% if disabled %}disabled{% endif %} onclick='{{ onclick }}'>
+    <button class="{{c}} {{c}}--{{ variant }}" {% if disabled %}disabled{% endif %} {% if onclick %}onclick="{{ onclick }}"{% endif %}>
         {{ text }}
         {% if arrow %}
-            {% bookshop "generic/icon" svg_icon:arrow_type icon_type:"solid" icon_size:'tiny'  color:'transparent' %}
+            {% bookshop "generic/icon" svg_icon:arrow_type icon_type:"solid" icon_size:'extra-small'  color:'transparent' %}
         {% endif %}
     </button>
 {% endif %}
