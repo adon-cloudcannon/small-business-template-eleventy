@@ -4,7 +4,6 @@
 
 {% else %}
 
-    {% assign image_path = "src/" | append: image_path %}
-    {% image image_path, image_alt %}
+    {% image image_path, image_alt, false %}
 
 {% endif %}
