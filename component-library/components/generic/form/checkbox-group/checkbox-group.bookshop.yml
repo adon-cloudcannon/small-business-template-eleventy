@@ -22,7 +22,22 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   label: Checkbox group
-  
+  id: 915341d1-0f7f-4db1-bee6-3335435dfeda
+  checkboxes:
+    - label: Checkbox 1
+      id: 0bb9d85c-017e-483c-bcb6-3cf842ba0468
+      checked: true
+      required: false
+    - label: Checkbox 2
+      id: bd126f91-44da-4de0-a371-fd08a711efb4
+      checked: false
+      required: false
+    - label: Checkbox 3
+      id: fa24b997-f0c0-46eb-b7d0-02b4b5aa2e1e
+      checked: false
+      required: false
+  helper_text: Optional helper text
+
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   helper_text:
