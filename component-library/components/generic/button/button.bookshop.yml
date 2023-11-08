@@ -10,7 +10,8 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   url: "#"
-  text: "Hello World!"
+  open_in_new_tab: false
+  text: "Button text"
   variant: "primary"
   disabled: false
   arrow: "right"
@@ -19,7 +20,7 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   url: "#"
-  text: "Hello World!"
+  text: "Button text"
   variant: "primary"
   disabled: false
   arrow: "right"
@@ -43,3 +44,5 @@ _inputs:
         - secondary
   onclick:
     type: hidden
+  open_in_new_tab:
+    hidden: url
