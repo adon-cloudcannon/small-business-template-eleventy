@@ -1,5 +1,5 @@
-{% assign c = "c-button" %}
-{% assign arrow_type = "arrow-" | append: arrow %}
+{% assign_local c = "c-button" %}
+{% assign_local arrow_type = "arrow-" | append: arrow %}
 
 {% if url and url!=''%}
     <a href="{{ url }}" class="{{c}} {{c}}--{{ variant }}" {% if disabled %}disabled{% endif %} {% if open_in_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %} {% if onclick %}onclick="{{ onclick }}"{% endif %}>
