@@ -6,6 +6,8 @@
 body {
   display: grid;
   grid-template-columns: var(--twelve-column-grid);
+  min-height: 100svh;
+  grid-template-rows: auto 1fr auto;
   font-family: var(--content-font), Lato, sans-serif;
 
   h1,
