@@ -3,6 +3,7 @@
   height: calc(100svh - 60px); //60px is the height of the header
   display: grid;
   grid-template-columns: var(--twelve-column-grid);
+  grid-template-rows: minmax(0, 1fr);
   color: var(--brand-grey-000, #f9f9fb);
   background: var(--brand-grey-900, #1b1b1d);
   &__cover {
