@@ -60,7 +60,7 @@
     }
 
     @media screen and (min-width: 1023px) {
-      grid-template-rows: unset;
+      grid-template-rows: minmax(0, 1fr);
       #{$c}__content {
         grid-row: 1 / 2;
         grid-column: 2 / 8;
