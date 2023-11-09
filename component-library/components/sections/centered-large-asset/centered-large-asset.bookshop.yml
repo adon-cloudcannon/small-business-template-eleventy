@@ -35,9 +35,3 @@ preview:
 _inputs:
   description:
     type: textarea
-  background_variant:
-    type: choice
-    options:
-      values:
-        - dark
-        - light
