@@ -1,21 +1,19 @@
-<div class="c-centered-large-asset">
-    <p>{{ text }}</p>
-</div>
-
-{% assign cla = "c-centered-large-asset" %}
-<section class="{{ cla }} component 
+{% assign_local c = "c-centered-large-asset" %}
+<section class="{{ c }} component 
             {% if styles.background_variant == 'dark' %} 
                 component--dark
             {% endif %}">
     
-    <div class="{{ cla }}__heading">
+    <div class="{{ c }}__heading">
         {% if content.heading %}{% bookshop "generic/component-heading" bind:content.heading %}{% endif %}
         {% if content.description %}{% bookshop "generic/text-block" text:content.description %}{% endif %}
     </div>
 
-    <div class="{{ cla }}__asset">
+    <div class="{{ c }}__asset">
         {% if content.asset %}{% bookshop "{{content.asset._bookshop_name}}" bind:content.asset %}{% endif %}
     </div>
 
-    {% comment %} TODO: add button(s) subcomponent {% endcomment %}
+    {% if content.button %}
+        <div class="{{ c }}__button">{% bookshop "generic/button" bind:content.button %}</div>
+    {% endif %}
 </section>

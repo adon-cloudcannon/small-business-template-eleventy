@@ -13,7 +13,7 @@ blueprint:
     heading: bookshop:generic/component-heading!
     description: Description text to compliment the block
     asset: bookshop:structure:asset_blocks
-    # TODO: add button(s) components
+    button: bookshop:generic/button
   styles:
     background_variant: light
 
@@ -26,14 +26,7 @@ preview:
       primary_heading: Display a video or image
     description: >-
         Whether your business is a restaurant, a barber shop, a gym, or a café, our small business template has you covered. Add your services to the list below, as many as you like, and let people contact you or book now.
-    asset:
-      _bookshop_name: generic/video
-      video_source: YouTube
-      video_url: https://www.youtube.com/watch?v=LeqKIzeZel4
-      fallback_image:
-        image_path: https://placekitten.com/1000
-        image_alt: A placeholder image
-    # TODO: add button(s) components
+    button: bookshop:generic/button
   styles:
     background_variant: light
     content_alignment: center
