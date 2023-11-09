@@ -9,7 +9,13 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  text: "Hello World!"
+  variant: left-right-feature
+  background:
+    image: bookshop:generic/image
+  content:
+    heading: bookshop:generic/component-heading!
+    button: bookshop:generic/button!
+    description: "some content"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
