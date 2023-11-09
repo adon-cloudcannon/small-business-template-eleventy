@@ -1,6 +1,7 @@
 {% assign_local c = "c-hero" %}
 <section class="{{ c }} {% if variant=="left-right-feature" %}{{ c }}--left-right-variant{% endif %}">
     {% bookshop "generic/image" bind:background.image %}
+    <div class="{{ c }}__cover"></div>
     <div class="{{ c }}__content">
         {% if content.heading %}{% bookshop "generic/component-heading" bind:content.heading %}{% endif %}
         {% if content.description %}{% bookshop "generic/text-block" text:content.description %}{% endif %}
