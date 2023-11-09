@@ -14,6 +14,10 @@ blueprint:
   subject:
   success_page: ""
   inputs: [bookshop:structure:form_blocks]
+  submit_button:
+    text: "Button text"
+    variant: "primary"
+    arrow: "right"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -129,6 +133,10 @@ preview:
           id: beff4820-604b-4d23-a74b-47625baa2c3f
       arrangement: inline
       helper_text: You can view the terms and conditions at /terms-and-conditions
+  submit_button:
+    text: "Button text"
+    variant: "primary"
+    arrow: "right"
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
@@ -145,3 +153,17 @@ _inputs:
     comment: The key that you configured for your cloudcannon inbox. If not set it will go to the default inbox you set up.
   subject:
     comment: The subject line for the form submission emails
+  arrow:
+    type: select
+    options:
+      values:
+        - up
+        - right
+        - down
+        - left
+  variant:
+    type: select
+    options:
+      values:
+        - primary
+        - secondary
