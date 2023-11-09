@@ -26,6 +26,10 @@
     grid-row: 1 / -1;
     grid-column: 2 / -2;
     align-self: center;
+    .c-component-heading__primary_heading {
+      text-wrap: pretty;
+      max-width: 20ch;
+    }
     .c-text-block {
       text-wrap: balance;
       max-width: 60ch; //recommended characters per line
