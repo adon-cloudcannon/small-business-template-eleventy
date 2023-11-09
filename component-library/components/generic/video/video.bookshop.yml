@@ -4,7 +4,7 @@ spec:
     - asset_blocks
   label: "Video"
   description: "Simple video component"
-  icon: ondemand_videogit
+  icon: ondemand_video
   tags: []
 
 # Defines the structure of this component, as well as the default values
