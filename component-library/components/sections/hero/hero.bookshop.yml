@@ -15,10 +15,36 @@ blueprint:
   content:
     heading: bookshop:generic/component-heading!
     button: bookshop:generic/button!
-    description: "some content"
+    description: Description text to compliment the block
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
+  variant: left-right-feature
+  background:
+    image:
+      _bookshop_name: generic/image
+      image_path: /assets/images/Testimonial--background-feature.png
+      image_alt: A woman laughing
+  content:
+    heading:
+      _bookshop_name: generic/component-heading
+      eyebrow_headline: a small business template
+      primary_heading: Empower Your Business with This Brilliant Template
+    button:
+      url: "#"
+      open_in_new_tab: false
+      text: Primary
+      variant: primary
+      disabled: false
+      arrow: right
+      onclick: console.log(this)
+    description: "We wanted you to have a couple of options to use above the fold, and give you the customisation you need to display your product/service in the best way possible."
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  variant:
+    type: select
+    options:
+      values:
+        - background-image-feature
+        - left-right-feature
