@@ -1,0 +1,48 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Embed"
+  description: A custom embed along with any extra information
+  icon: web_asset
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  content:
+    heading: bookshop:generic/component-heading!
+    description: Description text to compliment the block
+    embed: 
+    button: bookshop:generic/button
+  styles:
+    background_variant: light
+    content_alignment: center
+    embed_ratio: default
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  embed: >-
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+      hbspt.forms.create({
+        region: "na1",
+        portalId: "22461532",
+        formId: "6376aaf5-1db8-43cc-9c0d-5abbc4a072f5"
+      });
+    </script>
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  embed:
+    type: code
+  embed_ratio:
+    comment: The ratio of the width to height (The second number indicates how many x the width the height will be)
+    type: select
+    options:
+      values:
+        - default
+        - 1 / 0.5
+        - 1 / 0.75
+        - 1 / 1
+        - 1 / 1.25
+        - 1 / 1.5
