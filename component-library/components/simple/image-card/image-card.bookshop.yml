@@ -13,7 +13,7 @@ blueprint:
   image: 
   icon: bookshop:generic/icon
   heading: bookshop:generic/component-heading
-  content: These versatile cards can be used to talk about your services or products, or anything else you are keen to share with your audience. They come with an action link to get your users into the journey you’ve crafted for them.
+  content: bookshop:generic/text-block
   link_url:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
