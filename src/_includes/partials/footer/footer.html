@@ -31,6 +31,6 @@
             {% endif %}
         {% endfor %}
     </ul>
-    <p class="{{ c }}__content">{{ footer.footer_content }}</p>
+    <div class="{{ c }}__content">{{ footer.footer_content | markdownify }}</div>
 
 </footer>

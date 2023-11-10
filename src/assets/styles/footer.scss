@@ -5,7 +5,7 @@
   display: grid;
   gap: 1rem;
   place-items: center;
-  color: #fff;
+
   &__logo-link {
     text-decoration: none;
     color: var(--brand-grey-200, #e9e9ec);
@@ -50,5 +50,10 @@
   &__content {
     padding-top: 7rem;
     text-align: center;
+    color: var(--neutral-000, #FFF);
+
+    a {
+      color: var(--neutral-000, #FFF);
+    }
   }
 }
