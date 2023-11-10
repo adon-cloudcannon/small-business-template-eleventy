@@ -2,7 +2,6 @@
   $c: &;
   background: var(--brand-grey-900, #1b1b1d);
   padding: 3.5rem 1rem;
-  // grid-template-columns: var(--twelve-column-grid);
   display: grid;
   gap: 1rem;
   place-items: center;
@@ -16,11 +15,17 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-wrap: wrap;
+    white-space: normal;
+    text-align: center;
   }
   &__navlist {
     display: flex;
     gap: 1.5rem;
     list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap;
+    place-content: center;
     &__item {
       &__link {
         text-decoration: none;
@@ -41,7 +46,9 @@
       }
     }
   }
+
   &__content {
     padding-top: 7rem;
+    text-align: center;
   }
 }

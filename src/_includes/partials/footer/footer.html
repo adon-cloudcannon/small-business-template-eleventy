@@ -2,10 +2,10 @@
 
 <footer class="{{ c }}">
     <a class="{{c}}__logo-link" href="/" aria-label="Home" {% if page.url=="/" %}aria-current="page" {% endif %}>
-        {% if nav.logo_image != '' %}
-            <img class="{{c}}__logo-link__image" src="{{nav.logo_image}}" alt="Site logo" />
+        {% if footer.logo_image != '' %}
+            <img class="{{c}}__logo-link__image" src="{{footer.logo_image}}" alt="Site logo" />
         {% else %}
-            <span class="{{c}}__logo-link__text">{{ nav.logo_text.text }}</span>
+            <p class="{{c}}__logo-link__text">{{ footer.logo_text.text }}</p>
         {% endif %}
     </a>
     <div class="{{ c }}__social-icons">
@@ -18,7 +18,7 @@
             {% bookshop "generic/social-icons" social_media_links:site.social_media_links style:social_icons_style %}
         </div>
     <ul class="{{ c }}__navlist">
-        {% for navitem in nav.navigation_items %}
+        {% for navitem in footer.navigation_items %}
             {% assign nav_item_with_slash = navitem.link_url | append: "/" %}
             {% if page.url == navitem.link_url or page.url == nav_item_with_slash %}
                 <li class="{{ c }}__navlist__item {{ c }}__navlist__item--active" aria-current="page">
