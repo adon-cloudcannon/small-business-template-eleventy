@@ -21,15 +21,6 @@ blueprint:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  embed: >-
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-    <script>
-      hbspt.forms.create({
-        region: "na1",
-        portalId: "22461532",
-        formId: "6376aaf5-1db8-43cc-9c0d-5abbc4a072f5"
-      });
-    </script>
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
