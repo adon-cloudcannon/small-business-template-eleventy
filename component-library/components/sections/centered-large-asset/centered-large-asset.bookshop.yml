@@ -29,7 +29,6 @@ preview:
     button: bookshop:generic/button
   styles:
     background_variant: light
-    content_alignment: center
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
