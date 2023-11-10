@@ -1,0 +1,4 @@
+{% assign_local c = "c-custom-embed" %}
+<div class="{{ c }} {% if styles.custom_max_width %}{{ c }}--custom-max-width{% endif %}" style="--{{ c }}-ratio: {{ styles.ratio }}; --{{ c }}-custom-max-width: {{ styles.custom_max_width }}px;">
+    {{ embed }}
+</div>

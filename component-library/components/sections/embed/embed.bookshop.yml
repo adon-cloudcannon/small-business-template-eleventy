@@ -12,28 +12,14 @@ blueprint:
   content:
     heading: bookshop:generic/component-heading!
     description: Description text to compliment the block
-    embed: 
+    embed: bookshop:generic/custom-embed
     button: bookshop:generic/button
   styles:
     background_variant: light
     content_alignment: center
-    embed_ratio: default
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  embed:
-    type: code
-  embed_ratio:
-    comment: The ratio of the width to height (The second number indicates how many x the width the height will be)
-    type: select
-    options:
-      values:
-        - default
-        - 1 / 0.5
-        - 1 / 0.75
-        - 1 / 1
-        - 1 / 1.25
-        - 1 / 1.5

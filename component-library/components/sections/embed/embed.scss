@@ -15,11 +15,6 @@
         flex-direction: column;
         gap: 24px;
     }
-
-    &__embed, &__embed iframe {
-        width: 100%;
-        aspect-ratio: var(--c-embed-ratio);
-    }
     
     &--content-align-center &__embed  {
         display: flex;

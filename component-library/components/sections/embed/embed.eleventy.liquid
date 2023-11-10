@@ -14,8 +14,8 @@
             {% bookshop "generic/notification" heading:"Embed Display" text:"If your embed contains a script tag, it will not show in live editing <br> This note only will only show in live editing" %}
         </div>
     {% endif %}
-    <div class="{{ c }}__embed" style="--{{ c }}-ratio: {{ styles.embed_ratio }}">
-        {{ content.embed }}
+    <div class="{{ c }}__embed">
+        {% bookshop "generic/custom-embed" bind:content.embed %}
     </div>
 
     {% if content.button %}

@@ -1,0 +1,36 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+  label: "Custom Embed"
+  description: Enter code for a custom embed along with any extra styles
+  icon: web_asset
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  embed: 
+  styles:
+    custom_max_width: 
+    ratio: default
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  embed:
+    type: code
+  ratio:
+    comment: The ratio of the width to height (The second number indicates how many x the width the height will be)
+    type: select
+    options:
+      values:
+        - default
+        - 1 / 0.5
+        - 1 / 0.75
+        - 1 / 1
+        - 1 / 1.25
+        - 1 / 1.5
+  custom_max_width:
+    type: number
+    comment: If the embed should not always take the full screen width, enter a custom max width here (useful for embeds that explicitly set a max width and therefore don't always sit in the center without this property). Unit is px.
