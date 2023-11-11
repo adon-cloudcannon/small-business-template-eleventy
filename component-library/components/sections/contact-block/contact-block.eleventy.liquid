@@ -1,3 +1,34 @@
-<div class="c-contact-block">
-    <p>{{ text }}</p>
-</div>
+{% assign c = "c-contact-block" %}
+
+<section class="{{ c }} component 
+    {% if styles.orientation == "Right" %}
+        {{ c }}--right
+    {% endif %} 
+    {% if styles.background_variant == "Dark" %} 
+        component--dark
+    {% endif %}">
+  <div class="{{ c }}__content">
+    <div class="{{ c }}__content-wrapper">
+      {% if content.social_media_links %}
+        {% bookshop "generic/social-icons" bind: social_media_links %}
+      {% endif %}
+
+      {% bookshop "generic/component-heading" bind: content.heading %}
+      
+      <div class="{{ c }}__contact-details">
+        {% bookshop "generic/text-block" bind: content.description %}
+
+        {% for detail in content.contact_details %}
+            {% bookshop "generic/labelled-icon" bind: detail %}
+        {% endfor %}
+      </div>
+
+      {% if content.button %}
+        <div class="{{ c }}__button">{% bookshop "generic/button" bind:content.button %}</div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="{{ c }}__map-wrapper">
+      {% bookshop "simple/google-map-embed" bind: content.map %}
+  </div>
+</section>
