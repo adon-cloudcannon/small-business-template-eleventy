@@ -55,9 +55,3 @@ _inputs:
         - Right  
   content:
     type: markdown
-  background_variant:
-    type: select
-    options:
-      values:
-        - 'Dark'
-        - 'Light'
