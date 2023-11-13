@@ -84,7 +84,8 @@
         }
   
         #{$c}__map-wrapper {
-          grid-column: 1 / 8;
+          grid-column: auto / 8;
+          justify-self:end;
           grid-row: 1;
         }
       }
