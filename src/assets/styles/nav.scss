@@ -2,7 +2,7 @@
   $c: &;
   display: grid;
   grid-template-columns: var(--twelve-column-grid);
-  grid-template-rows: 60px 1fr auto;
+  grid-template-rows: var(--nav-height) 1fr auto;
   height: auto;
   background: var(--header-color);
   --nav-padding: 8px;
@@ -117,7 +117,7 @@
 
   // Mobile menu open state
   &--open {
-    grid-template-rows: 60px 1fr 140px;
+    grid-template-rows: var(--nav-height) 1fr 140px;
     height: 100svh;
     #{$c}__burger-menu {
       &__burger {
@@ -146,10 +146,9 @@
     }
   }
 
-  // Desktop styles
   @media screen and (min-width: 768px) {
     height: auto;
-    grid-template-rows: 60px 60px auto;
+    grid-template-rows: var(--nav-height) var(--nav-height) auto;
 
     &__social-icons {
       display: block;

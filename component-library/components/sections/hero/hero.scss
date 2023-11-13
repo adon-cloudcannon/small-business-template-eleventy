@@ -1,6 +1,6 @@
 .c-hero {
   $c: &;
-  height: calc(100svh - 60px); //60px is the height of the header
+  height: calc(100svh - var(--nav-height));
   display: grid;
   grid-template-columns: var(--twelve-column-grid);
   grid-template-rows: minmax(0, 1fr);
@@ -38,7 +38,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    height: calc(100svh - 120px); //120px is the height of the header
+    height: calc(100svh - (var(--nav-height) * 2));
   }
 
   &--left-right-variant {

@@ -5,7 +5,8 @@
     <div class="{{ c }}__content">
         {% if content.heading %}{% bookshop "generic/component-heading" bind:content.heading %}{% endif %}
         {% if content.description %}{% bookshop "generic/text-block" text:content.description %}{% endif %}
-    <div>
-        {% if content.button %}{% bookshop "generic/button" bind:content.button %}{% endif %}
+        <div class="{{ c }}__content__button">
+            {% if content.button %}{% bookshop "generic/button" bind:content.button %}{% endif %}
+        </div>
     </div>
 </section>
