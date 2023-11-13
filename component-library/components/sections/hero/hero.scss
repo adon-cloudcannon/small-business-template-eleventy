@@ -36,6 +36,11 @@
       max-width: 60ch; //recommended characters per line
     }
   }
+
+  @media screen and (min-width: 768px) {
+    height: calc(100svh - 120px); //120px is the height of the header
+  }
+
   &--left-right-variant {
     grid-template-rows: auto minmax(0, 1fr);
     row-gap: 3rem;
@@ -53,10 +58,6 @@
     picture {
       grid-row: 2 / 3;
       // grid-column: 1 / -1;
-    }
-
-    @media screen and (min-width: 768px) {
-      height: calc(100svh - 120px); //120px is the height of the header
     }
 
     @media screen and (min-width: 1023px) {
