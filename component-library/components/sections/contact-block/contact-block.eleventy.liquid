@@ -31,7 +31,7 @@
         {% endif %}
 
         {% for detail in content.contact_details %}
-          {% bookshop "generic/labelled-icon" bind:detail %}
+          {% bookshop "generic/labelled-icon" bind:detail icon.rounded_border:true icon.icon_size:'small'  %}
         {% endfor %}
       </div>
 
