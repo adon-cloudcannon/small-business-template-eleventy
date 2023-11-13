@@ -236,4 +236,26 @@ content_blocks:
     styles:
       background_variant: light
       content_alignment: center
+  - _bookshop_name: sections/embed
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline:
+        primary_heading: Google Forms
+      description: Description text to compliment the block
+      embed:
+        _bookshop_name: generic/custom-embed
+        embed: >-
+          <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScuFqX8axCEVVIh8ittroB7688DfuSreT5dMvZXCOhy5VClkw/viewform?embedded=true"
+          width="640" height="382" frameborder="0" marginheight="0"
+          marginwidth="0">Loading…</iframe>
+        styles:
+          custom_max_width:
+          ratio: default
+      button:
+      show_note: true
+    styles:
+      background_variant: light
+      content_alignment: center
 ---
