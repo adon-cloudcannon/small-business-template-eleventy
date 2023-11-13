@@ -11,9 +11,9 @@ spec:
 blueprint:
   content:
     heading: bookshop:generic/component-heading!
-    button: bookshop:generic/button!
     description: Description text to compliment the block
-    image: bookshop:generic/image
+    button: bookshop:generic/button!
+    image: bookshop:generic/image!
   styles:
     image_alignment: left
     background_variant: light
@@ -22,7 +22,8 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   styles:
-    variant: background-image-feature
+    image_alignment: left
+    background_variant: light
   content:
     heading:
       _bookshop_name: generic/component-heading
