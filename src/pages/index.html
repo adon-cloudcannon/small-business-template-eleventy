@@ -8,28 +8,22 @@ content_blocks:
   - _bookshop_name: sections/contact-block
     content:
       social_icons:
-        _bookshop_name: generic/social-icons
-        social_media_links:
-          - link_url: https://www.youtube.com/
-            svg_icon: /assets/images/icons/social/youtube.svg
-          - link_url: https://www.facebook.com/
-            svg_icon: /assets/images/icons/social/facebook.svg
-          - link_url: https://www.linkedin.com/
-            svg_icon: /assets/images/icons/social/linkedin.svg
-          - link_url: https://www.twitter.com/
-            svg_icon: /assets/images/icons/social/x.svg
-          - link_url: https://www.instagram.com/
-            svg_icon: /assets/images/icons/social/instagram.svg
-        style:
-          icon_background_hover_color: '#f9f9fb'
-          icon_color: '#f9f9fb'
-          icon_hover_color: '#000000'
       heading:
       description: >-
         This is a simple yet powerful block to display not only your location by
         using Google Maps, but also any other contact details you wish to share
         with your customers.
-      contact_details: []
+      contact_details:
+        - _bookshop_name: generic/labelled-icon
+          arrangement: inline
+          text: test?
+          icon:
+            _bookshop_name: generic/icon
+            hero_icon_name: academic-cap
+            icon_size: small
+            icon_type: solid
+            rounded_border: false
+            color: '#f9f9fb'
       button:
     styles:
       orientation:
