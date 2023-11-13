@@ -10,7 +10,9 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   content:
-    social_media_links: bookshop:generic/social-icons!
+    social_media_links: 
+      - link_url: #
+        svg_icon: bookshop:generic/icon
     heading: bookshop:generic/component-heading
     description: 
     contact_details: [bookshop:generic/labelled-icon]
