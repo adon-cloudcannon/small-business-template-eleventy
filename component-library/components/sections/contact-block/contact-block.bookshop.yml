@@ -13,11 +13,13 @@ blueprint:
     social_icons: true
     heading: bookshop:generic/component-heading
     description: This is a simple yet powerful block to display not only your location by using Google Maps, but also any other contact details you wish to share with your customers.
-    contact_details: [bookshop:generic/labelled-icon]
+    contact_details:
+      - text: mybusiness@business.com
+        hero_icon_name: envelope
     button: bookshop:generic/button    
   styles:
     orientation: Left
-    background_variant: light
+    background_variant: Dark
 
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
@@ -36,7 +38,7 @@ preview:
         icon: bookshop:generic/icon
   styles:
     orientation: Left
-    background_variant: dark
+    background_variant: Dark
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
@@ -47,7 +49,6 @@ _inputs:
         - Left
         - Right  
   heading:
-    eyebrow_headline:
-      hidden: true
+    eyebrow_headline: ''
   description:
     type: textarea  

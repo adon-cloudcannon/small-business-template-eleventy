@@ -20,9 +20,10 @@
       padding-left: 1.5rem;
       display:flex;
       flex-direction:column;
+      align-items: flex-start;
       gap:24px;
 
-      .c-social-icons{
+      .c-social-icons, .c-labelled-icon{
         justify-content:flex-start;
       }
     }
@@ -30,11 +31,13 @@
     &__contact-details{
         display:flex;
         flex-direction: column;
-        gap: 8px;
-
-        .c-labelled-icon{
-            justify-content: flex-start;
-        }
+        gap: 8px;       
+    }
+        
+    &__text-block{
+        display:flex;
+        flex-direction:column;
+        gap:24px;
     }
   
     &__icons {
@@ -54,17 +57,22 @@
       gap: 1rem;
     }
   
-  
     &__map-wrapper {
-      height: 700px;
       aspect-ratio: 1 / 1;
-      width:700px;
       object-fit: cover;
       grid-column: 1 / -1;
 
       & > div{
         height:100%;
       }
+    }
+
+    @media screen and (min-width:768px) {
+        &__map-wrapper {            
+            height:700px;            
+            width:700px;
+            justify-self:center;
+          }
     }
   
     // Desktop styles
@@ -74,8 +82,9 @@
         align-self: center;
       }
   
-      &__map-wrapper {
-        grid-column: 8 / -1;
+      &__map-wrapper {        
+        grid-column: 8 / auto;
+        justify-self:start;
       }
   
       &--right {
