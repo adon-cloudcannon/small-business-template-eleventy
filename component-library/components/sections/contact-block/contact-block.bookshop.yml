@@ -4,8 +4,8 @@ spec:
     - content_blocks
   label: "Contact block"
   description: Contact content block
-  icon: side_navigation
-  tags: []
+  icon: contact_phone
+  tags: ['contact', 'content-block', 'left-right']
 
 # Defines the structure of this component, as well as the default values
 blueprint:
@@ -19,7 +19,7 @@ blueprint:
     button: bookshop:generic/button    
   styles:
     orientation: Left
-    background_variant: Dark
+    background_variant: dark
 
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
@@ -38,7 +38,7 @@ preview:
         icon: bookshop:generic/icon
   styles:
     orientation: Left
-    background_variant: Dark
+    background_variant: dark
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
