@@ -10,16 +10,20 @@
   <div class="{{ c }}__content">
     <div class="{{ c }}__content-wrapper">
       {% if content.social_media_links %}
-        {% bookshop "generic/social-icons" bind: social_media_links %}
+        {% bookshop "generic/social-icons" bind:social_media_links %}
       {% endif %}
 
-      {% bookshop "generic/component-heading" bind: content.heading %}
-      
+      {% if content.heading %}
+        {% bookshop "generic/component-heading" bind:content.heading %}
+      {% endif %}
+
       <div class="{{ c }}__contact-details">
-        {% bookshop "generic/text-block" bind: content.description %}
+        {% if content.description %}
+          {% bookshop "generic/text-block" text:content.description %}
+        {% endif %}
 
         {% for detail in content.contact_details %}
-            {% bookshop "generic/labelled-icon" bind: detail %}
+          {% bookshop "generic/labelled-icon" bind:detail %}
         {% endfor %}
       </div>
 
@@ -29,6 +33,6 @@
     </div>
   </div>
   <div class="{{ c }}__map-wrapper">
-      {% bookshop "simple/google-map-embed" bind: content.map %}
+      {% bookshop "simple/google-map-embed" bind:content.map %}
   </div>
 </section>

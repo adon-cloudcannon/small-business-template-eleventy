@@ -12,7 +12,7 @@ blueprint:
   content:
     social_icons: bookshop:generic/social-icons 
     heading: bookshop:generic/component-heading
-    description: 
+    description: This is a simple yet powerful block to display not only your location by using Google Maps, but also any other contact details you wish to share with your customers.
     contact_details: [bookshop:generic/labelled-icon]
     button: bookshop:generic/button    
   styles:
