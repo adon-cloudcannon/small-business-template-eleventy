@@ -19,7 +19,7 @@ blueprint:
     contact_details:
       - text: mybusiness@business.com
         hero_icon_name: envelope
-    button: bookshop:generic/button    
+    button: bookshop:generic/button!    
   styles:
     orientation: Left
     background_variant: dark
