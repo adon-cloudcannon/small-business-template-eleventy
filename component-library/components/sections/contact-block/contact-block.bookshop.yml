@@ -10,7 +10,7 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   content:
-    social_icons: bookshop:generic/social-icons 
+    social_icons: true
     heading: bookshop:generic/component-heading
     description: This is a simple yet powerful block to display not only your location by using Google Maps, but also any other contact details you wish to share with your customers.
     contact_details: [bookshop:generic/labelled-icon]
@@ -22,7 +22,8 @@ blueprint:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  data:
+  content:
+    social_icons: true
     heading:
       bookshop: generic/component-heading
       primary_heading: A contact block
@@ -45,8 +46,8 @@ _inputs:
       values:
         - Left
         - Right  
-  description:
-    type: textarea
   heading:
     eyebrow_headline:
       hidden: true
+  description:
+    type: textarea  

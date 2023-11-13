@@ -22,7 +22,7 @@
       {% endif %}
 
       {% if content.heading %}
-        {% bookshop "generic/component-heading" bind:content.heading eyebrow_headline:'' %}
+        {% bookshop "generic/component-heading" bind:content.heading %}
       {% endif %}
 
       <div class="{{ c }}__contact-details">
@@ -31,7 +31,7 @@
         {% endif %}
 
         {% for detail in content.contact_details %}
-          {% bookshop "generic/labelled-icon" bind:detail icon.rounded_border:true icon.icon_size:'small'  %}
+          {% bookshop "generic/labelled-icon" bind:detail %}
         {% endfor %}
       </div>
 
