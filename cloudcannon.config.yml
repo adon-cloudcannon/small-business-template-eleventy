@@ -68,6 +68,9 @@ _inputs:
         - name: Light
           id: light
           icon: light_mode
+  show_note:
+    type: switch
+    comment: Hide/Show the note that contains helpful information about the live editing of this component
 _select_data: {}
 _structures:
   content_blocks:

@@ -1,6 +1,6 @@
 .c-notification {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr;
     gap: 12px;
     padding: 12px;
     border-radius: 3px;
@@ -15,11 +15,5 @@
             color: var(--interaction-blue-500, #163D91);
             font-size: var(--paragraph-large);
         }
-    }
-
-    &__button {
-        all: unset;
-        display: flex;
-        align-items: start;
     }
 }

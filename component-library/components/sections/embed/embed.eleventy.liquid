@@ -9,7 +9,7 @@
         {% if content.description %}{% bookshop "generic/text-block" text:content.description %}{% endif %}
     </div>
 
-    {% if env_bookshop_live %}
+    {% if env_bookshop_live and content.show_note %}
         <div class="{{ c }}__note">
             {% bookshop "generic/notification" heading:"Embed Display" text:"If your embed contains a script tag, it will not show in live editing <br> This note only will only show in live editing" %}
         </div>
