@@ -78,22 +78,6 @@
   }
 
   &--image-left {
-    grid-template-rows: minmax(0, 1fr) auto;
-
-    #{$c}__content {
-      margin-top: 0rem;
-      margin-bottom: 3rem;
-      grid-row: 2 / 3;
-    }
-    #{$c}__cover {
-      grid-row: 1 / 2;
-    }
-    & .c-image,
-    .c-image--live-editing,
-    picture {
-      grid-row: 1 / 2;
-    }
-
     @media screen and (min-width: 1023px) {
       grid-template-rows: minmax(0, 1fr);
       #{$c}__content {
