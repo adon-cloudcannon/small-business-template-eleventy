@@ -12,8 +12,9 @@ blueprint:
   content:
     heading: bookshop:generic/component-heading!
     description: Description text to compliment the block
-    embed: bookshop:generic/custom-embed
+    embed: bookshop:generic/custom-embed!
     button: bookshop:generic/button
+    show_note: true
   styles:
     background_variant: light
     content_alignment: center
@@ -23,3 +24,5 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  embed:
+    comment: Copy the embed code from the chosen provider here. This approach is not recommended for youtube/vimeo (use the centered large asset component instead)
