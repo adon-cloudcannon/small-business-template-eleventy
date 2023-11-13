@@ -4,5 +4,23 @@ layout: layouts/page.html
 permalink: /
 draft: false
 eleventyExcludeFromCollections: false
-content_blocks: []
+content_blocks:
+  - _bookshop_name: sections/contact-block
+    content:
+      social_icons: true
+      heading:
+        bookshop: generic/component-heading
+        primary_heading: A contact block
+        eyebrow_headline: ''
+      description: >-
+        This is a simple yet powerful block to display not only your location by
+        using Google Maps, but also any other contact details you wish to share
+        with your customers.
+      contact_details:
+        - text: mybusiness@business.com
+          hero_icon_name: envelope
+      button:
+    styles:
+      orientation: Left
+      background_variant: dark
 ---
