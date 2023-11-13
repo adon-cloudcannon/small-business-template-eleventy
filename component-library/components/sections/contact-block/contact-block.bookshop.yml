@@ -42,5 +42,5 @@ _inputs:
   description:
     type: textarea
   heading:
-    eyeborw_headline:
+    eyebrow_headline:
       hidden: true
