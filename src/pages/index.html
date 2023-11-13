@@ -85,4 +85,26 @@ content_blocks:
     styles:
       background_variant: light
       content_alignment: center
+  - _bookshop_name: sections/embed
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      embed:
+        _bookshop_name: generic/custom-embed
+        embed: >-
+          <iframe style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5Ejj0EkURtP?utm_source=generator" 
+          frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write;
+          encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+        styles:
+          custom_max_width:
+          ratio: 1 / 1
+      button:
+    styles:
+      background_variant: light
+      content_alignment: center
 ---
