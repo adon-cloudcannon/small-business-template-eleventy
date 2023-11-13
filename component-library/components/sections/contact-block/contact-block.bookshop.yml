@@ -16,7 +16,7 @@ blueprint:
     contact_details: [bookshop:generic/labelled-icon]
     button: bookshop:generic/button    
   styles:
-    orientation:
+    orientation: Left
     background_variant: light
 
 
