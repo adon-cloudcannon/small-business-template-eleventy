@@ -1,13 +1,12 @@
 .c-custom-embed {
     aspect-ratio: var(--c-custom-embed-ratio);
     width: 100%;
+    display:flex;
+    justify-content: center;
 
     iframe {
+        border:none;
         aspect-ratio: var(--c-custom-embed-ratio);
         width: 100%;
-    }
-
-    &--custom-max-width {
-        max-width: var(--c-custom-embed-custom-max-width, 100%);
     }
 }
