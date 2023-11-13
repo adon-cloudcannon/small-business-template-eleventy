@@ -4,5 +4,54 @@ layout: layouts/page.html
 permalink: /
 draft: false
 eleventyExcludeFromCollections: false
-content_blocks: []
+content_blocks:
+  - _bookshop_name: sections/embed
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      embed:
+        _bookshop_name: generic/custom-embed
+        embed: >-
+          <iframe width="200" height="600"
+          src="https://www.youtube.com/embed/jfKfPfyJRdk?si=HbbcdXAL3kjNvCxw"
+          title="YouTube video player" frameborder="0" allow="accelerometer;
+          autoplay; clipboard-write; encrypted-media; gyroscope;
+          picture-in-picture; web-share" allowfullscreen></iframe>
+        styles:
+          custom_max_width: 9
+          ratio: 1 / 1
+      button:
+        _bookshop_name: generic/button
+        url: '#'
+        open_in_new_tab: false
+        text: Button text
+        variant: primary
+        disabled: false
+        arrow: right
+        onclick:
+    styles:
+      background_variant: light
+      content_alignment: center
+  - _bookshop_name: sections/embed
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      embed:
+        _bookshop_name: generic/custom-embed
+        embed: >-
+          <iframe
+          src="https://docs.google.com/document/d/e/2PACX-1vQ9aWnwKR50Q5jW15YfJkrKkt92_-tyoQ-E4lN4lSWjYOvrtsisXDpCNpER1b6DVldx4qTjJCPIa7E_/pub?embedded=true"></iframe>
+        styles:
+          custom_max_width:
+          ratio: 1 / 1
+      button:
+    styles:
+      background_variant: light
+      content_alignment: center
 ---
