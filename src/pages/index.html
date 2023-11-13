@@ -63,7 +63,12 @@ content_blocks:
       description: Description text to compliment the block
       embed:
         _bookshop_name: generic/custom-embed
-        embed:
+        embed: >-
+          <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"></script> 
+
+              <dotlottie-player src="https://lottie.host/8763bd2d-71e3-46c8-bda5-8da83be81988/af4Dio5vh8.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
         styles:
           custom_max_width:
           ratio: default
