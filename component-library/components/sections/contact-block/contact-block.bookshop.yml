@@ -41,3 +41,6 @@ preview:
 _inputs:
   description:
     type: textarea
+  heading:
+    eyeborw_headline:
+      hidden: true

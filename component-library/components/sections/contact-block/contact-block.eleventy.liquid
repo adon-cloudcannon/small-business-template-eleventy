@@ -9,12 +9,12 @@
     {% endif %}">
   <div class="{{ c }}__content">
     <div class="{{ c }}__content-wrapper">
-      {% if content.social_media_links %}
-        {% bookshop "generic/social-icons" bind:social_media_links %}
+      {% if content.social_icons %}
+        {% bookshop "generic/social-icons" bind:social_icons %}
       {% endif %}
 
       {% if content.heading %}
-        {% bookshop "generic/component-heading" bind:content.heading %}
+        {% bookshop "generic/component-heading" bind:content.heading eyebrow_headline:'' %}
       {% endif %}
 
       <div class="{{ c }}__contact-details">
