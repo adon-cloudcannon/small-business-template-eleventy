@@ -1,8 +1,12 @@
 {%  assign c = 'c-simple-text-block' %}
 
-<div class='{{c}}--container'>
-    <div class={{c}}>
+
+<section class='{{c}} {{ c }}--content-align-{{ styles.content_alignment }} component 
+{% if styles.background_variant == 'dark' %} 
+    component--dark
+{% endif %} '>
+    <div class='{{c}}__content'>
         {% bookshop "generic/component-heading" bind:heading %}
         {% bookshop "generic/text-block" bind:content %}
     </div>
-</div>
+</section>
