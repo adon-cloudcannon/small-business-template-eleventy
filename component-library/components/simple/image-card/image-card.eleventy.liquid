@@ -8,12 +8,8 @@
 
     {% if heading %}{% bookshop "generic/component-heading" bind:heading %}{% endif %}
 
-    <div class="{{c}}__content">{% bookshop "generic/text-block" bind:content %}</div>
+    <div class="{{c}}__content">{% bookshop "generic/text-block" text:content %}</div>
     <div>
-        {% comment %} TODO: waiting on Generic Button component {% endcomment %}
-        <a href="{{ link_url }}">
-            Book Now {% bookshop "generic/icon" svg_icon: 'solid/arrow-right' icon_size: 'small' rounded_border: false color: '#111' %}
-        </a>
-        {% comment %} TODO: replace this block! {% endcomment %}
+        {% bookshop "generic/button" url:link_url text:'Book Now' variant:"secondary" disabled:false arrow:"right"%}
     </div>
 </div>
