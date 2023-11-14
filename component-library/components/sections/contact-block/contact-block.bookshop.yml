@@ -54,14 +54,14 @@ _inputs:
     eyebrow_headline: ''
   description:
     type: textarea  
-
-_structures:
-  content.contact_details:
-    - label: Email
-      value:
-        text: mybusiness@business.com
-        hero_icon_name: envelope
-    - label: Custom
-      value:
-        text: ''
-        hero_icon_name: ''
+  contact_details:
+    options:
+      structures:
+        - label: Email
+          value:
+            text: mybusiness@business.com
+            hero_icon_name: envelope
+        - label: Custom
+          value:
+            text: ''
+            hero_icon_name: ''
