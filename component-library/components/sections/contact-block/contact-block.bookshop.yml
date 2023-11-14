@@ -44,6 +44,19 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  contact_details:
+    type: array
+    options:
+      structures:
+        values:
+          - label: Email
+            value:
+              text: mybusiness@business.com
+              hero_icon_name: envelope
+          - label: Custom
+            value:
+              text: ''
+              hero_icon_name: ''
   orientation:
     type: select
     options:
@@ -54,14 +67,4 @@ _inputs:
     eyebrow_headline: ''
   description:
     type: textarea  
-  contact_details:
-    options:
-      structures:
-        - label: Email
-          value:
-            text: mybusiness@business.com
-            hero_icon_name: envelope
-        - label: Custom
-          value:
-            text: ''
-            hero_icon_name: ''
+    
