@@ -3,9 +3,11 @@
     //Colors added for demo only. Remove before merge.
     display: grid;
     grid-template-columns: var(--twelve-column-grid);
+    row-gap:48px;
+    padding:0!important;
   
     &__content {
-      padding: 6rem 0;
+      padding: 0;
       grid-column: 2 / -2;
     }
   
@@ -20,63 +22,39 @@
       padding-left: 1.5rem;
       display:flex;
       flex-direction:column;
-      align-items: flex-start;
-      gap:24px;
+      align-items: flex-start;      
 
       .c-social-icons, .c-labelled-icon{
         justify-content:flex-start;
       }
     }
 
-    &__contact-details{
+    &__contact-details, &__content{
         display:flex;
-        flex-direction: column;
-        gap: 8px;       
+        flex-direction: column;      
     }
         
-    &__text-block{
-        display:flex;
-        flex-direction:column;
-        gap:24px;
-    }
-  
-    &__icons {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 2.18rem;
-      margin-bottom: 1.5rem;
-    }
-  
-    &__buttons {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-  
+    &__contact-details{ gap: 24px; }
+    &__content{ gap:8px; }
+   
     &__map-wrapper {
       aspect-ratio: 1 / 1;
       object-fit: cover;
       grid-column: 1 / -1;
 
-      & > div{
-        height:100%;
-      }
+      & > div{ height:100%; }
     }
 
     @media screen and (min-width:768px) {
-        &__map-wrapper {            
-            height:700px;            
-            width:700px;
-            justify-self:center;
-          }
+      &__map-wrapper {            
+        height:700px;            
+        width:700px;
+        justify-self:center;
+      }
     }
   
     // Desktop styles
-    @media screen and (min-width: 1279px) {
+    @media screen and (min-width: 1023px) {
       &__content {
         grid-column: 2 / 7;
         align-self: center;
