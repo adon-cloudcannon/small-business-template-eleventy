@@ -1,10 +1,9 @@
 .c-contact-block {
     $c: &;
-    //Colors added for demo only. Remove before merge.
     display: grid;
     grid-template-columns: var(--twelve-column-grid);
     row-gap:48px;
-    padding:0!important;
+    padding:96px 0 0!important;
   
     &__content {
       padding: 0;
@@ -30,8 +29,8 @@
     }
 
     &__contact-details, &__content{
-        display:flex;
-        flex-direction: column;      
+      display:flex;
+      flex-direction: column;      
     }
         
     &__contact-details{ gap: 24px; }
@@ -41,27 +40,24 @@
       aspect-ratio: 1 / 1;
       object-fit: cover;
       grid-column: 1 / -1;
+      width:100%;     
+      max-height:700px; 
 
       & > div{ height:100%; }
     }
-
-    @media screen and (min-width:768px) {
-      &__map-wrapper {            
-        height:700px;            
-        width:700px;
-        justify-self:center;
-      }
-    }
   
     // Desktop styles
-    @media screen and (min-width: 1023px) {
+    @media screen and (min-width: 769px) {
+      padding:0!important;
+
       &__content {
         grid-column: 2 / 7;
         align-self: center;
       }
   
-      &__map-wrapper {        
-        grid-column: 8 / auto;
+      &__map-wrapper {       
+        max-width:700px; 
+        grid-column: 8 / -1;
         justify-self:start;
       }
   
@@ -71,7 +67,7 @@
         }
   
         #{$c}__map-wrapper {
-          grid-column: auto / 8;
+          grid-column: 1 / 8;
           justify-self:end;
           grid-row: 1;
         }
