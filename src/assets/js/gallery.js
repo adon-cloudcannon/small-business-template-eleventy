@@ -13,7 +13,6 @@ for (let i = 0; i < galleries.length; i++) {
         showCards = 6
 
         for (let x = 3; x < (showCards && totalTiles); x++) {
-            console.log(tiles[x])
             tiles[x].classList.remove("c-gallery__tiles__tile--hidden")
         }
     }
