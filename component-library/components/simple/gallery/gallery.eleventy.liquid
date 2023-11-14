@@ -1,0 +1,9 @@
+<div class="c-gallery">
+    <div class="c-gallery__tiles" total-tiles="{{ images.length }}">
+        {% for image in images %}
+            <div tile="{{ forloop.index }}" class="c-gallery__tiles__tile {% if forloop.index > 3 %}c-gallery__tiles__tile--hidden{% endif %}">{% bookshop "generic/image" bind:image %}</div>
+        {% endfor %}
+    </div>
+
+    <div class="c-gallery__button">{% bookshop "generic/button" text:"Load More" variant:"primary" disabled:false arrow:"down" %}</div>
+</div>
