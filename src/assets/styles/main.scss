@@ -1,10 +1,13 @@
 @import "reset.css";
-@import 'variables.scss';
-@import 'nav.scss';
+@import "variables.scss";
+@import "nav.scss";
+@import "footer.scss";
 
 body {
   display: grid;
   grid-template-columns: var(--twelve-column-grid);
+  min-height: 100svh;
+  grid-template-rows: auto 1fr auto;
   font-family: var(--content-font), Lato, sans-serif;
 
   h1,
@@ -26,10 +29,14 @@ main {
 // Default styles applied to all components
 // Component-specific styles are defined within their component directory
 .component {
-  padding: 96px 124px;
+  padding: 96px 0px;
   background-color: var(--light-background-variant);
 
   &--dark {
     background-color: var(--dark-background-variant);
+  }
+
+  &--full-height {
+    padding: 0;
   }
 }
