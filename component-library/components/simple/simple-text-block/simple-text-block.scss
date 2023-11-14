@@ -3,6 +3,7 @@
     grid-template-columns: var(--twelve-column-grid);
     justify-content: center;
     align-items: center;
+    color: var(--neutral-000, #FFF);
 
     &__content {
         grid-column: 2 / -2;
