@@ -11,7 +11,7 @@ spec:
 blueprint:
   content:
     heading: bookshop:generic/component-heading!
-    description: bookshop:generic/text-block!
+    text: bookshop:generic/text-block!
   styles:
     background_variant: light
 
