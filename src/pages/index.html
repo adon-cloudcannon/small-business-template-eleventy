@@ -229,7 +229,7 @@ content_blocks:
       show_note: true
     styles:
       background_variant: light
-      content_alignment: center
+      content_alignment: left
   - _bookshop_name: sections/embed
     content:
       heading:
@@ -245,6 +245,33 @@ content_blocks:
           width="640" height="382" frameborder="0" marginheight="0"
           marginwidth="0">Loading…</iframe>
         ratio: default
+      button:
+      show_note: true
+    styles:
+      background_variant: light
+      content_alignment: center
+  - _bookshop_name: sections/embed
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline:
+        primary_heading: Google Forms
+      description: Description text to compliment the block
+      embed:
+        _bookshop_name: generic/custom-embed
+        embed: >-
+          <div id="adobe-dc-view"></div>
+          <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+          <script type="text/javascript">
+              document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+                  var adobeDCView = new AdobeDC.View({clientId: "<YOUR_CLIENT_ID>", divId: "adobe-dc-view"});
+                  adobeDCView.previewFile({
+                      content:{location: {url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf"}},
+                      metaData:{fileName: "Bodea Brochure.pdf"}
+                  }, {});
+              });
+          </script>
+        ratio: A4 Document
       button:
       show_note: true
     styles:
