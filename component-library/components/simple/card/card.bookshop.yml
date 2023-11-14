@@ -2,7 +2,7 @@
 spec:
   structures:
     - content_blocks
-  label: "Image-card"
+  label: "Card"
   description: Block that contain image and description
   icon: perm_media
   tags: []
