@@ -5,6 +5,29 @@ permalink: /
 draft: false
 eleventyExcludeFromCollections: false
 content_blocks:
+  - _bookshop_name: sections/hero
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      button:
+        _bookshop_name: generic/button
+        url: '#'
+        open_in_new_tab: false
+        text: Button text
+        variant: primary
+        disabled: false
+        arrow: right
+        onclick:
+      image:
+        _bookshop_name: generic/image
+        image_path: /uploads/brooke-cagle-8jp-6sjvibm-unsplash.jpg
+        image_alt:
+    styles:
+      image_alignment: left
+      background_variant: light
   - _bookshop_name: simple/simple-text-block
     content:
       heading:
