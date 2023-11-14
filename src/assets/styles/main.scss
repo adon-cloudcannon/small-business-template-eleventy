@@ -35,4 +35,8 @@ main {
   &--dark {
     background-color: var(--dark-background-variant);
   }
+
+  &--full-height {
+    padding: 0;
+  }
 }

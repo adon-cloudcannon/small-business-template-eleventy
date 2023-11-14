@@ -44,6 +44,38 @@ _inputs:
       redo: true
   font:
     comment: Write the name of any font from https://fonts.google.com/ in data/fonts to access it here
+  content_alignment:
+    type: choice
+    options:
+      value_key: id
+      preview:
+        text: 
+          - key: name
+        icon:
+          - key: icon
+      values:
+        - name: Left
+          id: left
+          icon: format_align_left
+        - name: Center
+          id: center
+          icon: format_align_center
+  background_variant:
+    type: choice
+    options:
+      value_key: id
+      preview:
+        text: 
+          - key: name
+        icon:
+          - key: icon
+      values:
+        - name: Dark
+          id: dark
+          icon: dark_mode
+        - name: Light
+          id: light
+          icon: light_mode
 _select_data: {}
 _structures:
   content_blocks:

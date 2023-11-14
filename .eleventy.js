@@ -67,6 +67,17 @@ module.exports = function (eleventyConfig) {
   // Filters
   eleventyConfig.addFilter("markdownify", (markdown) => md.render(markdown));
   eleventyConfig.addFilter("ymlify", (yml) => yaml.load(yml));
+  eleventyConfig.addFilter("militaryTime", function(value) { 
+    const [time, period] = value.split(' '); 
+    const [hour, minute] = time.split(':'); 
+    let formattedHour = parseInt(hour); 
+  
+    if (period === 'pm' || period === 'PM') { 
+        formattedHour += 12; 
+    } 
+  
+    return `${formattedHour}:${minute}`; 
+  });
 
   eleventyConfig.setBrowserSyncConfig({
     files: "./_site/css/**/*.css",
