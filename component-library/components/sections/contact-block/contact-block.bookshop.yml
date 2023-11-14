@@ -56,7 +56,7 @@ _inputs:
     type: textarea  
 
 _structures:
-  contact_details:
+  content.contact_details:
     - label: Email
       value:
         text: mybusiness@business.com
