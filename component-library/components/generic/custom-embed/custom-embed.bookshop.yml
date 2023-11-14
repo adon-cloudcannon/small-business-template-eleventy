@@ -9,8 +9,7 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   embed: 
-  styles:
-    ratio: default
+  ratio: default
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -20,7 +19,7 @@ _inputs:
   embed:
     type: code
   ratio:
-    comment: The ratio of the width to height (The second number indicates how many x the width the height will be)
+    comment: The ratio of the width to height for the embed container (The second number indicates how many x the width the height will be)
     type: select
     options:
       value_key: ratio_value
@@ -30,7 +29,7 @@ _inputs:
       values:
         - name: Default
           ratio_value: auto
-        - name: Document
+        - name: A4 Document
           ratio_value: 1 / 1.41
         - name: Video
           ratio_value: 16 / 9
