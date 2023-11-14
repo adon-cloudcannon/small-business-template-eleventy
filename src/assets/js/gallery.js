@@ -1,7 +1,6 @@
 let galleries = document.querySelectorAll(".c-gallery")
 
 let paginateCards = (showCards, paginateCardAmount, tiles, totalTiles, button) => {
-    console.log(showCards, paginateCardAmount)
     for (let x = showCards; x < (showCards + paginateCardAmount); x++)
         tiles[x]?.classList.remove("c-gallery__tiles__tile--hidden")   
 
