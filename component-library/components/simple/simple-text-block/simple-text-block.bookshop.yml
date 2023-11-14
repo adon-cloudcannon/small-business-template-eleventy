@@ -3,7 +3,7 @@ spec:
   structures:
     - content_blocks
   label: "Simple Text Block"
-  description: This is a content block with header
+  description: Block of content with a header
   icon: article
   tags: []
 
