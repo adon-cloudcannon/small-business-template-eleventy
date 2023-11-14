@@ -23,10 +23,24 @@ _inputs:
     comment: The ratio of the width to height (The second number indicates how many x the width the height will be)
     type: select
     options:
+      value_key: ratio_value
+      preview:
+        text: 
+          - key: name
       values:
-        - default
-        - 1 / 0.5
-        - 1 / 0.75
-        - 1 / 1
-        - 1 / 1.25
-        - 1 / 1.5
+        - name: Default
+          ratio_value: auto
+        - name: Document
+          ratio_value: 1 / 1.41
+        - name: Video
+          ratio_value: 16 / 9
+        - name: 1 / 0.5
+          ratio_value: 1 / 0.5
+        - name: 1 / 0.75
+          ratio_value: 1 / 0.75
+        - name: 1 / 1
+          ratio_value: 1 / 1          
+        - name: 1 / 1.25
+          ratio_value: 1 / 1.25
+        - name: 1 / 1.5
+          ratio_value: 1 / 1.5
