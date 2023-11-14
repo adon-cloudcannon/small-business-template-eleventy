@@ -1,7 +1,7 @@
 {%  assign c = 'c-image-card' %}
 <div class={{c}}>
     {% if is_image %}
-        {% comment %} TODO: put image component here {% endcomment %}
+        {% bookshop "generic/image" bind:image %}
     {% elsif icon %}
         {% bookshop "generic/icon" bind:icon %}
     {% endif %}

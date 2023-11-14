@@ -9,8 +9,8 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  is_image: false
-  image: 
+  is_image: true
+  image: bookshop:generic/image
   icon: bookshop:generic/icon
   heading: bookshop:generic/component-heading
   content: bookshop:generic/text-block
