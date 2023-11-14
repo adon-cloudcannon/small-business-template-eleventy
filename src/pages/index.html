@@ -31,4 +31,35 @@ content_blocks:
     styles:
       orientation: Left
       background_variant: dark
+  - _bookshop_name: sections/form
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      form:
+        _bookshop_name: simple/form-builder
+        id: 4c8c1220-d189-43e0-8d18-f815f9f50793
+        form_submission_type: email/cloudcannon
+        inbox_key:
+        subject:
+        success_page: ''
+        inputs:
+          - _bookshop_name: generic/form/date-input
+            label: ''
+            id: f8979de5-c623-49dd-877e-484ee06a6413
+            required: false
+            min_today: false
+            min:
+            max_today: false
+            max:
+            helper_text:
+        submit_button:
+          text: Button text
+          variant: primary
+          arrow: right
+    styles:
+      background_variant: light
+      content_alignment: center
 ---
