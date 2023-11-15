@@ -6,7 +6,8 @@
   grid-template-rows: minmax(0, 1fr);
   color: var(--main-text-color);
   &__cover {
-    background-color: var(--alt-background-color, #1b1b1d); // supposed to be the alt, or always a 'dark' color??
+    background-color: var(--main-background-color);
+    opacity:.4;
     grid-row: 1 / -1;
     grid-column: 1 / -1;
   }
