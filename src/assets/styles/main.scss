@@ -30,10 +30,14 @@ main {
 // Component-specific styles are defined within their component directory
 .component {
   padding: 96px 0px;
-  background-color: var(--primary-background-color);
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
 
-  &--dark {
-    background-color: var(--secondary-background-color);
+  &--secondary {
+    --main-background-color: var(--secondary-background-color, #1B1B1D);
+    --main-text-color: var(--secondary-foreground-color, #D9D9DC);
+    --alt-background-color: var(--primary-background-color, #3B3B3D);
+    --alt-text-color: var(--primary-foreground-color, #F9F9FB);
   }
 
   &--full-height {

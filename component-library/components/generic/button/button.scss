@@ -1,9 +1,8 @@
 .c-button {
-  --_button-color: var(--primary-foreground-color, #f9f9fb);
-
+  color: var(--main-text-color);
   all: unset;
   padding: 1rem 0.75rem;
-  color: var(--_button-color);
+  color: inherit;
   font-size: var(--buttonh);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height);
@@ -21,21 +20,11 @@
   }
 
   &--primary {
-    border: 2px solid var(--_button-color);
+    border: 2px solid var(--main-text-color);
     &:hover {
-      --_button-color: var(--secondary-background-color, #1b1b1d);
-      border: 2px solid var(--_button-color);
-      background: var(--primary-foreground-color, #f9f9fb);
-    }
-  }
-
-  &[disabled] {
-    --_button-color: var(--brand-grey-600, #6e6e70);
-    pointer-events: none;
-    &:hover {
-      cursor: default;
-      text-decoration: none;
-      background-color: unset;
+      color: var(--alt-text-color);
+      border: 2px solid var(--alt-text-color);
+      background: var(--alt-background-color);
     }
   }
 
@@ -46,6 +35,6 @@
   }
 
   .c-icon__image, .c-icon__svg {
-      --c-icon-color: var(--_button-color);
+      --c-icon-color: var(--main-text-color);
   }
 }

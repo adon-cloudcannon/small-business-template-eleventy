@@ -29,10 +29,16 @@
 
   /* Colors */
   // User editable theme colors
-  --primary-background-color: #2b0026;
-  --primary-foreground-color: #f9f9fb;
-  --secondary-background-color: #033700;
-  --secondary-foreground-color: #dbffd7;
+  --primary-background-color: #fff;
+  --primary-foreground-color: #000;
+  --secondary-background-color: #000;
+  --secondary-foreground-color: #fff;
+
+  // FOR INTERNAL USE
+  --main-background-color: var(--primary-background-color, #3B3B3D);
+  --main-text-color: var(--primary-foreground-color, #F9F9FB);
+  --alt-background-color: var(--secondary-background-color, #1B1B1D);
+  --alt-text-color: var(--secondary-foreground-color, #D9D9DC);
 
   // Red - error
   --error-color: #bf2323;

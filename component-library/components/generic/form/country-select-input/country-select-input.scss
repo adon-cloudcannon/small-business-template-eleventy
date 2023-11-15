@@ -1,7 +1,7 @@
 .c-country-select-input {
     display: grid;
     gap: 4px;
-    color: var(--primary-foreground-color, #F9F9FB);
+    color: var(--main-text-color);
 
     &__label {
         font-size: var(--label);
@@ -21,7 +21,7 @@
         -webkit-appearance: none;
         appearance: none;
         background-color: transparent;
-        color: var(--primary-foreground-color, #F9F9FB);
+        color: var(--main-text-color);
 
         &::placeholder {
             opacity: 1;
@@ -48,6 +48,6 @@
         gap: 8px;
         font-size: var(--paragraph-small);
         line-height: var(--line-height);
-        color: var(--primary-foreground-color, #F9F9FB);
+        color: var(--main-text-color);
     }
 }

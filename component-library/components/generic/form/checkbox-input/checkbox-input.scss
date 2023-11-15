@@ -2,13 +2,13 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  color: var(--primary-foreground-color, #F9F9FB);
+  color: var(--main-text-color);
 
   &__input {
     appearance: none;
     width: 16px;
     height: 16px;
-    border: 2px solid var(--primary-foreground-color, #F9F9FB);
+    border: 2px solid var(--main-text-color);
     cursor: pointer;
     position: relative;
     display: flex;
@@ -22,7 +22,7 @@
     }
 
     &:checked:not(:focus) {
-      border: 2px solid var(--primary-foreground-color, #F9F9FB);
+      border: 2px solid var(--main-text-color);
     }
 
     &:focus:checked:after {
@@ -34,7 +34,7 @@
       position: absolute;
       font-size: var(--paragraph-small);
       line-height: var(--paragraph-small);
-      color: var(--primary-foreground-color, #F9F9FB);
+      color: var(--main-text-color);
     }
   }
 
