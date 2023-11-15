@@ -19,7 +19,7 @@ blueprint:
         hero_icon_name: envelope
     button: bookshop:generic/button!    
   styles:
-    orientation: Left
+    map_alignment: Left
     background_variant: dark
 
 
