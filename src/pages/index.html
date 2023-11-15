@@ -24,4 +24,66 @@ content_blocks:
         onclick:
     styles:
       background_variant: secondary
+  - _bookshop_name: sections/form
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      form:
+        _bookshop_name: simple/form-builder
+        id: f642d06b-4be8-4a98-b43f-4247046102d9
+        form_submission_type: email/cloudcannon
+        inbox_key:
+        subject:
+        success_page: ''
+        inputs:
+          - _bookshop_name: generic/form/email-input
+            label: Email
+            id: 7c8d7fe8-b02a-4869-abdb-972e5c2e9641
+            required: false
+            placeholder: Placeholder
+            helper_text: Please enter an email
+        submit_button:
+          text: Button text
+          variant: primary
+          arrow: right
+    styles:
+      background_variant: primary
+      content_alignment: center
+  - _bookshop_name: sections/price-list
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      lists: []
+    styles:
+      background_variant: primary
+      content_alignment: center
+  - _bookshop_name: sections/hero
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      button:
+        _bookshop_name: generic/button
+        url: '#'
+        open_in_new_tab: false
+        text: Button text
+        variant: primary
+        disabled: false
+        arrow: right
+        onclick:
+      image:
+        _bookshop_name: generic/image
+        image_path: /uploads/brooke-cagle-8jp-6sjvibm-unsplash.jpg
+        image_alt:
+    styles:
+      image_alignment: left
+      background_variant: primary
 ---
