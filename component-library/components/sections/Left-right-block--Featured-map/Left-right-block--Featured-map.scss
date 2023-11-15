@@ -3,7 +3,10 @@
     display: grid;
     grid-template-columns: var(--twelve-column-grid);
     row-gap:48px;
-    padding:96px 0 0!important;
+
+    &.component{
+      padding:96px 0 0;
+    }
   
     &__content {
       padding: 0;
@@ -48,7 +51,9 @@
   
     // Desktop styles
     @media screen and (min-width: 769px) {
-      padding:0!important;
+      &.component{
+        padding:0;
+      }
 
       &__content {
         grid-column: 2 / 7;
@@ -61,7 +66,7 @@
         justify-self:start;
       }
   
-      &--right {
+      &--map-left {
         #{$c}__content {
           grid-column: 9 / -2;
         }

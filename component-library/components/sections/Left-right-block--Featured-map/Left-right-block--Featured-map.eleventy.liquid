@@ -1,8 +1,8 @@
 {% assign_local c = "c-contact-block" %}
 
-<section class="{{ c }} component 
-    {% if styles.orientation == "Right" %}
-        {{ c }}--map-right
+<section class="{{ c }} component {{ c }}
+    {% if styles.orientation == "Left" %}
+        {{ c }}--map-left
     {% endif %} 
     {% if styles.background_variant == "dark" %} 
         component--dark
