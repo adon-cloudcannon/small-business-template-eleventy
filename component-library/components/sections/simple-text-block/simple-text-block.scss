@@ -15,6 +15,10 @@
         align-self: stretch;
     }
 
+    & h3 {
+        line-height: 1.5rem;
+    }
+
     // Desktop styles
     @media screen and (min-width: 1025px ) {
         &__content {
