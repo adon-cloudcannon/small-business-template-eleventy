@@ -36,7 +36,7 @@ preview:
         hero_icon_name: envelope
     button: bookshop:generic/button    
   styles:
-    orientation: Left
+    map_alignment: Left
     background_variant: dark
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
@@ -76,7 +76,7 @@ _inputs:
             value:
               text: ''
               hero_icon_name: ''
-  orientation:
+  map_alignment:
     type: select
     options:
       values:
