@@ -45,8 +45,11 @@ _inputs:
     type: array
     options:
       structures:
+        preview:
+          text: 
+            - key: label
         values:
-          - label: Email
+          - label: Email          
             value:
               text: 'Email address: mybusiness@business.com'
               hero_icon_name: envelope
