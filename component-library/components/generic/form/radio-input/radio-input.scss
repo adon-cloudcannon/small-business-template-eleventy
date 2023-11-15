@@ -16,12 +16,12 @@
         align-items: center;
     
         &:focus {
-            border: 2px solid var(--interaction-blue-300, #2566F2);
+            border: 2px solid var(--interaction-color, #2566F2);
             outline: none;
         }
 
         &:focus:checked:after {
-            background-color: var(--interaction-blue-300, #2566F2);
+            background-color: var(--interaction-color, #2566F2);
         }
     
         &:checked:not(:focus) {

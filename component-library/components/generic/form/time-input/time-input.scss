@@ -22,7 +22,7 @@
         }
 
         &:focus {
-            border: 2px solid var(--interaction-blue-300, #2566F2);
+            border: 2px solid var(--interaction-color, #2566F2);
             outline: none;
         }
 
@@ -68,7 +68,7 @@
     
     &__error {
         display: none;
-        color: var(--error-red-300, #BF2323);
+        color: var(--error-color, #BF2323);
         gap: 8px;
         font-size: var(--paragraph-small);
         line-height: var(--line-height);
