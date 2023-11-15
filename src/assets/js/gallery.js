@@ -17,7 +17,7 @@ galleries.forEach(gallery => {
     let tiles = tileContainer.children;
     let totalTiles = tileContainer.getAttribute("total-tiles");
     let button = gallery.querySelector('.c-gallery__button')
-    let paginateCardAmount = screen.width >= 768 ? 6 : 3    
+    let paginateCardAmount = window.innerWidth >= 768 ? 6 : 3
     let showCards = paginateCards(0, paginateCardAmount, tiles, totalTiles, button)
 
     gallery.querySelector('.c-button').addEventListener("click", e => {
