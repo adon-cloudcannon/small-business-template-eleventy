@@ -1,15 +1,15 @@
 <div class="c-gallery">
     {% if env_bookshop_live %}
         {% comment %} TODO: add notification for live editing to explain all tiles will show but on the live site it will display 3-6 initially with a load more button {% endcomment %}
-        <div class="c-gallery__tiles" total-tiles="{{ images.length }}">
+        <div class="c-gallery__tiles">
             {% for image in images %}
-                <div class="c-gallery__tiles__tile">{% bookshop "generic/image" bind:image %}</div>
+                {% if image.image_path %}<div class="c-gallery__tiles__tile">{% bookshop "generic/image" bind:image %}</div>{% endif %}
             {% endfor %}
         </div>
     {% else %}
-        <div class="c-gallery__tiles" total-tiles="{{ images.length }}">
+        <div class="c-gallery__tiles">
             {% for image in images %}
-                <div class="c-gallery__tiles__tile c-gallery__tiles__tile--hidden">{% bookshop "generic/image" bind:image %}</div>
+                {% if image.image_path %}<div class="c-gallery__tiles__tile c-gallery__tiles__tile--hidden">{% bookshop "generic/image" bind:image %}</div>{% endif %}
             {% endfor %}
         </div>
 

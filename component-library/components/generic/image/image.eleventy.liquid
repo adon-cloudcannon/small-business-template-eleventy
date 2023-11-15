@@ -6,7 +6,7 @@
 
     <img class="c-image" src="{{ image_path }}" alt="{{ image_alt }}">
 
-{% else %}
+{% elsif image_path %}
 
     {% image image_path, image_alt, 'c-image', true %}
 

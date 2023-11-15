@@ -15,7 +15,7 @@ let paginateCards = (showCards, paginateCardAmount, tiles, totalTiles, button) =
 galleries.forEach(gallery => {
     let tileContainer = gallery.querySelector('.c-gallery__tiles')
     let tiles = tileContainer.children;
-    let totalTiles = tileContainer.getAttribute("total-tiles");
+    let totalTiles = tiles.length;
     let button = gallery.querySelector('.c-gallery__button')
     let paginateCardAmount = window.innerWidth >= 768 ? 6 : 3
     let showCards = paginateCards(0, paginateCardAmount, tiles, totalTiles, button)
