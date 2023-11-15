@@ -29,10 +29,10 @@
 
   /* Colors */
   // User editable theme colors
-  --primary-background-color: purple;
-  --primary-foreground-color: #000000;
-  --secondary-background-color: red;
-  --secondary-foreground-color: #ffffff;
+  --primary-background-color: #004949;
+  --primary-foreground-color: #f9f100;
+  --secondary-background-color: #6c0000;
+  --secondary-foreground-color: #d7ffee;
 
   // FOR INTERNAL USE
   --main-background-color: var(--primary-background-color, #3B3B3D);
@@ -44,7 +44,7 @@
   --error-color: #bf2323;
 
   // Blue - interaction
-  --interaction-color: #2566f2;
+  --interaction-color: #f2a925;
 
   // Green - success
   --success-color: #0d8843;
