@@ -3,13 +3,13 @@
         {% comment %} TODO: add notification for live editing to explain all tiles will show but on the live site it will display 3-6 initially with a load more button {% endcomment %}
         <div class="c-gallery__tiles">
             {% for image in images %}
-                {% if image.image_path %}<div class="c-gallery__tiles__tile">{% bookshop "generic/image" bind:image %}</div>{% endif %}
+                <div class="c-gallery__tiles__tile">{% bookshop "generic/image" bind:image %}</div>
             {% endfor %}
         </div>
     {% else %}
         <div class="c-gallery__tiles">
             {% for image in images %}
-                {% if image.image_path %}<div class="c-gallery__tiles__tile c-gallery__tiles__tile--hidden">{% bookshop "generic/image" bind:image %}</div>{% endif %}
+                <div class="c-gallery__tiles__tile c-gallery__tiles__tile--hidden">{% bookshop "generic/image" bind:image %}</div>
             {% endfor %}
         </div>
 
