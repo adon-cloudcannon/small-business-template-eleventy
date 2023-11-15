@@ -11,8 +11,7 @@ spec:
 blueprint:
   content:
     social_icons: true
-    heading: 
-      primary_heading: A contact block
+    heading: A contact block
     description: This is a simple yet powerful block to display not only your location by using Google Maps, but also any other contact details you wish to share with your customers.
     contact_details:
       - text: 'Email address: mybusiness@business.com'
@@ -73,8 +72,6 @@ _inputs:
       values:
         - Left
         - Right  
-  heading:
-    eyebrow_headline: ''
   description:
     type: textarea  
     
