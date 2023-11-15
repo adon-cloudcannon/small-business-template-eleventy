@@ -4,5 +4,57 @@ layout: layouts/page.html
 permalink: /
 draft: false
 eleventyExcludeFromCollections: false
-content_blocks: []
+content_blocks: 
+  - _bookshop_name: sections/centered-large-asset
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      asset:
+      button:
+        _bookshop_name: generic/button
+        url: '#'
+        open_in_new_tab: false
+        text: Button text
+        variant: primary
+        disabled: true
+        arrow: right
+        onclick:
+    styles:
+      background_variant: light
+  - _bookshop_name: sections/form
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      form:
+        _bookshop_name: simple/form-builder
+        id: 24e95531-9fc7-409d-b016-18fddd28d51b
+        form_submission_type: email/cloudcannon
+        inbox_key:
+        subject:
+        success_page: ''
+        inputs:
+          - _bookshop_name: generic/form/country-select-input
+            label: ''
+            id: 395f6cb4-69ea-4fd1-a5da-520504cee27b
+            required: false
+            helper_text:
+          - _bookshop_name: generic/form/email-input
+            label: ''
+            id: 9cab361d-9a51-47ea-8c5d-e08100d72af9
+            required: false
+            placeholder: email?
+            helper_text:
+        submit_button:
+          text: Button text
+          variant: primary
+          arrow: right
+    styles:
+      background_variant: light
+      content_alignment: center
 ---

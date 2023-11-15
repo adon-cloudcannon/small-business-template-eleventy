@@ -30,10 +30,10 @@ main {
 // Component-specific styles are defined within their component directory
 .component {
   padding: 96px 0px;
-  background-color: var(--light-background-variant);
+  background-color: var(--primary-background);
 
   &--dark {
-    background-color: var(--dark-background-variant);
+    background-color: var(--secondary-background);
   }
 
   &--full-height {
