@@ -1,7 +1,5 @@
 {
   "styles": {
-    "light_background_variant": "#3b3b3d",
-    "dark_background_variant": "#1b1b1d",
     "heading_font": "Lato",
     "content_font": "Lato"
   },

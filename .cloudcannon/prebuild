@@ -1,5 +1,0 @@
-npm i
-
-npm run fetch-theme-colors
-npm run sass:build
-npm run bookshop-sass:build

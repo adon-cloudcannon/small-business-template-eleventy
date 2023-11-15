@@ -4,13 +4,13 @@
   grid-template-columns: var(--twelve-column-grid);
   grid-template-rows: var(--nav-height) 1fr auto;
   height: auto;
-  background: var(--secondary-background);
+  background: var(--secondary-background-color);
   --nav-padding: 8px;
 
   &__logo-link {
     grid-column: 2 / -3;
     text-decoration: none;
-    color: var(--primary-foreground, #e9e9ec);
+    color: var(--primary-foreground-color, #e9e9ec);
     font-family: var(--logo-font), Lato, sans-serif;
     font-size: 2rem;
     line-height: 3.75rem;
@@ -44,19 +44,19 @@
     &__item {
       &__link {
         text-decoration: none;
-        color: var(--primary-foreground, #e9e9ec);
+        color: var(--primary-foreground-color, #e9e9ec);
         white-space: nowrap;
 
         &:hover,
         &:active {
-          border-bottom: 1px solid var(--primary-foreground, #f9f9fb);
-          color: var(--primary-foreground, #f9f9fb);
+          border-bottom: 1px solid var(--primary-foreground-color, #f9f9fb);
+          color: var(--primary-foreground-color, #f9f9fb);
         }
       }
       &--active {
         #{$c}__navlist__item__link {
-          border-bottom: 1px solid var(--primary-foreground, #f9f9fb);
-          color: var(--primary-foreground, #f9f9fb);
+          border-bottom: 1px solid var(--primary-foreground-color, #f9f9fb);
+          color: var(--primary-foreground-color, #f9f9fb);
         }
       }
     }

@@ -1,5 +1,5 @@
 .c-button {
-  --_button-color: var(--primary-foreground, #f9f9fb);
+  --_button-color: var(--primary-foreground-color, #f9f9fb);
 
   all: unset;
   padding: 1rem 0.75rem;
@@ -23,9 +23,9 @@
   &--primary {
     border: 2px solid var(--_button-color);
     &:hover {
-      --_button-color: var(--secondary-background, #1b1b1d);
+      --_button-color: var(--secondary-background-color, #1b1b1d);
       border: 2px solid var(--_button-color);
-      background: var(--primary-foreground, #f9f9fb);
+      background: var(--primary-foreground-color, #f9f9fb);
     }
   }
 
