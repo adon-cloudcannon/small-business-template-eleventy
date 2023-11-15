@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: "Contact block"
-  description: Contact content block
+  label: "Left right block - Featured map"
+  description: Display your contact details and a map
   icon: contact_phone
   tags: ['contact', 'content-block', 'left-right']
 
