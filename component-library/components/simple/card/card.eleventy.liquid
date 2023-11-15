@@ -1,15 +1,34 @@
 {%  assign_local c = 'c-card' %}
-<div class={{c}}>
-    {% if is_image %}
-        {% bookshop "generic/image" bind:image %}
-    {% elsif icon %}
-        {% bookshop "generic/icon" bind:icon %}
-    {% endif %}
+<div class="{{c}} component component--full-height
+            {% if styles.background_variant == 'dark' %} 
+                component--dark
+            {% endif %}
+            {% if is_image %} {{ c }}--image {% else %} {{ c }}--icon {% endif %}">
 
-    {% if heading %}{% bookshop "generic/component-heading" bind:heading %}{% endif %}
+    <div class="{{ c }}__imagery">
+        {% if is_image %}
+            {% bookshop "generic/image" bind:image %}
+        {% elsif icon %}
+            {% bookshop "generic/icon" bind:icon %}
+        {% endif %}
+    </div>
+
+    <header class="{{ c }}__header">
+        {% if heading.primary_heading %}
+            <h4 class="{{ c }}__header__primary_heading">
+                {{ heading.primary_heading }}
+            </h4>
+        {% endif %}
+        
+        {% if heading.eyebrow_headline %}
+            <h5 class="{{ c }}__header__eyebrow_heading">
+                {{ heading.eyebrow_headline }}
+            </h5>
+        {% endif %}
+    </header>
 
     <div class="{{c}}__content">{% bookshop "generic/text-block" text:content %}</div>
-    <div>
-        {% bookshop "generic/button" url:link_url text:'Book Now' variant:"secondary" disabled:false arrow:"right"%}
+    <div class="{{ c }}__button">
+        {% bookshop "generic/button" url:button.url text:button.text open_in_new_tab:button.open_in_new_tab variant:"secondary" disabled:false arrow:"right"%}
     </div>
 </div>
