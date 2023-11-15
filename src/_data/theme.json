@@ -1,7 +1,7 @@
 {
-    "primary_background_color": "#ffffff",
-    "primary_foreground_color": "#000000",
-    "secondary_background_color": "#000000",
-    "secondary_foreground_color": "#ffffff",
-    "interaction_color": "#2566f2"
+    "primary_background_color": "#004949",
+    "primary_foreground_color": "#f9f100",
+    "secondary_background_color": "#6c0000",
+    "secondary_foreground_color": "#d7ffee",
+    "interaction_color": "#f2a925"
 }
