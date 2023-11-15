@@ -44,28 +44,35 @@ _inputs:
   contact_details:
     type: array
     options:
-      structures:
-        preview:
-          text: 
-            - key: label
+      structures:        
         values:
           - label: Email          
+            preview:
+              text: Email
             value:
               text: 'Email address: mybusiness@business.com'
               hero_icon_name: envelope
           - label: Phone
+            preview:
+              text: Phone
             value:
               text: 'Phone number: 312 325 326'
               hero_icon_name: phone
           - label: Address
+            preview:
+              text: Address
             value:
               text: 'Address: 1 Fake St, Faketown'
               hero_icon_name: map-pin
           - label: Opening hours
+            preview:
+              text: Opening hours
             value:
               text: 'Opening hours: 9-5pm, Monday to Friday'
               hero_icon_name: clock
           - label: Custom
+            preview:
+              text: Custom
             value:
               text: ''
               hero_icon_name: ''
