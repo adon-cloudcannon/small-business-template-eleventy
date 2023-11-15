@@ -12,7 +12,7 @@
         {% include 'partials/head/google-fonts.html' %}
     </head>
     <body>
-        {% bookstop 'partials/nav/navigation.html' _liveRender:false %}
+        {% include 'partials/nav/navigation.html'%}
         <main>
             {% bookshop_include "page" content_blocks: content_blocks %}
             {{ content }}
