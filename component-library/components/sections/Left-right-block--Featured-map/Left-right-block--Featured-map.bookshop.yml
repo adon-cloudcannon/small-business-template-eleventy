@@ -26,10 +26,7 @@ blueprint:
 preview:
   content:
     display_social_icons: true
-    heading:
-      bookshop: generic/component-heading
-      primary_heading: A contact block
-      eyebrow_headline: ''
+    heading: A contact block
     content: Content
     contact_details:
       - text: 'Email address: mybusiness@business.com'
