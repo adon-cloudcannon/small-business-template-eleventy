@@ -2,7 +2,7 @@
 spec:
   structures:
     - content_blocks
-  label: "Grid Gallery Images"
+  label: "Grid - Gallery Images"
   description: A grid layout of images with supporting information
   icon: collections
   tags: []
