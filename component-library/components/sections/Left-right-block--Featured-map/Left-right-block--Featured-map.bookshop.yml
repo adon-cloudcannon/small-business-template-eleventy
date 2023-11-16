@@ -25,7 +25,7 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   content:
-    social_icons: true
+    display_social_icons: true
     heading:
       bookshop: generic/component-heading
       primary_heading: A contact block
