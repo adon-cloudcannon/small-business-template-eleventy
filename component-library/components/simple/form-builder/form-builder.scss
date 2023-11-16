@@ -7,4 +7,8 @@
     &__submit-button {
         text-align: center;
     }
+
+    .c-icon__image, .c-icon__svg {
+        --c-icon-color: var(--main-text-color);
+    }
 }
