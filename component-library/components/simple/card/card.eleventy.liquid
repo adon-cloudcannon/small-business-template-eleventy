@@ -3,14 +3,16 @@
             {% if styles.background_variant == 'dark' %} 
                 component--dark
             {% endif %}
-            {% if imagery._bookshop_name == 'generic/image' %} {{ c }}--image {% else %} {{ c }}--icon {% endif %}">
+            {% if content.imagery._bookshop_name == 'generic/image' %} {{ c }}--image {% else %} {{ c }}--icon {% endif %}">
 
-    <div class="{{ c }}__imagery">
-        {% bookshop "{{imagery._bookshop_name}}" bind:imagery %}
-    </div>
+    {% if content.imagery %}
+        <div class="{{ c }}__imagery">
+            {% bookshop "{{content.imagery._bookshop_name}}" bind:content.imagery %}
+        </div>
+    {% endif %}
 
     <div class="{{ c }}__content-wrapper">
-        {% if heading.primary_heading or heading.eyebrow_headline %}
+        {% if content.heading %}
             <header class="{{ c }}__header">
                 {% if heading.primary_heading %}
                     <h4 class="{{ c }}__header__primary_heading">
@@ -26,9 +28,9 @@
             </header>
         {% endif %}
 
-        <div class="{{c}}__content">{% bookshop "generic/text-block" text:content %}</div>
+        <div class="{{c}}__content">{% bookshop "generic/text-block" text:content.text %}</div>
         <div class="{{ c }}__button">
-            {% bookshop "generic/button" url:button.url text:button.text open_in_new_tab:button.open_in_new_tab variant:"secondary" disabled:false arrow:"right"%}
+            {% bookshop "generic/button" url:content.button.url text:content.button.text open_in_new_tab:content.button.open_in_new_tab variant:"secondary" disabled:false arrow:"right"%}
         </div>
     </div>
 </div>
