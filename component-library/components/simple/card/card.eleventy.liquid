@@ -10,19 +10,21 @@
     </div>
 
     <div class="{{ c }}__content-wrapper">
-        <header class="{{ c }}__header">
-            {% if heading.primary_heading %}
-                <h4 class="{{ c }}__header__primary_heading">
-                    {{ heading.primary_heading }}
-                </h4>
-            {% endif %}
-            
-            {% if heading.eyebrow_headline %}
-                <h5 class="{{ c }}__header__eyebrow_heading">
-                    {{ heading.eyebrow_headline }}
-                </h5>
-            {% endif %}
-        </header>
+        {% if heading.primary_heading or heading.eyebrow_headline %}
+            <header class="{{ c }}__header">
+                {% if heading.primary_heading %}
+                    <h4 class="{{ c }}__header__primary_heading">
+                        {{ heading.primary_heading }}
+                    </h4>
+                {% endif %}
+                
+                {% if heading.eyebrow_headline %}
+                    <h5 class="{{ c }}__header__eyebrow_heading">
+                        {{ heading.eyebrow_headline }}
+                    </h5>
+                {% endif %}
+            </header>
+        {% endif %}
 
         <div class="{{c}}__content">{% bookshop "generic/text-block" text:content %}</div>
         <div class="{{ c }}__button">
