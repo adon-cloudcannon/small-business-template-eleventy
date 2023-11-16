@@ -53,6 +53,7 @@ _inputs:
               text: 'Email address: mybusiness@business.com'
               hero_icon_name: envelope
           - label: Phone
+            icon: call
             value:
               _type: Phone
               text: 'Phone number: 312 325 326'
