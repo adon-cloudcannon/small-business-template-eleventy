@@ -62,8 +62,6 @@ _inputs:
               text: 'Address: 1 Fake St, Faketown'
               hero_icon_name: map-pin
           - label: Opening hours
-            preview:
-              text: Opening hours
             value:
               _type: Hours
               text: 'Opening hours: 9-5pm, Monday to Friday'
