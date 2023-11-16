@@ -8,10 +8,12 @@
         flex-wrap: wrap;
         place-content: center;
         gap: 24px;
+        width:100%;
 
         &__tile {
             aspect-ratio: 1 / 1;
             width: 100%;
+            box-shadow: 0px 0px 0px 1px var(--main-text-color) inset;
 
             @media screen and (min-width: 769px) {
                 width: calc((100% - 24px) / 2);
