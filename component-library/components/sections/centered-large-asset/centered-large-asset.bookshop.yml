@@ -5,7 +5,7 @@ spec:
   label: "Centered Large Asset"
   description: An asset (such as image or video) with optional supporting content
   icon: web_asset
-  tags: []
+  tags: ['video', 'image']
 
 # Defines the structure of this component, as well as the default values
 blueprint:
