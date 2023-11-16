@@ -59,7 +59,7 @@ module.exports = function (eleventyConfig) {
         decoding: "async",
       });
     } else {
-      return `<img src='${srcFilePath}'>`;
+      return `<img src='${srcFilePath}' alt='${alt}'>`;
     }
 	});
   
