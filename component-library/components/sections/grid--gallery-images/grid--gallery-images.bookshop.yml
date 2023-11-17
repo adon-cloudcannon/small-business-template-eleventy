@@ -29,7 +29,7 @@ preview:
       below, as many as you like, and let people contact you or book now.
     gallery: bookshop:simple/gallery
   styles:
-    background_variant: light
+    background_variant: primary
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
