@@ -11,7 +11,7 @@
     <div class="{{ c }}__content-wrapper">            
         {% if content.display_social_icons %}
           {% if env_bookshop_live %}
-            {% bookshop "generic/notification" heading:"Social Icons" text:"This is where your social icons will appear in the live site, but will not show in live editing in CloudCannon <br> This note only will only show in live editing" %}
+            {% bookshop "generic/notification" heading:"Social Icons" text:"This is where your social icons will appear in the live site, but will not show in live editing in CloudCannon <br> You can edit the icons and their details in /data/site <br> This note only will only show in live editing" %}
           {% endif %}
           <div class="{{ c }}__social-icons">
             {% bookshop "generic/social-icons" social_media_links:site.social_media_links style:social_icons_style %}
