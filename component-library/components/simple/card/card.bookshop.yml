@@ -14,7 +14,7 @@ blueprint:
     heading: bookshop:generic/component-heading
     text: These versatile cards can be used to talk about your services or products, or anything else you are keen to share with your audience. They come with an action link to get your users into the journey you’ve crafted for them.
     button: 
-      - url: ""
+        url: ""
         text: "Button text"
         open_in_new_tab: false
   styles:
