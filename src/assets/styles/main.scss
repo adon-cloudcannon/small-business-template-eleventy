@@ -2,6 +2,7 @@
 @import "variables.scss";
 @import "nav.scss";
 @import "footer.scss";
+@import "component-browser.scss";
 
 body {
   display: grid;
@@ -9,6 +10,7 @@ body {
   min-height: 100svh;
   grid-template-rows: auto 1fr auto;
   font-family: var(--content-font), Lato, sans-serif;
+  color: var(--main-text-color);
 
   h1,
   h2,
@@ -31,7 +33,6 @@ main {
 .component {
   padding: 96px 0px;
   background-color: var(--main-background-color);
-  color: var(--main-text-color);
 
   &--secondary {
     --main-background-color: var(--secondary-background-color, #1B1B1D);
