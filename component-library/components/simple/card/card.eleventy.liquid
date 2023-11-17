@@ -29,8 +29,10 @@
         {% endif %}
 
         <div class="{{c}}__content">{% bookshop "generic/text-block" text:content.text %}</div>
-        <div class="{{ c }}__button">
-            {% bookshop "generic/button" url:content.button.url text:content.button.text open_in_new_tab:content.button.open_in_new_tab variant:"secondary" disabled:false arrow:"right"%}
-        </div>
+        {% if button %}
+            <div class="{{ c }}__button">
+                {% bookshop "generic/button" url:content.button.url text:content.button.text open_in_new_tab:content.button.open_in_new_tab variant:"secondary" disabled:false arrow:"right"%}
+            </div>
+        {% endif %}
     </div>
 </div>
