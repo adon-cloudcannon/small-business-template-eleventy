@@ -4,5 +4,108 @@ layout: layouts/page.html
 permalink: /
 draft: false
 eleventyExcludeFromCollections: false
-content_blocks: []
+content_blocks:
+  - _bookshop_name: sections/centered-large-asset
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      asset:
+      button:
+        _bookshop_name: generic/button
+        url: '#'
+        open_in_new_tab: false
+        text: Button text
+        variant: primary
+        disabled: false
+        arrow: right
+        onclick:
+    styles:
+      background_variant: secondary
+  - _bookshop_name: sections/form
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      form:
+        _bookshop_name: simple/form-builder
+        id: f642d06b-4be8-4a98-b43f-4247046102d9
+        form_submission_type: email/cloudcannon
+        inbox_key:
+        subject:
+        success_page: ''
+        inputs:
+          - _bookshop_name: generic/form/email-input
+            label: Email
+            id: 7c8d7fe8-b02a-4869-abdb-972e5c2e9641
+            required: false
+            placeholder: Placeholder
+            helper_text: Please enter an email
+          - _bookshop_name: generic/form/date-input
+            label: ''
+            id: 45f8e626-566a-4c6a-bf4f-9dccf26f18e9
+            required: false
+            min_today: false
+            min:
+            max_today: false
+            max:
+            helper_text:
+          - _bookshop_name: generic/form/time-input
+            label: ''
+            placeholder: ''
+            id: 6c0dc486-1a2e-41c7-a9a4-796956094542
+            helper_text:
+            min: 10:00 am
+            max: 11:02 am
+        submit_button:
+          text: Button text
+          variant: primary
+          arrow: right
+    styles:
+      background_variant: primary
+      content_alignment: center
+  - _bookshop_name: sections/price-list
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      lists:
+        - list_heading: List heading
+          list_items:
+            - label: List item
+              detail: $$
+            - label: List item
+              detail: $$
+    styles:
+      background_variant: primary
+      content_alignment: center
+  - _bookshop_name: sections/hero
+    content:
+      heading:
+        _bookshop_name: generic/component-heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: Primary Heading
+      description: Description text to compliment the block
+      button:
+        _bookshop_name: generic/button
+        url: '#'
+        open_in_new_tab: false
+        text: Button text
+        variant: primary
+        disabled: false
+        arrow: right
+        onclick:
+      image:
+        _bookshop_name: generic/image
+        image_path: /uploads/brooke-cagle-8jp-6sjvibm-unsplash.jpg
+        image_alt:
+    styles:
+      image_alignment: full
+      background_variant: primary
 ---
