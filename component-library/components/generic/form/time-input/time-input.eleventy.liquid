@@ -5,8 +5,8 @@
         type="time" id="{{ id }}" 
         name="{{ label }}" 
         value="{{ placeholder }}"
-        min="{{ min | militaryTime }}"
-        max="{{ max | militaryTime }}"
+        {% if min %}min="{{ min | militaryTime }}"{% endif %}
+        {% if max %}max="{{ max | militaryTime }}"{% endif %}
         onblur="validateInput(this)"
         oninput="validateInputTyping(this)"
         {% if helper_text %}aria-describedby="{{ id }}--helper"{% endif %}>
