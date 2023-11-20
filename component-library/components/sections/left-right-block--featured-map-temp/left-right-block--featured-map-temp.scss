@@ -1,4 +1,4 @@
-.c-contact-block {
+.c-left-right-block--featured-map {
     $c: &;
     display: grid;
     grid-template-columns: var(--twelve-column-grid);
@@ -81,5 +81,4 @@
         }
       }
     }
-  }
-  
+}
