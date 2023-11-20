@@ -10,7 +10,7 @@
   <div class="{{ c }}__content">
     <div class="{{ c }}__content-wrapper">            
         {% if content.display_social_icons %}
-          {% if env_bookshop_live %}
+          {% if env_bookshop_live and content.show_note %}
             {% bookshop "generic/notification" heading:"Social Icons" text:"This is where your social icons will appear in the live site, but will not show in live editing in CloudCannon <br> You can edit the icons and their details in /data/site <br> This note only will only show in live editing" %}
           {% endif %}
           {% capture social_icon_styles %}
