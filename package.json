@@ -30,15 +30,15 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.0",
-    "@bookshop/sass": "^3.6.5",
+    "@bookshop/sass": "3.8.1",
     "eleventy-plugin-svg-contents": "^0.7.0",
     "outdent": "^0.8.0"
   },
   "dependencies": {
-    "@bookshop/browser": "3.6.5",
-    "@bookshop/eleventy-bookshop": "3.6.5",
-    "@bookshop/eleventy-engine": "3.6.5",
-    "@bookshop/generate": "3.6.5",
+    "@bookshop/browser": "3.8.1",
+    "@bookshop/eleventy-bookshop": "3.8.1",
+    "@bookshop/eleventy-engine": "3.8.1",
+    "@bookshop/generate": "3.8.1",
     "body-scroll-lock": "^4.0.0-beta.0",
     "esbuild": "^0.19.4",
     "js-yaml": "^4.1.0",
